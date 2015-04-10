@@ -67,7 +67,7 @@
 }
 
 body {
-    background-image: url(/img/wallpaper.jpg);
+    background-image: url(/img/background-app.png);
 }
 
 h4 {
@@ -93,7 +93,10 @@ h4 {
 }
 
 .navbar {
-    background-color: black;
+    background-color: rgba(1, 27, 29, 0.84);
+    color: #fafafa;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    margin: -1px;
 }
 .controle-group
 {
@@ -189,7 +192,41 @@ div.jGrowl-notification{
     margin-bottom: 0px;
     margin-right: 15px;
 }
-
+.btn-pub {
+    margin-top: 6px;   
+}
+.btn-blue {
+    background-color: #1597a2;
+    border: 1px solid #1597a2;
+    color: #fafafa;
+    text-transform: uppercase;
+    transition: all 1s;
+    letter-spacing: 1px;
+}
+.btn-blue:hover {
+    background-color: #fafafa;
+    border: 1px solid #1597a2;
+    color: #1597a2;
+}
+.btn-blue-inverse {
+    background-color: #fafafa;
+    border: 1px solid #1597a2;
+    color: #1597a2;
+    text-transform: uppercase;
+    transition: all 1s;
+    letter-spacing: 1px;
+}
+.btn-blue-inverse:hover {
+    background-color: #1597a2;
+    border: 1px solid #1597a2;
+    color: #fafafa;
+}
+.navbar-form {
+  margin-top: 22px !important;
+}
+.navbar .nav {
+  margin-top: 15px !important;
+}
 .navbar .nav > li > a {
     color: #CCCCCC;
 }
@@ -251,13 +288,16 @@ div.jGrowl-notification{
     background-size: cover;
     -ms-behavior: url(/css/vendor/backgroundsize.min.htc);
 }
-
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+}
 .navbar-edit {
     line-height: 14px;
     left: 10px;
     width: 48px;
     padding: 4px 13px 3px;
-    background-color: #428bca;
+    background-color: #1597a2;
 }
 
 .navbar-edit:hover,
@@ -272,7 +312,7 @@ div.jGrowl-notification{
 }
 
 .img-rounded {
-    /*border-radius: 15px;*/
+    border-radius: 35px;
 }
 
 .navbar .btn-navbar.fix-navbar {

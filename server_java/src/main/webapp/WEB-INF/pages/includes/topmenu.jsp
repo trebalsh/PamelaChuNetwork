@@ -35,7 +35,7 @@
                     </span>
                     </a>
                 </li>
-                <li class="dropdown pointer">
+                <!-- <li class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown">
                     <span>
                         <span class="glyphicon glyphicon-info-sign"></span>
@@ -115,7 +115,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <c:if test="${currentPage != null && currentPage == 'home'}">
@@ -190,7 +190,7 @@
                     </ul>
                 </li>
                 <li class="hidden-phone">
-                    <button id="editTatam" class="editTatam btn btn-primary navbar-form">
+                    <button id="editTatam" class="editTatam btn btn-pub btn-blue">
                         <i class="glyphicon glyphicon-pencil"></i>
                         <span class="visible-desktop">
                             <fmt:message key="tatami.tatam.publish"/>
@@ -198,7 +198,7 @@
                     </button>
                 </li>
             </ul>
-            <ul class="nav pull-right">
+            <!--<ul class="nav pull-right">
                 <li>
                     <a href="#" id="help-tour">
                         <span>
@@ -209,7 +209,7 @@
                         </span>
                     </a>
                 </li>
-            </ul>
+            </ul> -->
             <form id="searchform" class="navbar-form pull-right col-span-4" action="">
                 <input name="search" type="text" class="col-span-12" id="searchinput" placeholder="<fmt:message key="tatami.search.placeholder"/>" autocomplete="off">
                 <span class="deleteicon"><i class="glyphicon glyphicon-remove-sign"></i></span>
