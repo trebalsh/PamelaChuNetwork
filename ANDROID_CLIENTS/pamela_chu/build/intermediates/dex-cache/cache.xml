@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-9182a43e3393dbaaac0ca08b6a37ea60e4d97e94.jar" />
+    </item>
+    <item
+        jar="C:\Users\ritchou\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-e8a1c924c46cdac0abf01cca034b3cd4abac49dc.jar" />
+    </item>
+    <item
+        jar="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2e8c06a7aad26ba8d2d5cab8134556594fe36856">
+        <dex dex="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\classes-a61b5a2b29852c7063545b058ab18eea2d9ff40f.jar" />
+    </item>
+    <item
+        jar="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\classes-aaa0ae8018b6b949404b6cfe4f6198ae1653b333.jar" />
+    </item>
+    <item
+        jar="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\classes-0f8f581f26f3538eaab1552a49577ff2c222a7c0.jar" />
+    </item>
+
+</items>

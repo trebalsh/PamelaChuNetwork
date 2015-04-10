@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="213dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_weight="0.22" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#1597A2"
+        android:gravity="center"
+        android:text="HOST"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:background="@drawable/round_corner"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#1597A2"
+        android:gravity="center"
+        android:text="COMPTE"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_corner"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corner"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#1597A2"
+        android:gravity="center"
+        android:text="TYPE DE NOTIFICATION"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ne pas déranger"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vibreur"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vibreur et sonnerie"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+
+
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="#1597A2"
+        android:minHeight="28dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Valider"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

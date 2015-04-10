@@ -1,0 +1,6 @@
+C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\classes\debug
+C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-e8a1c924c46cdac0abf01cca034b3cd4abac49dc.jar
+C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\classes-a61b5a2b29852c7063545b058ab18eea2d9ff40f.jar
+C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-9182a43e3393dbaaac0ca08b6a37ea60e4d97e94.jar
+C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\classes-aaa0ae8018b6b949404b6cfe4f6198ae1653b333.jar
+C:\Users\ritchou\Desktop\pamelachu\pamelachu\ANDROID_CLIENTS\pamela_chu\app\build\intermediates\pre-dexed\debug\classes-0f8f581f26f3538eaab1552a49577ff2c222a7c0.jar

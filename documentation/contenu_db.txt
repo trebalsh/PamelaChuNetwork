@@ -1,0 +1,66 @@
+Les différentes pages :
+
+    - Page de login/acceuil
+    - Page d'actualités (le mur)
+    - Page de profil :
+        - Page des paramètres
+        - Page des actualite
+        - Page d'info
+
+    
+
+Page de Profil :
+
+
+    A. Les champs à renseigner pour un profil :
+
+        - Prénom
+        - Nom
+        - Pseudo
+        - Mot de passe
+        - Adresse mail
+        - Date de naissance
+        - Ecole
+        - Localisation (pays, ville)
+        - Statu amoureux (célibataire, en couple, fiancé, marié, c'est tendu)
+        - Moyen de pratique social (PC, XBOX ONE, PS4, XBOX, PS2, etc...)
+        - Secte (WINDOWS, OS-X, Linux)
+        - Jeu de prédilexion
+!       - photo de profil
+
+
+    B. Posts :
+
+        - Une boîte text + une boite texte pour urls vidéo seulement (voir élément "vidéo" HTML5)
+        - Un bouton upload pour les images (seulement des images= parser .jpg, .png, etc...)
+
+
+Page de login :
+
+!   A. Créer un compte
+        - Nom
+        - Prénom
+        - Pseudo
+        - Mot de passe
+        - Adresse mail
+        - Date de naissance
+        
+        
+Types d'intéractions :
+
+    - ++, -- (système de likes, le ++ vaut pour 2, et les négatifs sont à soustraire, du coup le chiffre affiché sera la sommes des + et -)
+    - Commenter
+    - Forker (partager)
+
+
+Système d'amitié :
+
+    - Un système de follow/unfollow (Twitter style)
+    
+    table user
+    table post
+    table like
+    table follow
+    table share
+    table comments
+    
