@@ -1,3 +1,13 @@
+a {
+    color: #1597a2;
+    cursor: pointer;
+}
+a:hover,
+a:focus {
+    color: #0b676a;
+    transition: all 0.5s;
+    text-decoration: none;
+}
 @media screen and (max-width: 767px) {
     .navbar .nav, .navbar .navbar-form {
         float: none;
@@ -93,7 +103,7 @@ h4 {
 }
 
 .navbar {
-    background-color: rgba(1, 27, 29, 0.84);
+    background-color: rgba(1, 27, 29, 0.0);
     color: #fafafa;
     border: 1px solid rgba(255, 255, 255, 0.29);
     margin: -1px;
@@ -288,6 +298,9 @@ div.jGrowl-notification{
     background-size: cover;
     -ms-behavior: url(/css/vendor/backgroundsize.min.htc);
 }
+.navbar-brand {
+    color: #1597a2;
+}
 .navbar-brand img {
     width: 50px;
     height: 50px;
@@ -307,7 +320,7 @@ div.jGrowl-notification{
 
 .page-header {
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 8px;
     padding-bottom: 0px;
 }
 
@@ -631,10 +644,6 @@ margin-bottom: 20px;
     background-color: #ECF1F7;
 }
 
-.homebody-nav {
-    background-color: white;
-}
-
 .nav-justified {
     border-collapse: collapse;
 }
@@ -649,11 +658,11 @@ margin-bottom: 20px;
 }
 
 .homebody-nav {
-    background-color: white;
+    background-color: #fff;
 }
 
 .homebody-nav .active a {
-    color: #333333;
+    color: #262626;
 }
 
 .nav-tabs.nav-justified > .active > a {

@@ -64,9 +64,9 @@
             </a>
             <br>
             <a href="#users/<@= username @>">
-                <small>
+                <b>
                     @<@= username @>
-                </small>
+                </b>
             </a>
         </h4>
     </div>
