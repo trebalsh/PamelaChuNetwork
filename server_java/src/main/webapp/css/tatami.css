@@ -1,3 +1,6 @@
+body {
+    font-family: 'Arimo', sans-serif;
+}
 a {
     color: #1597a2;
     cursor: pointer;
@@ -7,6 +10,34 @@ a:focus {
     color: #0b676a;
     transition: all 0.5s;
     text-decoration: none;
+}
+.title-white {
+    color: #fafafa !important;
+    font-family: 'Orbitron', sans-serif;
+}
+.text-white {
+    color: #fafafa !important;   
+}
+.logo-site {
+    width: 170px;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-blue {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.panel-blue>.panel-heading,
+.panel-post>.panel-heading {
+    background-color: #1597a2 !important;
+    color: #fafafa;
+}
+.panel-blue>.panel-body {
+    background-color: #fafafa;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 @media screen and (max-width: 767px) {
     .navbar .nav, .navbar .navbar-form {
@@ -202,16 +233,36 @@ div.jGrowl-notification{
     margin-bottom: 0px;
     margin-right: 15px;
 }
+.btn-link {
+    color: #1597a2;   
+}
+.btn-link:hover,
+.btn-link:focus {
+    color: #0b676a;
+    transition: all 0.5s;
+    text-decoration: none;
+}
 .btn-pub {
     margin-top: 6px;   
+}
+.btn-red {
+    background-color: #a21515;
+    border: 1px solid #a21515;
+    color: #fafafa;
+    transition: all 1s;
+    letter-spacing: 0.5px;
+}
+.btn-red:hover {
+    background-color: #fafafa;
+    border: 1px solid #a21515;
+    color: #a21515;
 }
 .btn-blue {
     background-color: #1597a2;
     border: 1px solid #1597a2;
     color: #fafafa;
-    text-transform: uppercase;
     transition: all 1s;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 .btn-blue:hover {
     background-color: #fafafa;
@@ -222,9 +273,8 @@ div.jGrowl-notification{
     background-color: #fafafa;
     border: 1px solid #1597a2;
     color: #1597a2;
-    text-transform: uppercase;
     transition: all 1s;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 .btn-blue-inverse:hover {
     background-color: #1597a2;

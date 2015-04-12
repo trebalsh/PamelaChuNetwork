@@ -9,17 +9,14 @@
 
 <body>
 
-<jsp:include page="includes/topmenu.jsp"/>
+<%-- <jsp:include page="includes/topmenu.jsp"/> --%>
 
 <div id="mainPanel" class="container">
 
 <div class="row">
-    <div class="jumbotron">
-        <h1><fmt:message key="tatami.presentation"/></h1>
-
-        <p>
-            [<a href="/tatami/presentation"><fmt:message key="tatami.presentation.moreinfo"/></a>]
-        </p>
+    <div class="container-fluid">
+        <img class="logo-site" src="/img/company-logo.png" alt="<fmt:message key="tatami.logo"/>">
+        <h2 class="text-center title-white"><fmt:message key="tatami.presentation"/></h2>
     </div>
 </div>
 
@@ -55,16 +52,12 @@
 </c:if>
 
 <div class="row">
-    <div class="col-span-4">
-        <h1><fmt:message key="tatami.register.title"/></h1>
+    <div class="col-span-6">
+        <h3 class="title-white"><fmt:message key="tatami.register.title"/></h3>
 
-        <p>
+        <p class="text-white">
             <fmt:message key="tatami.register.text.1"/>
-        <ul>
-            <li><fmt:message key="tatami.register.text.2"/></li>
-            <li><fmt:message key="tatami.register.text.3"/></li>
-            <li><fmt:message key="tatami.register.text.4"/></li>
-        </ul>
+            <fmt:message key="tatami.register.text.2"/>
         </p>
         <form action="/tatami/register" method="post" class="well" accept-charset="utf-8" id="registrationForm">
             <fieldset class="row-fluid">
@@ -76,19 +69,16 @@
                            placeholder="Your e-mail..."/>
                 </div>
                 <div class="controle-group">
-                    <button type="submit" class="col-span-12 btn btn-success" id="registrationButton">
+                    <button type="submit" class="col-span-12 btn btn-blue" id="registrationButton">
                         <fmt:message key="tatami.register"/>
                     </button>
-                    <div class="text-center">(<a href="/tatami/tos"><fmt:message
-                            key="tatami.authentication.cgv"/></a>)
-                    </div>
                 </div>
             </fieldset>
         </form>
     </div>
 
-    <div class="col-span-4">
-        <h1><fmt:message key="tatami.authentification"/></h1>
+    <div class="col-span-6">
+        <h3 class="title-white"><fmt:message key="tatami.authentification"/></h3>
 
         <form action="/tatami/authentication" method="post" accept-charset="utf-8" id="loginForm" class="well">
             <fieldset class="row-fluid">
@@ -112,7 +102,7 @@
                     <fmt:message key="tatami.remember.password.time"/>
                 </div>
                 <div class="controle-group">
-                    <button type="submit" class="col-span-12 btn btn-success" id="loginButton">
+                    <button type="submit" class="col-span-12 btn btn-blue" id="loginButton">
                         <fmt:message key="tatami.authentificate"/>
                     </button>
                 </div>
@@ -122,7 +112,7 @@
 
         <div class="well row-fluid share-img-fffix col-span-12">
             <div data-toggle="collapse" data-target="#lostPasswordDiv">
-                <button class="col-span-12 btn btn-info">
+                <button class="col-span-12 btn btn-red">
                     <fmt:message key="tatami.lost.password.title"/>
                 </button>
             </div>
@@ -138,7 +128,7 @@
                                        placeholder="Your e-mail..."/>
                             </div>
                             <div class="controle-group">
-                                <button type="submit" class="col-span-12 btn btn-success">
+                                <button type="submit" class="col-span-12 btn btn-blue">
                                     <fmt:message key="tatami.lost.password.button"/>
                                 </button>
                             </div>
@@ -150,7 +140,7 @@
     </div>
 
 
-    <div class="col-span-4">
+    <%-- <div class="col-span-4">
         <h1><fmt:message key="tatami.authentication.google.title"/></h1>
 
         <p>
@@ -187,7 +177,7 @@
                 </div>
             </fieldset>
         </form>
-    </div>
+    </div> --%>
 </div>
 
 <div id="modalTimeoutWindow" class="modal hide fade">
