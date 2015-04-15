@@ -11,11 +11,11 @@
                         <i class="glyphicon glyphicon-user"></i> <fmt:message key="tatami.menu.profile"/>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#preferences">
                         <i class="glyphicon glyphicon-picture"></i> <fmt:message key="tatami.menu.preferences"/>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#password">
                         <i class="glyphicon glyphicon-lock"></i> <fmt:message key="tatami.menu.password"/>

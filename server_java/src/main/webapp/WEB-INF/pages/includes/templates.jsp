@@ -363,7 +363,7 @@
         <fmt:message key="tatami.timeline.messages"/>
     <@ } @>
 </script>
-<script type="text/template" id="Welcome">
+<!-- <script type="text/template" id="Welcome">
     <div id="WelcomeModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -387,7 +387,7 @@
             </div>
         </div>
     </div>
-</script>
+</script> -->
 <script type="text/template" id="StatusEdit">
     <div class="modal-dialog">
         <div class="modal-content">

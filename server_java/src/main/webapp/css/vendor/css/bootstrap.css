@@ -4810,11 +4810,11 @@ a.label:focus {
 }
 
 .label-warning {
-  background-color: #f0ad4e;
+  background-color: #a21515;
 }
 
 .label-warning[href] {
-  background-color: #ec971f;
+  background-color: #a21515;
 }
 
 .label-success {
@@ -4826,11 +4826,11 @@ a.label:focus {
 }
 
 .label-info {
-  background-color: #5bc0de;
+  background-color: #1597a2;
 }
 
 .label-info[href] {
-  background-color: #31b0d5;
+  background-color: #1597a2;
 }
 
 .badge {
