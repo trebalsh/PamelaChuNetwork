@@ -4,7 +4,7 @@
 
 <c:if test="${ios == null || !ios}">
     <div id="navbar" class="navbar noRadius">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <button type="button" class="btn-blue navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -14,7 +14,7 @@
             <fmt:message key="tatami.title"/>
         </a>
     <c:if test="${currentPage != null && currentPage == 'home'}">
-        <button type="button" class="editTatam btn btn-primary navbar-toggle navbar-edit">
+        <button type="button" class="editTatam btn btn-blue navbar-toggle navbar-edit">
             <i class="close glyphicon glyphicon-pencil"></i>
         </button>
     </c:if>
@@ -152,10 +152,10 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="/tatami/account/#/files">
+                            <!-- <a href="/tatami/account/#/files">
                                 <span class="glyphicon glyphicon-file"></span>
                                 <fmt:message key="tatami.menu.files"/>
-                            </a>
+                            </a> -->
                             <a href="/tatami/account/#/users">
                                 <span class="glyphicon glyphicon-globe"></span>
                                 <fmt:message key="tatami.menu.directory"/>
@@ -169,7 +169,7 @@
                                 <fmt:message key="tatami.menu.tags"/>
                             </a>
                         </li>
-                        <li class="divider"></li>
+                        <!-- <li class="divider"></li>
                         <li>
                             <a href="/tatami/account/#/status_of_the_day">
                                 <span class="glyphicon glyphicon-signal"></span>
@@ -179,7 +179,7 @@
                                 <span class="glyphicon glyphicon-briefcase"></span>
                                 <fmt:message key="tatami.menu.company.wall"/>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="divider"></li>
                         <li>
                             <a href="/tatami/logout">

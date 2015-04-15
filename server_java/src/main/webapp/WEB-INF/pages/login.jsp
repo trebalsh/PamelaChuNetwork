@@ -16,7 +16,7 @@
 <div class="row">
     <div class="container-fluid">
         <img class="logo-site" src="/img/company-logo.png" alt="<fmt:message key="tatami.logo"/>">
-        <h2 class="text-center title-white"><fmt:message key="tatami.presentation"/></h2>
+        <h2 class="text-center title-blue"><fmt:message key="tatami.presentation"/></h2>
     </div>
 </div>
 
@@ -53,7 +53,7 @@
 
 <div class="row">
     <div class="col-span-6">
-        <h3 class="title-white"><fmt:message key="tatami.register.title"/></h3>
+        <h3 class="title-blue"><fmt:message key="tatami.register.title"/></h3>
 
         <p class="text-white">
             <fmt:message key="tatami.register.text.1"/>
@@ -69,7 +69,7 @@
                            placeholder="Your e-mail..."/>
                 </div>
                 <div class="controle-group">
-                    <button type="submit" class="col-span-12 btn btn-blue" id="registrationButton">
+                    <button type="submit" class="col-span-12 btn btn-blue btn-L" id="registrationButton">
                         <fmt:message key="tatami.register"/>
                     </button>
                 </div>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="col-span-6">
-        <h3 class="title-white"><fmt:message key="tatami.authentification"/></h3>
+        <h3 class="title-blue"><fmt:message key="tatami.authentification"/></h3>
 
         <form action="/tatami/authentication" method="post" accept-charset="utf-8" id="loginForm" class="well">
             <fieldset class="row-fluid">
@@ -102,7 +102,7 @@
                     <fmt:message key="tatami.remember.password.time"/>
                 </div>
                 <div class="controle-group">
-                    <button type="submit" class="col-span-12 btn btn-blue" id="loginButton">
+                    <button type="submit" class="col-span-12 btn btn-blue btn-L" id="loginButton">
                         <fmt:message key="tatami.authentificate"/>
                     </button>
                 </div>
@@ -110,9 +110,9 @@
             </fieldset>
         </form>
 
-        <div class="well row-fluid share-img-fffix col-span-12">
+        <div class="well row-fluid col-span-12">
             <div data-toggle="collapse" data-target="#lostPasswordDiv">
-                <button class="col-span-12 btn btn-red">
+                <button class="col-span-12 btn btn-red btn-L">
                     <fmt:message key="tatami.lost.password.title"/>
                 </button>
             </div>
@@ -128,7 +128,7 @@
                                        placeholder="Your e-mail..."/>
                             </div>
                             <div class="controle-group">
-                                <button type="submit" class="col-span-12 btn btn-blue">
+                                <button type="submit" class="col-span-12 btn-L btn btn-blue">
                                     <fmt:message key="tatami.lost.password.button"/>
                                 </button>
                             </div>
@@ -167,7 +167,7 @@
                            value="https://www.google.com/accounts/o8/id"/>
                 </div>
                 <div class="controle-group">
-                    <button id="proceed_google" type="submit" class="col-span-12 btn btn-success">
+                    <button id="proceed_google" type="submit" class="col-span-12 btn btn-blue">
                         <fmt:message key="tatami.authentication.google.submit"/>
                     </button>
                 </div>

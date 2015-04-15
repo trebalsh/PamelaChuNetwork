@@ -4,7 +4,7 @@
 
 
     <div class="col-span-4">
-        <div class="tabbable alert alert-status">
+        <div class="well tabbable alert alert-status">
             <ul class="adminMenu nav nav-pills nav-stacked nomargin">
                 <li class="active">
                     <a href="#profile">
@@ -21,11 +21,11 @@
                         <i class="glyphicon glyphicon-lock"></i> <fmt:message key="tatami.menu.password"/>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#files">
                         <i class="glyphicon glyphicon-file"></i> <fmt:message key="tatami.menu.files"/>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#users">
                         <i class="glyphicon glyphicon-globe"></i> <fmt:message key="tatami.menu.directory"/>
@@ -41,11 +41,11 @@
                         <i class="glyphicon glyphicon-tags"></i> <fmt:message key="tatami.menu.tags"/>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#status_of_the_day">
                         <i class="glyphicon glyphicon-signal"></i> <fmt:message key="tatami.menu.status.of.the.day"/>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

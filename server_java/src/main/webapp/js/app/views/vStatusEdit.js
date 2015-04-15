@@ -45,7 +45,7 @@
                 $(":file").filestyle({
                     input: false,
                     buttonText: this.$el.find(".choose-label").html(),
-                    classButton: "btn btn-primary",
+                    classButton: "btn btn-blue",
                     icon: false
                 });
             }

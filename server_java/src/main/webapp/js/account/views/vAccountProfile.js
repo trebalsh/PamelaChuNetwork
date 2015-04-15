@@ -25,7 +25,7 @@ var VAccountProfile = Marionette.ItemView.extend({
         $(":file").filestyle({
             input: false,
             buttonText: "Photo",
-            classButton: "btn btn-primary",
+            classButton: "btn btn-blue",
             icon: false
         });
       } 

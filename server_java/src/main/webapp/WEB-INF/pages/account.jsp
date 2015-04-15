@@ -19,7 +19,7 @@
                 <div class="row">
                 <div id="navigation"></div>
                     <div class="col-span-8">
-                        <div id="accountContent" class="alert alert-status">
+                        <div id="accountContent" class="well alert alert-status">
                             <div id="content-container"></div>
                         </div>
                     </div>

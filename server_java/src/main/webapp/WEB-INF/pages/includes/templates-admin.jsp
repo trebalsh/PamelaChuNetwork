@@ -30,7 +30,7 @@
         </label>
           <div class="controlsIE">
             <p><fmt:message key="tatami.user.picture.buttonIE" /></p>
-            <input id="avatarFile" type="file" name="uploadFile" data-url="/tatami/rest/fileupload/avatarIE" class="filestyle" data-classButton="btn btn-primary" data-input="false" data-buttonText="Photo" data-icon="false"/>
+            <input id="avatarFile" type="file" name="uploadFile" data-url="/tatami/rest/fileupload/avatarIE" class="filestyle" data-classButton="btn btn-blue" data-input="false" data-buttonText="Photo" data-icon="false"/>
             <span class="glyphicon glyphicon-search"></span>
             <span class="upload-ok"><fmt:message key="tatami.user.picture.buttonIE-ok" /></span>
             <span class="upload-ko"><fmt:message key="tatami.user.picture.buttonIE-ko" /></span>
@@ -98,7 +98,7 @@
         <div class="return"/>
 
         <div class="form-actions">
-            <button type="submit" class="input-xlarge btn btn-primary btn-block">
+            <button type="submit" class="input-xlarge btn btn-blue btn-block">
                 <fmt:message key="tatami.form.save"/>
             </button>
         </div>
@@ -110,7 +110,7 @@
         <legend><fmt:message key="tatami.user.suppress"/></legend>
         <div class="return"/>
         <div class="form-actions">
-            <button type="submit" class="input-xlarge btn btn-danger btn-block" onclick="return(confirm('<fmt:message key="tatami.user.suppress.confirmation"/>'));">
+            <button type="submit" class="input-xlarge btn btn-red btn-block" onclick="return(confirm('<fmt:message key="tatami.user.suppress.confirmation"/>'));">
                 <fmt:message key="tatami.user.suppress"/>
             </button>
         </div>
@@ -154,7 +154,7 @@
     <fieldset>
         <div class="return"/>
         <div class="form-actions">
-            <button type="submit" class="input-xlarge btn btn-primary btn-block">
+            <button type="submit" class="input-xlarge btn btn-blue btn-block">
                 <fmt:message key="tatami.form.save"/>
             </button>
         </div>
@@ -207,7 +207,7 @@
         </div>
         <div class="return"/>
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" class="btn btn-blue btn-block">
                 <fmt:message key="tatami.form.save"/>
             </button>
         </div>
@@ -264,7 +264,7 @@
         <fmt:message key="tatami.group.name"/>
     </h2>
     <@ if (typeof groupId === 'undefined') { @>
-        <button class="show btn btn-xlarge btn-block btn-primary" type="button">
+        <button class="show btn btn-xlarge btn-block btn-blue" type="button">
             <fmt:message key="tatami.group.add"/>
         </button>
     <@ } @>
@@ -336,7 +336,7 @@
                 </div>
             </div>
 
-            <div class="alert">
+            <div class="">
                 <i class="icon-warning-sign"></i>
                 <fmt:message key="tatami.group.archive.alert"/>
             </div>
@@ -347,14 +347,14 @@
         <br/>
         <div class="form-actions">
             <@ if (typeof groupId === 'undefined') { @>
-                <button type="submit" class="btn btn-success col-span-7 little-marge-right">
+                <button type="submit" class="btn btn-blue col-span-7 little-marge-right">
                     <fmt:message key="tatami.form.save"/>
                 </button>
-                <button type="reset" class="btn btn-danger col-span-4">
+                <button type="reset" class="btn btn-red col-span-4">
                     <fmt:message key="tatami.form.cancel"/>
                 </button>
             <@ } else { @>
-                <button type="submit" class="btn btn-success col-span-12">
+                <button type="submit" class="btn btn-blue col-span-12">
                     <fmt:message key="tatami.form.save"/>
                 </button>
             <@ } @>
@@ -384,7 +384,7 @@
         <div class="return"/>
         <br/>
         <div class="form-actions">
-            <button type="submit" class="btn btn-success col-span-12">
+            <button type="submit" class="btn btn-blue col-span-12">
                 <fmt:message key="tatami.form.save"/>
             </button>
         </div>
@@ -402,11 +402,11 @@
     </td>
     <td>
         <@ if(publicGroup && !archivedGroup) { @>
-            <span class="label labelSizeNormal label-warning"><fmt:message key="tatami.group.add.public"/></span>
+            <span class=""><fmt:message key="tatami.group.add.public"/></span>
         <@ } else if(publicGroup && archivedGroup || !publicGroup && archivedGroup) { @>
-            <span class="label labelSizeNormal"><fmt:message key="tatami.group.add.archived"/></span>
+            <span class="text-blue"><fmt:message key="tatami.group.add.archived"/></span>
         <@ } else {@>
-            <span class="label labelSizeNormal label-info"><fmt:message key="tatami.group.add.private"/></span>
+            <span class="text-red"><fmt:message key="tatami.group.add.private"/></span>
         <@ } @>
     </td>
     <td>
@@ -414,7 +414,7 @@
     </td>
       <td>
           <@ if(publicGroup && !administrator) { @>
-          <a class="btn-title toggleGroup pull-right label labelSizeNormal <@= (member)?'label-info':'' @>">
+          <a class="btn-blue toggleGroup pull-right label labelSizeNormal <@= (member)?'label-info':'' @>">
               <@ if(member) { @>
               <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="tatami.user.followed"/></span></span>
               <@ } else { @>
@@ -422,7 +422,7 @@
               <@ } @>
           </a>
           <@ } else if(administrator) { @>
-          <a href="/tatami/account/#/groups/<@= groupId @>"  class="btn-title toggleTag pull-right label labelSizeNormal label-info hidden-phone">
+          <a href="/tatami/account/#/groups/<@= groupId @>"  class="btn-blue toggleTag pull-right label labelSizeNormal label-info hidden-phone">
               <span class="glyphicon glyphicon-th-large"> <span><fmt:message key="tatami.group.edit.link"/></span></span>
           </a>
           <@ } @>
@@ -469,7 +469,7 @@
     <td>
        
             <@ if (window.username !== username) { @>
-                <button type="button" class="btn btn-success input-block-level delete">
+                <button type="button" class="btn btn-blue input-block-level delete">
                     <fmt:message key="tatami.group.edit.member.delete"/>
                 </button>
             <@ } @>
@@ -502,7 +502,7 @@
         <a href="/tatami/home/#/tags/<@= name @>" title="<@= name @>">#<@= name @></a>
     </td>
     <td class="follow">
-        <a class="btn-title toggleTag pull-right label labelSizeNormal <@= (followed)?'label-info':'' @> ">
+        <a class="btn-blue toggleTag pull-right label labelSizeNormal <@= (followed)?'label-info':'' @> ">
             <@ if(followed) { @>
             <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="tatami.user.followed"/></span></span>
             <@ } else { @>
@@ -559,7 +559,7 @@
     <td><@= (size/1000) @> kb</td>
     <td><@= prettyPrintCreationDate @> </td>
     <td>
-        <span class="btn btn-primary btn-block">
+        <span class="btn btn-blue btn-block">
             <fmt:message key="tatami.user.status.delete"/>
         </span>
     </td>
