@@ -683,7 +683,6 @@ margin-bottom: 20px;
 .tatams-content-title {
     border: 1px solid #1597a2;
     background-color: rgba(21, 151, 162, 0.12);
-    margin-bottom: 5px;
     border-radius: 5px 5px 2px 2px;
 }
 
@@ -714,7 +713,6 @@ margin-bottom: 20px;
 .tatam-expand-container {
     border-top: 1px solid #1597a2;
     border-bottom: 1px solid #1597a2;
-    border-radius: 5px;
 }
 
 .tatam-background {
@@ -753,7 +751,7 @@ margin-bottom: 20px;
 
 .typeahead.dropdown-menu.hasCategory{
     /*width: 280px;*/
-    background: #EDEDED;
+    background: rgba(23, 23, 23, 0.68);
     padding: 0px;
 }
 
@@ -777,13 +775,11 @@ margin-bottom: 20px;
 .hasCategory .item{
     height: 100%;
     margin-left: 40px;
-    background: #FFFFFF;
     cursor: pointer;
 }
 .hasCategory .category{
     cursor: default;
     height: auto;
-    background: #EDEDED;
     padding: 6px 5px 5px 13px;
     width:30px;
 }
@@ -813,7 +809,7 @@ margin-bottom: 20px;
     margin: 0 1px 0 0;
 }
 .hasCategory li.item h4 a{
-    color:#000;
+    color:#fafafa;
     padding:0;
 }
 .hasCategory li.item p{
@@ -828,17 +824,9 @@ margin-bottom: 20px;
 }
 .hasCategory li.item.active,
 .hasCategory li.item:hover {
-    color: #ffffff;
     text-decoration: none;
-    background-color: #0081c2;
-    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
-    background-repeat: repeat-x;
+    background-color: #1597a2;
     outline: 0;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
 }
 .hasCategory li.item a:hover{
     text-decoration: none;

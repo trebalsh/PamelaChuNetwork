@@ -138,12 +138,12 @@
                                 <fmt:message key="tatami.menu.profile"/>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="/tatami/account/#/preferences">
                                 <span class="glyphicon glyphicon-picture"></span>
                                 <fmt:message key="tatami.menu.preferences"/>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="/tatami/account/#/password">
                                 <span class="glyphicon glyphicon-lock"></span>

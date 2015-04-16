@@ -240,7 +240,7 @@
             <sec:authorize ifAnyGranted="ROLE_ADMIN">
                 <@ if (statusPrivate == false && groupId == '') { @>
                 <button class="btn-link status-action status-action-announce button-ios"
-                        confirmation-text='<p><fmt:message key="tatami.user.status.confirm.announce"/></p><p class="text-center">
+                        confirmation-text='<p class="text-blue"><fmt:message key="tatami.user.status.confirm.announce"/></p><p class="text-center">
                                              <a class="btn btn-red status-action-announce-cancel" href="#"><fmt:message key="tatami.form.cancel"/></a>
                                              <a class="btn btn-red status-action-announce-confirm" href="#"><fmt:message key="tatami.user.status.announce"/></a>
                                              </p>'>
@@ -250,7 +250,7 @@
             </sec:authorize>
             <@ if (Tatami.app.user.get('username') == username) { @>
             <button class="btn-link status-action status-action-delete button-ios"
-                    confirmation-text='<p><fmt:message key="tatami.user.status.confirm.delete"/></p><p class="text-center">
+                    confirmation-text='<p class="text-blue"><fmt:message key="tatami.user.status.confirm.delete"/></p><p class="text-center">
                                          <button class="btn btn-red status-action-delete-cancel" href="#"><fmt:message key="tatami.form.cancel"/></button>
                                          <button class="btn btn-red status-action-delete-confirm" href="#"><fmt:message key="tatami.user.status.delete"/></button>
                                          </p>'>
