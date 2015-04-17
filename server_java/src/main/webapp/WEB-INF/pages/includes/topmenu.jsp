@@ -27,12 +27,12 @@
                     <c:if test="${currentPage == null || currentPage != 'home'}">
                       <a href="/tatami/home/timeline">
                     </c:if>
-                    <span>
-                        <span class="glyphicon glyphicon-th-list"></span>
-                        <span class="hidden-tablet">
-                            <fmt:message key="tatami.timeline"/>
+                        <span>
+                            <span class="glyphicon glyphicon-home"></span>
+                            <span class="hidden-tablet">
+                                <fmt:message key="tatami.timeline"/>
+                            </span>
                         </span>
-                    </span>
                     </a>
                 </li>
                 <!-- <li class="dropdown pointer">
@@ -121,10 +121,20 @@
             <c:if test="${currentPage != null && currentPage == 'home'}">
             <sec:authorize ifAnyGranted="ROLE_USER">
             <ul class="nav pull-right">
+                <li>
+                    <a href="/tatami/account/#/profile">
+                        <span>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="hidden-tablet">
+                                <fmt:message key="tatami.menu.profile"/>
+                            </span>
+                        </span>
+                    </a>
+                </li>
                 <li class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown">
                     <span>
-                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-th-list"></span>
                         <span class="hidden-tablet">
                             <fmt:message key="tatami.menu.account"/>
                         </span>
@@ -132,13 +142,13 @@
                     </span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
+                        <!-- <li>
                             <a href="/tatami/account/#/profile">
                                 <span class="glyphicon glyphicon-user"></span>
                                 <fmt:message key="tatami.menu.profile"/>
                             </a>
                         </li>
-                        <!-- <li>
+                        <li>
                             <a href="/tatami/account/#/preferences">
                                 <span class="glyphicon glyphicon-picture"></span>
                                 <fmt:message key="tatami.menu.preferences"/>

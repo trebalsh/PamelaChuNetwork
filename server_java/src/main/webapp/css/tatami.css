@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Play', sans-serif;
     color: #fafafa;
 }
 a {
@@ -20,11 +20,16 @@ a:focus {
     color: #1597a2 !important;
     font-family: 'Orbitron', sans-serif;
 }
+.sub-title-home {
+    font-size: 17px;   
+}
 .text-white {
     color: #fafafa !important;   
 }
 .text-blue {
-    color: #1597a2 !important;   
+    color: #1597a2 !important;
+        font-family: 'Play', sans-serif;
+
 }
 .text-red {
     color: #a21515 !important;   
@@ -53,11 +58,11 @@ a:focus {
 }
 .well {
     background-color: rgba(21, 151, 162, 0.12);
-    border-color: #1597a2;
+    border-color: rgba(21, 151, 162, 0.5);
 }
 .modal-content {
     background-color: rgba(0, 26, 28, 0.83);
-    border-color: #1597a2;
+    border-color: rgba(21, 151, 162, 0.5);
 }
 @media screen and (max-width: 767px) {
     .navbar .nav, .navbar .navbar-form {
@@ -154,9 +159,9 @@ h4 {
 }
 
 .navbar {
-    background-color: rgba(1, 27, 29, 0.0);
+    background-color: rgba(20, 20, 20, 0);
     color: #fafafa;
-    border: 1px solid rgba(255, 255, 255, 0.29);
+    border-bottom: 1px solid rgba(21, 151, 162, 0.3);
     margin: -1px;
 }
 .controle-group
@@ -362,16 +367,16 @@ div.jGrowl-notification{
 }
 
 .img-medium {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-position: center center;
     background-size: cover;
     -ms-behavior: url(/css/vendor/backgroundsize.min.htc);
 }
 
 .img-big {
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-position: center center;
     background-size: cover;
     -ms-behavior: url(/css/vendor/backgroundsize.min.htc);
@@ -475,11 +480,12 @@ div.jGrowl-notification{
 .useritem, .useritemmini {
     display: block;
     padding: 5px;
+    border-bottom: 1px solid rgba(21, 151, 162, 0.3);
+
 }
 
 .mention-share {
     font-size: 80%;
-    color: #888888;
 }
 
 .tatam.favorite {
@@ -641,8 +647,8 @@ margin-bottom: 20px;
 
 .tatam {
     background-color: rgba(21, 151, 162, 0.12);
-    border-top: 1px solid #1597a2;
-    border-bottom: 1px solid #1597a2;
+    border-top: 1px solid rgba(21, 151, 162, 0.5);
+    border-bottom: 1px solid rgba(21, 151, 162, 0.5);
     padding: 0px;
     margin-bottom: -1px;
     overflow: hidden;
@@ -651,8 +657,8 @@ margin-bottom: 20px;
 }
 
 .tatam-border-lr {
-    border-right: 1px solid #1597a2;
-    border-left: 1px solid #1597a2;
+    border-right: 1px solid rgba(21, 151, 162, 0.5);
+    border-left: 1px solid rgba(21, 151, 162, 0.5);
     margin-bottom: 5px;
 }
 
@@ -681,7 +687,7 @@ margin-bottom: 20px;
 }
 
 .tatams-content-title {
-    border: 1px solid #1597a2;
+    border: 1px solid rgba(21, 151, 162, 0.5);
     background-color: rgba(21, 151, 162, 0.12);
     border-radius: 5px 5px 2px 2px;
 }
@@ -701,7 +707,7 @@ margin-bottom: 20px;
 .tatams-content hr {
     padding: 0px;
     margin: 0px;
-    border-top: 1px solid #1597a2;
+    border-top: 1px solid rgba(21, 151, 162, 0.5);
     margin-bottom: -2px;
     margin-top: 0px;
 }
@@ -711,8 +717,8 @@ margin-bottom: 20px;
 }
 
 .tatam-expand-container {
-    border-top: 1px solid #1597a2;
-    border-bottom: 1px solid #1597a2;
+    border-top: 1px solid rgba(21, 151, 162, 0.5);
+    border-bottom: 1px solid rgba(21, 151, 162, 0.5);
 }
 
 .tatam-background {
@@ -721,7 +727,7 @@ margin-bottom: 20px;
 
 .nav-justified {
     border-collapse: collapse;
-    border: 1px solid #1597a2;
+    border: 1px solid rgba(21, 151, 162, 0.5);
     border-radius: 2px;
 }
 
@@ -742,7 +748,7 @@ margin-bottom: 20px;
 }
 
 .nav-tabs.nav-justified > .active > a {
-    border-bottom-color: #1597a2;
+    border-bottom-color: rgba(21, 151, 162, 0.5);
 }
 
 /**
@@ -791,7 +797,7 @@ margin-bottom: 20px;
 }
 .hasCategory li.item.active a{
     height: 24px;
-    padding:0;
+    background-color: rgba(21, 151, 162, 0.28) !important;
 }
 .hasCategory li:first-child{
     border-top: none;
@@ -825,7 +831,7 @@ margin-bottom: 20px;
 .hasCategory li.item.active,
 .hasCategory li.item:hover {
     text-decoration: none;
-    background-color: #1597a2;
+    background-color: rgba(21, 151, 162, 0.28);
     outline: 0;
 }
 .hasCategory li.item a:hover{
@@ -922,7 +928,7 @@ margin-bottom: 20px;
 }
 
 #status-content-container {
-    margin-left: 65px;
+    margin-left: 80px;
     margin-right: 30px;
 }
 
@@ -937,7 +943,7 @@ margin-bottom: 20px;
 @media screen and (min-width: 767px) {
     #buttons {
         clear: both;
-        margin-left: 60px;
+        margin-left: 80px;
     }
 }
 @media screen and (max-width: 767px) {

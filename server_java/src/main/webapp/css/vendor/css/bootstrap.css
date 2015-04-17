@@ -1256,10 +1256,10 @@ input[type="color"] {
   padding: 6px 9px;
   font-size: 14px;
   line-height: 20px;
-  color: #555555;
+  color: #fafafa;
   vertical-align: middle;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  background-color: rgba(0, 30, 31, 0.4);
+  border: 1px solid #fafafa;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1315,8 +1315,8 @@ input[type="color"]:focus {
   outline: thin dotted \9;
   /* IE6-9 */
 
-  -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
-          box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: 0 0 8px rgba(21, 151, 162, 0.5);
+          box-shadow: 0 0 8px rgba(21, 151, 162, 0.5);
 }
 
 input[type="radio"],
@@ -1573,7 +1573,6 @@ select:focus:invalid:focus {
   padding: 19px 20px 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  border-top: 1px solid #e5e5e5;
 }
 
 .form-actions:before,
@@ -2889,13 +2888,7 @@ fieldset[disabled] .btn-link:focus {
   color: #ffffff;
   text-decoration: none;
   background-color: #357ebd;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#428bca), to(#357ebd));
-  background-image: -webkit-linear-gradient(top, #428bca, #357ebd);
-  background-image: -moz-linear-gradient(top, #428bca, #357ebd);
-  background-image: linear-gradient(to bottom, #428bca, #357ebd);
-  background-repeat: repeat-x;
   outline: 0;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff357ebd', GradientType=0);
 }
 
 .dropdown-menu > .disabled > a,

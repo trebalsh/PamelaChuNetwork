@@ -537,20 +537,20 @@
 </script>
 <script type="text/template" id="ProfileStats">
     <div class="well well-small">
-        <h4>
+        <!-- <h4>
             <span class="glyphicon glyphicon-signal"></span>
             <fmt:message key="tatami.statistics"/>
-        </h4>
+        </h4> -->
 
         <div>
-            <p>
+            <!-- <p>
                 <strong>
                     <fmt:message key="tatami.badge.status"/> :
                 </strong>
                 <a href="#users/<@= username @>">
                     <span class="badge"><@= statusCount @></span>
                 </a>
-            </p>
+            </p> -->
 
             <p>
                 <strong>
@@ -573,7 +573,7 @@
     </div>
 </script>
 <script type="text/template" id="ProfileInformations">
-    <h4 class="profile-card background-image-fffix">
+    <h4 class="profile-card background-image-fffix text-center">
         <div class="img img-rounded img-big" style="background-image: url(<@= avatarURL @>);" />
     </h4>
     <div class="well well-small">

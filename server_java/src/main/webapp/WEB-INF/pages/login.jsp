@@ -16,7 +16,7 @@
 <div class="row">
     <div class="container-fluid">
         <img class="logo-site" src="/img/company-logo.png" alt="<fmt:message key="tatami.logo"/>">
-        <h2 class="text-center title-blue"><fmt:message key="tatami.presentation"/></h2>
+        <h3 class="text-center title-blue"><fmt:message key="tatami.presentation"/></h3>
     </div>
 </div>
 
@@ -53,9 +53,9 @@
 
 <div class="row">
     <div class="col-span-6">
-        <h3 class="title-blue"><fmt:message key="tatami.register.title"/></h3>
+        <h4 class="title-blue sub-title-home"><fmt:message key="tatami.register.title"/></h4>
 
-        <p class="text-white">
+        <p class="text-blue">
             <fmt:message key="tatami.register.text.1"/>
             <fmt:message key="tatami.register.text.2"/>
         </p>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="col-span-6">
-        <h3 class="title-blue"><fmt:message key="tatami.authentification"/></h3>
+        <h4 class="title-blue sub-title-home"><fmt:message key="tatami.authentification"/></h4>
 
         <form action="/tatami/authentication" method="post" accept-charset="utf-8" id="loginForm" class="well">
             <fieldset class="row-fluid">
