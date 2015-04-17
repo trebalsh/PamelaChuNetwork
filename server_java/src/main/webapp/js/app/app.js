@@ -95,90 +95,90 @@
         return this;
     };
 
-    var Tatami = {
+    var PamelaChu = {
         Models : {},
         Collections : {},
         Views : {},
         Factories : {}
     };
 
-    Tatami.app = new Backbone.Marionette.Application();
+    PamelaChu.app = new Backbone.Marionette.Application();
 
-    Tatami.app.addInitializer(function(){
+    PamelaChu.app.addInitializer(function(){
         $('input, textarea').placeholder();
     });
 
     // Polling : used as long as Atmosphere is not working with the proxy
-    Tatami.app.addInitializer(function(){
+    PamelaChu.app.addInitializer(function(){
         var autoRefresh = function(){
-            Tatami.app.trigger('refresh');
+            PamelaChu.app.trigger('refresh');
             _.delay(autoRefresh, 20000);
         };
         autoRefresh();
     });
 
-    Tatami.app.addInitializer(function(){
+    PamelaChu.app.addInitializer(function(){
         var $w = $(window);
         var $d = $(document);
 
         var autoNext = _.debounce(function(){
             if($w.height() + $d.scrollTop() > $d.height() - 200)
-                Tatami.app.trigger('next');
+                PamelaChu.app.trigger('next');
         }, jQuery.fx.speeds._default);
 
         $(window).scroll(autoNext);
     });
 
-    Tatami.app.addInitializer(function(){
-        Tatami.app.addRegions({
-            header: '#tatamiHeader',
-            side: '#tatamiSide',
-            body: '#tatamiBody',
+    PamelaChu.app.addInitializer(function(){
+        PamelaChu.app.addRegions({
+            header: '#pamelaChuHeader',
+            side: '#pamelaChuSide',
+            body: '#pamelaChuBody',
             slider: '#slider'
         });
     });
 
-    Tatami.app.addInitializer(function(){
-        Tatami.app.edit = new Tatami.Views.StatusEdit({
-            el: $('#tatamiEdit')
+    PamelaChu.app.addInitializer(function(){
+        PamelaChu.app.edit = new PamelaChu.Views.StatusEdit({
+            el: $('#pamelaChuEdit')
         });
         if (!ie || ie>9){
-            Tatami.app.favi = new Favico({
+            PamelaChu.app.favi = new Favico({
                 animation : 'popFade'
             });
         }
     });
 
-    Tatami.app.on('changeFavicon', function(options){
+    PamelaChu.app.on('changeFavicon', function(options){
         if (!ie || ie>9){
             setTimeout(function(){
-                Tatami.app.favi.badge(options.countFavicon);
+                PamelaChu.app.favi.badge(options.countFavicon);
             },1000)
         }
     });
 
     if(!ios) {
-        Tatami.app.addInitializer(function(){
-            Tatami.app.navbar = new Tatami.Views.Navbar({
+        PamelaChu.app.addInitializer(function(){
+            PamelaChu.app.navbar = new PamelaChu.Views.Navbar({
                 el: $('#navbar')
             });
         });
 
-        Tatami.app.addInitializer(function(){
-            Tatami.app.on('edit:show', function(){
-                Tatami.app.edit.show.apply(Tatami.app.edit, arguments);
+        PamelaChu.app.addInitializer(function(){
+            PamelaChu.app.on('edit:show', function(){
+                PamelaChu.app.edit.show.apply(PamelaChu.app.edit, arguments);
             });
         });
 
     }
 
-    Tatami.app.on("initialize:after", function(options){
+    PamelaChu.app.on("initialize:after", function(options){
         //if (Backbone.History.started){
             if (Backbone.history){
-            Tatami.app.router = new Tatami.Router();
+            PamelaChu.app.router = new PamelaChu.Router();
             Backbone.history.start({
                 pushState: true,
-                root: "/tatami/home/"
+                root: "/pamelaChu/home/"
             });
             if (Backbone.history._hasPushState) {
                 $(document).delegate("a", "click", function(evt) {
@@ -195,21 +195,21 @@
 
     $(function(){
         var onStart = _.after(2, function(){
-            Tatami.app.start();
+            PamelaChu.app.start();
         });
 
-        Tatami.app.user = new Tatami.Models.User({
+        PamelaChu.app.user = new PamelaChu.Models.User({
             username: username
         });
-        Tatami.app.groups = new Tatami.Collections.Groups();
+        PamelaChu.app.groups = new PamelaChu.Collections.Groups();
 
-        Tatami.app.user.fetch({
+        PamelaChu.app.user.fetch({
             success: onStart
         });
-        Tatami.app.groups.fetch({
+        PamelaChu.app.groups.fetch({
             success: onStart
         });
     });
 
-    window.Tatami = Tatami;
+    window.PamelaChu = PamelaChu;
 })(window, Backbone, jQuery, _);

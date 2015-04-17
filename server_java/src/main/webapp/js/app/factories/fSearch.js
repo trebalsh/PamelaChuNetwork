@@ -1,49 +1,49 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var searchModel;
 
-    Tatami.Factories.Search = {
+    PamelaChu.Factories.Search = {
         searchBody: function(input){          
             if(searchModel==null)
-                searchModel = new Tatami.Models.Search({"input": input});
-            var searchBody = new Tatami.Views.SearchBody({model: searchModel});
+                searchModel = new PamelaChu.Models.Search({"input": input});
+            var searchBody = new PamelaChu.Views.SearchBody({model: searchModel});
 
             return searchBody;
         },
         searchHeader: function(input){
-            searchModel = new Tatami.Models.Search({"input": input});
-            var vSearchHeader = new Tatami.Views.SearchHeader({model: searchModel});
+            searchModel = new PamelaChu.Models.Search({"input": input});
+            var vSearchHeader = new PamelaChu.Views.SearchHeader({model: searchModel});
 
             return vSearchHeader;
         },
 
         searchUsers: function(input){
-           var c = new Tatami.Collections.SearchUsers();
+           var c = new PamelaChu.Collections.SearchUsers();
             if(input) c.fetch({data: {q : input} });
 
-            return  new Tatami.Views.UserList({
+            return  new PamelaChu.Views.UserList({
                 collection: c,
                 itemViewOptions:{desactivable:true}
             });
         },
 
         searchGroups: function(input){
-            var c = new Tatami.Collections.SearchGroups();
+            var c = new PamelaChu.Collections.SearchGroups();
             if(input) c.fetch({data: {q : input} });
 
-            return  new Tatami.Views.GroupsList({
+            return  new PamelaChu.Views.GroupsList({
                 collection: c
             });
         },
 
         searchTags: function(input){
-            var c = new Tatami.Collections.SearchTags();
+            var c = new PamelaChu.Collections.SearchTags();
             if(input) c.fetch({data: {q : input} });
 
-            return  new Tatami.Views.TagsList({
+            return  new PamelaChu.Views.TagsList({
                 collection: c
             });
         }
     };
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

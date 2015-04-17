@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var GroupItems = Backbone.Marionette.ItemView.extend({
         template: '#GroupItems'
     });
@@ -9,6 +9,6 @@
         template: '#Groups'
     });
 
-    Tatami.Views.GroupItems = GroupItems;
-    Tatami.Views.Groups = Groups;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.GroupItems = GroupItems;
+    PamelaChu.Views.Groups = Groups;
+})(Backbone, _, PamelaChu);

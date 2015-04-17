@@ -1,4 +1,4 @@
 
 var MPassword = Backbone.Model.extend({
-    url: '/tatami/rest/account/password'
+    url: '/pamelaChu/rest/account/password'
 });

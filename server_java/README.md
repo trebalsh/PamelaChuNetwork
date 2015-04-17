@@ -1,23 +1,23 @@
-Tatami
+PamelaChu
 ================
 
 Presentation
 ------------------
 
-Tatami is an Open Source enterprise social network.
+PamelaChu is an Open Source enterprise social network.
 
-A public installation of Tatami is provided by [Ippon Technologies](http://www.ippon.fr) at : [https://tatami.ippon.fr](https://tatami.ippon.fr)
+A public installation of PamelaChu is provided by [Ippon Technologies](http://www.ippon.fr) at : [https://pamelaChu.ippon.fr](https://pamelaChu.ippon.fr)
 
-Tatami is made with the following technologies :
+PamelaChu is made with the following technologies :
 
 - HTML5, [Backbone.js](http://backbonejs.org/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - [The Spring Framework](http://www.springsource.org/)
 - [Apache Cassandra](http://cassandra.apache.org/)
 - [Elastic Search](http://www.elasticsearch.org/)
 
-Tatami is developed by [Ippon Technologies](http://www.ippon.fr)
+PamelaChu is developed by [Ippon Technologies](http://www.ippon.fr)
 
-Current build status: [![Build Status](https://drone.io/github.com/ippontech/tatami/status.png)](https://drone.io/github.com/ippontech/tatami/latest)
+Current build status: [![Build Status](https://drone.io/github.com/ippontech/pamelaChu/status.png)](https://drone.io/github.com/ippontech/pamelaChu/latest)
 
 Installation for developers
 ---------------------------------------
@@ -30,7 +30,7 @@ Installation for developers
 - Run Jetty from Maven : `mvn jetty:run`
 - Connect to the application at http://127.0.0.1:8080
 
-To create users, use the registration form. As we have not configured a SMTP server (you can configure it in src/main/resources/META-INF/tatami/tatami.properties - see below "installation for production use" for more options), the validation URL as well as the password will not be e-mailed to you, but you can see them in the log (look at the Jetty console output).
+To create users, use the registration form. As we have not configured a SMTP server (you can configure it in src/main/resources/META-INF/pamelaChu/pamelaChu.properties - see below "installation for production use" for more options), the validation URL as well as the password will not be e-mailed to you, but you can see them in the log (look at the Jetty console output).
 
 ### Using Tomcat instead of Jetty
 
@@ -52,7 +52,7 @@ export MAVEN_OPTS="$MAVEN_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:
 
 ### Cassandra troubleshooting
 
-On Mac OS X, you should use JDK 6 and not JDK 7, see [issue #281](https://github.com/ippontech/tatami/issues/281#issuecomment-12430701).
+On Mac OS X, you should use JDK 6 and not JDK 7, see [issue #281](https://github.com/ippontech/pamelaChu/issues/281#issuecomment-12430701).
 
 Installation for production use
 ---------------------------------------
@@ -63,21 +63,21 @@ Installation for production use
 - Install Cassandra : the application will work fine with just one node, but ideally you should have a cluster with at least 3 or 5 nodes
 - Cassandra is configured with its cassandra.yaml file : don't forget to backup your "data" and "commitlog" directories
 
-### Tatami installation
+### PamelaChu installation
 
-In order to use a stable version, use one of the [available tags](https://github.com/ippontech/tatami/tags).
+In order to use a stable version, use one of the [available tags](https://github.com/ippontech/pamelaChu/tags).
 
-Tatami can be configured with the src/main/resources/META-INF/tatami/tatami.properties file. You can configure this file in 2 ways :
+PamelaChu can be configured with the src/main/resources/META-INF/pamelaChu/pamelaChu.properties file. You can configure this file in 2 ways :
 
-- Edit the file in your own Tatami fork
+- Edit the file in your own PamelaChu fork
 - Properties in this file are replaced at build time by Maven : you can set up your own Maven profile with your specific properties
 
-Once Tatami is started, you will be able to check your properties at runtime in the Administration page.
+Once PamelaChu is started, you will be able to check your properties at runtime in the Administration page.
 
-To deploy Tatami :
+To deploy PamelaChu :
 
-- Create the Tatami WAR file : `mvn package`
-- The WAR file will be called "root.war", as Tatami should be run as the root application (on the "/" Web context)
+- Create the PamelaChu WAR file : `mvn package`
+- The WAR file will be called "root.war", as PamelaChu should be run as the root application (on the "/" Web context)
 - Deploy the WAR file on your favorite Java EE server
 - The WAR has been tested on Jetty 8 and Tomcat 7, and should work fine on all Java EE servers
 
@@ -94,10 +94,10 @@ Launching stress tests
 Stress tests are done with [Apache JMeter](http://jmeter.apache.org/).
 
 - Launch Cassandra
-- Run Tatami from Maven with the `stress-tests` profile : `mvn jetty:run -Pstress-tests`
+- Run PamelaChu from Maven with the `stress-tests` profile : `mvn jetty:run -Pstress-tests`
 - Launch JMeter
-- Run the `src/test/jmeter/tatami-create-users.jmx` script : it will create 200 normal users, which each has 200 follower users
-- Run the stress test : `src/test/jmeter/tatami-stress-test.jmx`
+- Run the `src/test/jmeter/pamelaChu-create-users.jmx` script : it will create 200 normal users, which each has 200 follower users
+- Run the stress test : `src/test/jmeter/pamelaChu-stress-test.jmx`
 
 Launching functional tests
 ---------------------------------------
@@ -106,7 +106,7 @@ Functional tests are a work in progress, you do not have to run them in order to
 
 Requirement : all components must run on localhost :
 
-- for LDAP authentication, the tests starts the LDAP server that the Tatami server will use
+- for LDAP authentication, the tests starts the LDAP server that the PamelaChu server will use
 - for fixture setup and assertions, the test connects directly to the local cassandra
 
 Launching UI Tests from maven :
@@ -114,7 +114,7 @@ Launching UI Tests from maven :
 - add this profile on your settings.xml :
 ```xml
 <profile>
-  <id>tatami</id>
+  <id>pamelaChu</id>
   <activation>
     <activeByDefault>true</activeByDefault>
   </activation>
@@ -138,8 +138,8 @@ Launching UI Tests from your IDE :
 
 - Enable a groovy plugin on your IDE
 - Activate maven profile "uitest" or add src/integration/* in your classpath
-- Run Tatami with Maven : `mvn cassandra:delete cassandra:start jetty:run -Djetty.scanIntervalSeconds=0 -Puitest`
-- Run Specs (in src\integration\java\fr\ippon\tatami\uitest) as Junit Tests from your IDE
+- Run PamelaChu with Maven : `mvn cassandra:delete cassandra:start jetty:run -Djetty.scanIntervalSeconds=0 -Puitest`
+- Run Specs (in src\integration\java\fr\ippon\pamelaChu\uitest) as Junit Tests from your IDE
   => you have to set adequate system properties to your running configurations (the same as those that are necessary in setting.xml for maven : see above)
 
 

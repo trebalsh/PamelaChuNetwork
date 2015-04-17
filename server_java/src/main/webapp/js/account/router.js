@@ -44,8 +44,8 @@ _.templateSettings = {
 
         profile: function() {
             this.selectMenu('profile');
-            var vAccountProfile = Tatami.Factories.Admin.profile() ;
-            var vAccountProfileDestroy = Tatami.Factories.Admin.destroyProfile() ;
+            var vAccountProfile = PamelaChu.Factories.Admin.profile() ;
+            var vAccountProfileDestroy = PamelaChu.Factories.Admin.destroyProfile() ;
 
             this.resetView();
             contentLayout.region1.show(vAccountProfile);
@@ -54,7 +54,7 @@ _.templateSettings = {
 
         preferences: function(){
             this.selectMenu('preferences');
-            var vPreferences = Tatami.Factories.Admin.preferences();
+            var vPreferences = PamelaChu.Factories.Admin.preferences();
 
             this.resetView();
             contentLayout.region1.show(vPreferences);
@@ -62,7 +62,7 @@ _.templateSettings = {
 
         password: function(){
             this.selectMenu('password');
-            var vPassword = Tatami.Factories.Admin.password();
+            var vPassword = PamelaChu.Factories.Admin.password();
 
             this.resetView();
             contentLayout.region1.show(vPassword);
@@ -70,9 +70,9 @@ _.templateSettings = {
 
         groups: function(){
             this.selectMenu('groups');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#groups-menu');
-            var vNewGroup = Tatami.Factories.Groups.newGroup();
-            var listGroups = Tatami.Factories.Groups.groupsSubscribe();
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#groups-menu');
+            var vNewGroup = PamelaChu.Factories.Groups.newGroup();
+            var listGroups = PamelaChu.Factories.Groups.groupsSubscribe();
 
             this.resetView();
             contentLayout.region1.show(vNewGroup);
@@ -83,9 +83,9 @@ _.templateSettings = {
 
         recommendedGroups: function(){
             this.selectMenu('groups');
-            var vNewGroup = Tatami.Factories.Groups.newGroup();
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#groups-menu');
-            var listGroupsRecommended = Tatami.Factories.Groups.groupsRecommended();
+            var vNewGroup = PamelaChu.Factories.Groups.newGroup();
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#groups-menu');
+            var listGroupsRecommended = PamelaChu.Factories.Groups.groupsRecommended();
 
             this.resetView();
             contentLayout.region1.show(vNewGroup);
@@ -96,10 +96,10 @@ _.templateSettings = {
 
         searchGroup: function(inputURL){
             this.selectMenu('groups');
-            var vNewGroup = Tatami.Factories.Groups.newGroup();
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#groups-menu');
-            var vTabSearch = Tatami.Factories.Admin.tabSearch(inputURL, 'groups/search/');
-            var vGroupList = Tatami.Factories.Search.searchGroups(inputURL);
+            var vNewGroup = PamelaChu.Factories.Groups.newGroup();
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#groups-menu');
+            var vTabSearch = PamelaChu.Factories.Admin.tabSearch(inputURL, 'groups/search/');
+            var vGroupList = PamelaChu.Factories.Search.searchGroups(inputURL);
 
             vGroupList.listenTo(vTabSearch, 'search', function(input){
                 vGroupList.collection.fetch({data: {q : input} });
@@ -115,9 +115,9 @@ _.templateSettings = {
 
         editGroup: function(id){
             this.selectMenu('groups');
-            var vEditGroup = Tatami.Factories.Admin.editGroup(id);
-            var vAddUserGroup = Tatami.Factories.Admin.addUserInGroup(id);
-            var vListUsersInGroup = Tatami.Factories.Groups.groupUsers(id);
+            var vEditGroup = PamelaChu.Factories.Admin.editGroup(id);
+            var vAddUserGroup = PamelaChu.Factories.Admin.addUserInGroup(id);
+            var vListUsersInGroup = PamelaChu.Factories.Groups.groupUsers(id);
 
             this.resetView();
             contentLayout.region1.show(vEditGroup);
@@ -127,8 +127,8 @@ _.templateSettings = {
 
         tags: function(){
             this.selectMenu('tags');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#tags-menu');
-            var listTags = Tatami.Factories.Home.tagsFollow();
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#tags-menu');
+            var listTags = PamelaChu.Factories.Home.tagsFollow();
 
             this.resetView();
             contentLayout.region1.show(vTabMenu);
@@ -138,8 +138,8 @@ _.templateSettings = {
 
         recommendedTags: function(){
             this.selectMenu('tags');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#tags-menu');
-            var listTags = Tatami.Factories.Home.tagsRecommended() ;
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#tags-menu');
+            var listTags = PamelaChu.Factories.Home.tagsRecommended() ;
 
             this.resetView();
             contentLayout.region1.show(vTabMenu);
@@ -149,9 +149,9 @@ _.templateSettings = {
 
         searchTags: function(inputURL){
             this.selectMenu('tags');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#tags-menu');
-            var vTabSearch = Tatami.Factories.Admin.tabSearch(inputURL, 'tags/search/');
-            var vTagList = Tatami.Factories.Search.searchTags(inputURL);
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#tags-menu');
+            var vTabSearch = PamelaChu.Factories.Admin.tabSearch(inputURL, 'tags/search/');
+            var vTagList = PamelaChu.Factories.Search.searchTags(inputURL);
 
             vTagList.listenTo(vTabSearch, 'search', function(input){
                 vTagList.collection.fetch({data: {q : input} });
@@ -166,8 +166,8 @@ _.templateSettings = {
 
         users: function(){
             this.selectMenu('users');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#users-menu');
-            var listFriends = Tatami.Factories.Profile.friends(Tatami.app.user.get('username'));
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#users-menu');
+            var listFriends = PamelaChu.Factories.Profile.friends(PamelaChu.app.user.get('username'));
 
             this.resetView();
             contentLayout.region1.show(vTabMenu);
@@ -177,8 +177,8 @@ _.templateSettings = {
 
         recommendedUsers: function(){
             this.selectMenu('users');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#users-menu');
-            var listFollowers = Tatami.Factories.Home.usersRecommended();
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#users-menu');
+            var listFollowers = PamelaChu.Factories.Home.usersRecommended();
 
             this.resetView();
             contentLayout.region1.show(vTabMenu);
@@ -188,9 +188,9 @@ _.templateSettings = {
 
         searchUsers: function(inputURL){
             this.selectMenu('users');
-            var vTabMenu = Tatami.Factories.Admin.tabMenu('#users-menu');
-            var vTabSearch = Tatami.Factories.Admin.tabSearch(inputURL, 'users/search/');
-            var vListUser = Tatami.Factories.Search.searchUsers(inputURL);
+            var vTabMenu = PamelaChu.Factories.Admin.tabMenu('#users-menu');
+            var vTabSearch = PamelaChu.Factories.Admin.tabSearch(inputURL, 'users/search/');
+            var vListUser = PamelaChu.Factories.Search.searchUsers(inputURL);
 
             vListUser.listenTo(vTabSearch, 'search', function(input){
               vListUser.collection.fetch({data: {q : input} });
@@ -205,7 +205,7 @@ _.templateSettings = {
 
         status_of_the_day: function(){
             this.selectMenu('status_of_the_day');
-            var vDailyStats = Tatami.Factories.Admin.dailyStats();
+            var vDailyStats = PamelaChu.Factories.Admin.dailyStats();
 
             this.resetView();
             contentLayout.region1.show(vDailyStats);
@@ -214,9 +214,9 @@ _.templateSettings = {
         files: function(){
             this.selectMenu('files');
 
-            var vFileHeader = new Tatami.Views.FilesMenu;
-            var vQuotaFiles = Tatami.Factories.Admin.quotaFiles();
-            var vListFiles = Tatami.Factories.Admin.listFiles();
+            var vFileHeader = new PamelaChu.Views.FilesMenu;
+            var vQuotaFiles = PamelaChu.Factories.Admin.quotaFiles();
+            var vListFiles = PamelaChu.Factories.Admin.listFiles();
             this.resetView();
             contentLayout.region1.show(vFileHeader);
             contentLayout.region2.show(vQuotaFiles);

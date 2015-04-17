@@ -1,10 +1,10 @@
-(function(Backbone, _, Tatami, Modernizr, window){
+(function(Backbone, _, PamelaChu, Modernizr, window){
 
     var User = Backbone.Model.extend({
         initialize: function(){
           this.listenTo(this, 'sync', function(model){
-            if(Tatami.app.user.id === model.id)
-              Tatami.app.user.set(model.toJSON());
+            if(PamelaChu.app.user.id === model.id)
+              PamelaChu.app.user.set(model.toJSON());
           });
         },
 
@@ -27,7 +27,7 @@
             activated: true
         },
 
-        urlRoot: '/tatami/rest/users/',
+        urlRoot: '/pamelaChu/rest/users/',
 
         toJSON: function(){
             var attr = Backbone.Model.prototype.toJSON.call(this);
@@ -48,7 +48,7 @@
         },
 
         getAvatarURL: function(){
-            return (this.get('avatar'))? '/tatami/avatar/' + this.get('avatar') + '/photo.jpg': '/img/default_image_profile.png';
+            return (this.get('avatar'))? '/pamelaChu/avatar/' + this.get('avatar') + '/photo.jpg': '/img/default_image_profile.png';
         },
 
         toggleIsFriend: function(options){
@@ -63,8 +63,8 @@
         urlRoot : ''
     });
 
-    Tatami.Models.User = User;
-    Tatami.Models.UserGroup = UserGroup;
+    PamelaChu.Models.User = User;
+    PamelaChu.Models.UserGroup = UserGroup;
 
 
-})(Backbone, _, Tatami, Modernizr, window);
+})(Backbone, _, PamelaChu, Modernizr, window);

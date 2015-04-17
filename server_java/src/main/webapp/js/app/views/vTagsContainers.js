@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
     var TagsBody = Backbone.Marionette.Layout.extend({
         template: '#TagsBody',
@@ -52,8 +52,8 @@
         template :'#TagsListTemplate'
     });
 
-    Tatami.Views.TagsBody = TagsBody;
-    Tatami.Views.TagsHeader = TagsHeader;
-    Tatami.Views.TagsList = TagsList;
+    PamelaChu.Views.TagsBody = TagsBody;
+    PamelaChu.Views.TagsHeader = TagsHeader;
+    PamelaChu.Views.TagsList = TagsList;
 
-})(Backbone, _, Tatami);
+})(Backbone, _, PamelaChu);

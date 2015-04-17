@@ -9,9 +9,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/tatami/home">
-            <img src="/img/company-logo.png" alt="<fmt:message key="tatami.logo"/>">
-            <fmt:message key="tatami.title"/>
+        <a class="navbar-brand" href="/pamelaChu/home">
+            <img src="/img/company-logo.png" alt="<fmt:message key="pamelaChu.logo"/>">
+            <fmt:message key="pamelaChu.title"/>
         </a>
     <c:if test="${currentPage != null && currentPage == 'home'}">
         <button type="button" class="editTatam btn btn-blue navbar-toggle navbar-edit">
@@ -25,12 +25,12 @@
                       <a href="#/home/timeline">
                     </c:if>
                     <c:if test="${currentPage == null || currentPage != 'home'}">
-                      <a href="/tatami/home/timeline">
+                      <a href="/pamelaChu/home/timeline">
                     </c:if>
                         <span>
                             <span class="glyphicon glyphicon-home"></span>
                             <span class="hidden-tablet">
-                                <fmt:message key="tatami.timeline"/>
+                                <fmt:message key="pamelaChu.timeline"/>
                             </span>
                         </span>
                     </a>
@@ -40,78 +40,78 @@
                     <span>
                         <span class="glyphicon glyphicon-info-sign"></span>
                         <span class="hidden-tablet">
-                            <fmt:message key="tatami.menu.about"/>
+                            <fmt:message key="pamelaChu.menu.about"/>
                         </span>
                         <b class="caret"></b>
                     </span>
                     </a>
                     <ul class="dropdown-menu closed">
                         <li>
-                            <a href="/tatami/presentation">
+                            <a href="/pamelaChu/presentation">
                                 <span class="glyphicon glyphicon-eye-open"></span>
-                                <fmt:message key="tatami.menu.presentation"/>
+                                <fmt:message key="pamelaChu.menu.presentation"/>
                             </a>
                         </li>
                         <li>
-                            <a href="/tatami/tos">
+                            <a href="/pamelaChu/tos">
                                 <span class="glyphicon glyphicon-briefcase"></span>
-                                <fmt:message key="tatami.menu.tos"/>
+                                <fmt:message key="pamelaChu.menu.tos"/>
                             </a>
                         </li>
                         <li class="dropdown-submenu">
                             <a>
                                 <span class="glyphicon glyphicon-flag"></span>
-                                <fmt:message key="tatami.menu.language"/>
+                                <fmt:message key="pamelaChu.menu.language"/>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="?language=en">
-                                        <fmt:message key="tatami.menu.language.en"/>
+                                        <fmt:message key="pamelaChu.menu.language.en"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="?language=fr">
-                                        <fmt:message key="tatami.menu.language.fr"/>
+                                        <fmt:message key="pamelaChu.menu.language.fr"/>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="/tatami/license">
+                            <a href="/pamelaChu/license">
                                 <span class="glyphicon glyphicon-info-sign"></span>
-                                <fmt:message key="tatami.menu.license"/>
+                                <fmt:message key="pamelaChu.menu.license"/>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/ippontech/tatami/issues" target="_blank">
+                            <a href="https://github.com/ippontech/pamelaChu/issues" target="_blank">
                                 <span class="glyphicon glyphicon-inbox"></span>
-                                <fmt:message key="tatami.github.issues"/>
+                                <fmt:message key="pamelaChu.github.issues"/>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/ippontech/tatami" target="_blank">
+                            <a href="https://github.com/ippontech/pamelaChu" target="_blank">
                                 <span class="glyphicon glyphicon-wrench"></span>
-                                <fmt:message key="tatami.github.fork"/>
+                                <fmt:message key="pamelaChu.github.fork"/>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="http://www.ippon.fr/" target="_blank">
                                 <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                <fmt:message key="tatami.ippon.website"/>
+                                <fmt:message key="pamelaChu.ippon.website"/>
                             </a>
                         </li>
                         <li>
                             <a href="http://blog.ippon.fr/" target="_blank">
                                 <span class="glyphicon glyphicon-pencil"></span>
-                                <fmt:message key="tatami.ippon.blog"/>
+                                <fmt:message key="pamelaChu.ippon.blog"/>
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com/ippontech" target="_blank">
                                 <span class="glyphicon glyphicon-bullhorn"></span>
-                                <fmt:message key="tatami.ippon.twitter.follow"/>
+                                <fmt:message key="pamelaChu.ippon.twitter.follow"/>
                             </a>
                         </li>
                     </ul>
@@ -122,11 +122,11 @@
             <sec:authorize ifAnyGranted="ROLE_USER">
             <ul class="nav pull-right">
                 <li>
-                    <a href="/tatami/account/#/profile">
+                    <a href="/pamelaChu/account/#/profile">
                         <span>
                             <span class="glyphicon glyphicon-user"></span>
                             <span class="hidden-tablet">
-                                <fmt:message key="tatami.menu.profile"/>
+                                <fmt:message key="pamelaChu.menu.profile"/>
                             </span>
                         </span>
                     </a>
@@ -136,65 +136,65 @@
                     <span>
                         <span class="glyphicon glyphicon-th-list"></span>
                         <span class="hidden-tablet">
-                            <fmt:message key="tatami.menu.account"/>
+                            <fmt:message key="pamelaChu.menu.account"/>
                         </span>
                         <b class="caret"></b>
                     </span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- <li>
-                            <a href="/tatami/account/#/profile">
+                            <a href="/pamelaChu/account/#/profile">
                                 <span class="glyphicon glyphicon-user"></span>
-                                <fmt:message key="tatami.menu.profile"/>
+                                <fmt:message key="pamelaChu.menu.profile"/>
                             </a>
                         </li>
                         <li>
-                            <a href="/tatami/account/#/preferences">
+                            <a href="/pamelaChu/account/#/preferences">
                                 <span class="glyphicon glyphicon-picture"></span>
-                                <fmt:message key="tatami.menu.preferences"/>
+                                <fmt:message key="pamelaChu.menu.preferences"/>
                             </a>
                         </li> -->
                         <li>
-                            <a href="/tatami/account/#/password">
+                            <a href="/pamelaChu/account/#/password">
                                 <span class="glyphicon glyphicon-lock"></span>
-                                <fmt:message key="tatami.menu.password"/>
+                                <fmt:message key="pamelaChu.menu.password"/>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <!-- <a href="/tatami/account/#/files">
+                            <!-- <a href="/pamelaChu/account/#/files">
                                 <span class="glyphicon glyphicon-file"></span>
-                                <fmt:message key="tatami.menu.files"/>
+                                <fmt:message key="pamelaChu.menu.files"/>
                             </a> -->
-                            <a href="/tatami/account/#/users">
+                            <a href="/pamelaChu/account/#/users">
                                 <span class="glyphicon glyphicon-globe"></span>
-                                <fmt:message key="tatami.menu.directory"/>
+                                <fmt:message key="pamelaChu.menu.directory"/>
                             </a>
-                            <a href="/tatami/account/#/groups">
+                            <a href="/pamelaChu/account/#/groups">
                                 <span class="glyphicon glyphicon-th-large"></span>
-                                <fmt:message key="tatami.menu.groups"/>
+                                <fmt:message key="pamelaChu.menu.groups"/>
                             </a>
-                            <a href="/tatami/account/#/tags">
+                            <a href="/pamelaChu/account/#/tags">
                                 <span class="glyphicon glyphicon-tags"></span>
-                                <fmt:message key="tatami.menu.tags"/>
+                                <fmt:message key="pamelaChu.menu.tags"/>
                             </a>
                         </li>
                         <!-- <li class="divider"></li>
                         <li>
-                            <a href="/tatami/account/#/status_of_the_day">
+                            <a href="/pamelaChu/account/#/status_of_the_day">
                                 <span class="glyphicon glyphicon-signal"></span>
-                                <fmt:message key="tatami.menu.status.of.the.day"/>
+                                <fmt:message key="pamelaChu.menu.status.of.the.day"/>
                             </a>
-                            <a href="/tatami/home#company">
+                            <a href="/pamelaChu/home#company">
                                 <span class="glyphicon glyphicon-briefcase"></span>
-                                <fmt:message key="tatami.menu.company.wall"/>
+                                <fmt:message key="pamelaChu.menu.company.wall"/>
                             </a>
                         </li> -->
                         <li class="divider"></li>
                         <li>
-                            <a href="/tatami/logout">
+                            <a href="/pamelaChu/logout">
                                 <span class="glyphicon glyphicon-off"></span>
-                                <fmt:message key="tatami.logout"/>
+                                <fmt:message key="pamelaChu.logout"/>
                             </a>
                         </li>
                     </ul>
@@ -203,7 +203,7 @@
                     <button id="editTatam" class="editTatam btn btn-pub btn-blue">
                         <i class="glyphicon glyphicon-pencil"></i>
                         <span class="visible-desktop">
-                            <fmt:message key="tatami.tatam.publish"/>
+                            <fmt:message key="pamelaChu.tatam.publish"/>
                         </span>
                     </button>
                 </li>
@@ -214,14 +214,14 @@
                         <span>
                             <span class="glyphicon glyphicon-question-sign"></span>
                             <span class="hidden-tablet">
-                                <fmt:message key="tatami.status.help.title"/>
+                                <fmt:message key="pamelaChu.status.help.title"/>
                             </span>
                         </span>
                     </a>
                 </li>
             </ul> -->
             <form id="searchform" class="navbar-form pull-right col-span-4" action="">
-                <input name="search" type="text" class="col-span-12" id="searchinput" placeholder="<fmt:message key="tatami.search.placeholder"/>" autocomplete="off">
+                <input name="search" type="text" class="col-span-12" id="searchinput" placeholder="<fmt:message key="pamelaChu.search.placeholder"/>" autocomplete="off">
                 <span class="deleteicon"><i class="glyphicon glyphicon-remove-sign"></i></span>
             </form>
             </sec:authorize>

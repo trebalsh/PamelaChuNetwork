@@ -1,21 +1,21 @@
 #!/bin/sh
 #
-# description: Installs Tatami on Ubuntu
+# description: Installs PamelaChu on Ubuntu
 # This script must be run by the "root" user.
 # Run this script directly by typing :
-# ﻿curl -L https://github.com/ippontech/tatami/raw/master/etc/installation/ubuntu/install.sh | sudo bash
+# ﻿curl -L https://github.com/ippontech/pamelaChu/raw/master/etc/installation/ubuntu/install.sh | sudo bash
 #
-# - Tatami is installed in the "/opt/tatami" directory
-# - Tatami is run by the "tatami" user
+# - PamelaChu is installed in the "/opt/pamelaChu" directory
+# - PamelaChu is run by the "pamelaChu" user
 #
-echo "Welcome to the Tatami installer"
+echo "Welcome to the PamelaChu installer"
 
 #################################
 # Variables
 #################################
 echo "Setting up variables"
-export USER=tatami
-export TATAMI_DIR=/opt/tatami
+export USER=pamelaChu
+export PAMELACHU_DIR=/opt/pamelaChu
 export MAVEN_VERSION=3.0.4
 export JETTY_VERSION=8.1.8.v20121106
 
@@ -40,26 +40,26 @@ sudo apt-get install sun-java6-jdk -y
 echo "Creating directories and users"
 useradd -m -s /bin/bash $USER
 
-mkdir -p $TATAMI_DIR
-mkdir -p $TATAMI_DIR/application
-mkdir -p $TATAMI_DIR/maven
-mkdir -p $TATAMI_DIR/data
-mkdir -p $TATAMI_DIR/data/elasticsearch
-mkdir -p $TATAMI_DIR/log
-mkdir -p $TATAMI_DIR/log/elasticsearch
+mkdir -p $PAMELACHU_DIR
+mkdir -p $PAMELACHU_DIR/application
+mkdir -p $PAMELACHU_DIR/maven
+mkdir -p $PAMELACHU_DIR/data
+mkdir -p $PAMELACHU_DIR/data/elasticsearch
+mkdir -p $PAMELACHU_DIR/log
+mkdir -p $PAMELACHU_DIR/log/elasticsearch
 
 #################################
 ## Download Application
 #################################
 echo "Getting the application from Github"
-cd $TATAMI_DIR/application
+cd $PAMELACHU_DIR/application
 
-git clone https://github.com/ippontech/tatami.git
+git clone https://github.com/ippontech/pamelaChu.git
 
 #################################
 ## Install Cassandra
 #################################
-cd $TATAMI_DIR
+cd $PAMELACHU_DIR
 
 echo "Installing JNA"
 sudo apt-get install libjna-java -y
@@ -103,7 +103,7 @@ sudo service opscenterd start
 ## Install Jetty
 #################################
 echo "Installing Jetty"
-cd $TATAMI_DIR
+cd $PAMELACHU_DIR
 
 sysctl -w net.core.rmem_max=16777216
 sysctl -w net.core.wmem_max=16777216
@@ -127,28 +127,28 @@ rm -rf /opt/jetty/webapps/*
 #################################
 echo "Installing Maven"
 
-cd $TATAMI_DIR/maven
+cd $PAMELACHU_DIR/maven
 
 wget http://mirrors.linsrv.net/apache/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
 tar -xzf apache-maven-$MAVEN_VERSION-bin.tar.gz
 rm -f apache-maven-$MAVEN_VERSION-bin.tar.gz
-ln -s $TATAMI_DIR/maven/apache-maven-$MAVEN_VERSION $TATAMI_DIR/maven/current
+ln -s $PAMELACHU_DIR/maven/apache-maven-$MAVEN_VERSION $PAMELACHU_DIR/maven/current
 
-# Configure Maven for the tatami user
-echo "# Begin tatami configuration" ﻿>> /home/tatami/.profile
-echo "export M2_HOME=/opt/tatami/maven/current" >> /home/tatami/.profile
-echo "export PATH=/opt/tatami/maven/current/bin:$PATH" >> /home/tatami/.profile
-echo "export MAVEN_OPTS=\"-XX:MaxPermSize=64m -Xms256m -Xmx1024m\"" >> /home/tatami/.profile
-echo "# End tatami configuration" ﻿>> /home/tatami/.profile
+# Configure Maven for the pamelaChu user
+echo "# Begin pamelaChu configuration" ﻿>> /home/pamelaChu/.profile
+echo "export M2_HOME=/opt/pamelaChu/maven/current" >> /home/pamelaChu/.profile
+echo "export PATH=/opt/pamelaChu/maven/current/bin:$PATH" >> /home/pamelaChu/.profile
+echo "export MAVEN_OPTS=\"-XX:MaxPermSize=64m -Xms256m -Xmx1024m\"" >> /home/pamelaChu/.profile
+echo "# End pamelaChu configuration" ﻿>> /home/pamelaChu/.profile
 
 # Configure Maven repository
-mkdir -p $TATAMI_DIR/maven/repository
-cp $TATAMI_DIR/application/tatami/etc/installation/ubuntu/files/maven/settings.xml $TATAMI_DIR/maven/apache-maven-$MAVEN_VERSION/conf
+mkdir -p $PAMELACHU_DIR/maven/repository
+cp $PAMELACHU_DIR/application/pamelaChu/etc/installation/ubuntu/files/maven/settings.xml $PAMELACHU_DIR/maven/apache-maven-$MAVEN_VERSION/conf
 
 #################################
 ## Install & run Application
 #################################
-chown -R $USER $TATAMI_DIR
+chown -R $USER $PAMELACHU_DIR
 ./update.sh
 
 #################################

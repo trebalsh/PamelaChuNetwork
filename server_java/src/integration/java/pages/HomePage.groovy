@@ -2,8 +2,8 @@ package pages
 
 import geb.Page;
 
-class HomePage extends TatamiBasePage {
-    static url = "tatami/"
+class HomePage extends PamelaChuBasePage {
+    static url = "pamelaChu/"
  
     static at = { profileContent != null } // sometimes I got an error here ?!
                 // TODO : add " or newUserWizard != null" if necessary

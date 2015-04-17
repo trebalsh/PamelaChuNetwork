@@ -1,4 +1,4 @@
-(function (Backbone, _, Tatami) {
+(function (Backbone, _, PamelaChu) {
     var StatusEdit = Backbone.Marionette.Layout.extend({
 
         template: '#StatusEdit',
@@ -17,7 +17,7 @@
         options : {currentGeoLocalization : ''},
 
         initialize: function () {
-            this.model = new Tatami.Models.PostStatus();
+            this.model = new PamelaChu.Models.PostStatus();
             if (!ie || ie > 9){
                 this.initGeoLocalization();
             }
@@ -50,9 +50,9 @@
                 });
             }
             this.$el.find(".submit").val(this.$el.find(".submit-label").html()); 
-            this.$el.find('.groups').toggleClass('hide', Tatami.app.groups.length === 0);
+            this.$el.find('.groups').toggleClass('hide', PamelaChu.app.groups.length === 0);
 
-            this.$edit.typeahead(new Tatami.Suggester(this.$edit));
+            this.$edit.typeahead(new PamelaChu.Suggester(this.$edit));
 
             this.$el.modal('show');
 
@@ -217,7 +217,7 @@
 
         serializeData: function () {
             return _.extend(Backbone.Marionette.Layout.prototype.serializeData.apply(this, arguments), {
-                groups: (new Tatami.Collections.Groups(Tatami.app.groups.where({archivedGroup: false}))).toJSON()
+                groups: (new PamelaChu.Collections.Groups(PamelaChu.app.groups.where({archivedGroup: false}))).toJSON()
             });
         },
 
@@ -242,7 +242,7 @@
             options = (options) ? options : {};
             if (options.status) {
                 var self = this;
-                var statusReply = new Tatami.Models.Status({
+                var statusReply = new PamelaChu.Models.Status({
                     statusId: options.status
                 });
                 statusReply.fetch({
@@ -252,7 +252,7 @@
                         self.$el.find('.groups').hide();
                         self.$el.find('.status-private').hide();
                         self.$reply.slideDown();
-                        var tatam = new Tatami.Views.StatusItem({
+                        var tatam = new PamelaChu.Views.StatusItem({
                             model: model
                         });
                         self.tatamReply.show(tatam);
@@ -276,7 +276,7 @@
         reset: function () {
             this.el.reset();
 
-            this.model = new Tatami.Models.PostStatus();
+            this.model = new PamelaChu.Models.PostStatus();
 
             var $reply = this.$el.find('.reply');
             $reply.css('display', 'none');
@@ -305,11 +305,11 @@
                 this.model.save(null, {
                     success: function (model, response) {
                         self.hide();
-                        Tatami.app.trigger('refresh', {
+                        PamelaChu.app.trigger('refresh', {
                             display: true,
                             replyTo: replyTo
                         });
-                        Tatami.app.user.set('statusCount', Tatami.app.user.get('statusCount') + 1);
+                        PamelaChu.app.user.set('statusCount', PamelaChu.app.user.get('statusCount') + 1);
                     },
                     error: function (model, response) {
                     }
@@ -321,5 +321,5 @@
         }
     });
 
-    Tatami.Views.StatusEdit = StatusEdit;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.StatusEdit = StatusEdit;
+})(Backbone, _, PamelaChu);

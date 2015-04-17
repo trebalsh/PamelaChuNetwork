@@ -1,12 +1,12 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
-    Tatami.Factories.Home = {
+    PamelaChu.Factories.Home = {
         homeSide: function(){
-            return new Tatami.Views.HomeSide();
+            return new PamelaChu.Views.HomeSide();
         },
         homeBody: function(tabName){
-            var model = new Tatami.Models.HomeBody({'tabName':tabName});
-            return new Tatami.Views.HomeBody({'model': model});
+            var model = new PamelaChu.Models.HomeBody({'tabName':tabName});
+            return new PamelaChu.Views.HomeBody({'model': model});
         },
        tagTrends: function(username){
             var data = _.extend({
@@ -15,9 +15,9 @@
                 user: username
             }: null);
 
-            var tags = new Tatami.Collections.Tags();
+            var tags = new PamelaChu.Collections.Tags();
 
-            View = (username)?Tatami.Views.TagTrendsProfile:Tatami.Views.TagTrends;
+            View = (username)?PamelaChu.Views.TagTrendsProfile:PamelaChu.Views.TagTrends;
             tagTrends = new View({
                 collection: tags
             });
@@ -30,51 +30,51 @@
         },
 
         tagsFollow: function(){
-            var c = new Tatami.Collections.TagsFollow();
+            var c = new PamelaChu.Collections.TagsFollow();
             c.fetch();
-            return new Tatami.Views.TagsList({
+            return new PamelaChu.Views.TagsList({
                 collection: c
             });
         },
 
         tagsRecommended : function(){
-            var c = new Tatami.Collections.TagsRecommended();
+            var c = new PamelaChu.Collections.TagsRecommended();
             c.fetch();
-            return new Tatami.Views.TagsList({
+            return new PamelaChu.Views.TagsList({
                 collection: c
             });
         },
 
         cardProfile: function(){
-            var cardProfile = new Tatami.Views.CardProfile({
-                model: Tatami.app.user
+            var cardProfile = new PamelaChu.Views.CardProfile({
+                model: PamelaChu.app.user
             });
 
             cardProfile.model.fetch();
             return cardProfile;
         },
         groups: function(){
-            var groups = new Tatami.Views.Groups({
-                collection: new Tatami.Collections.Groups(Tatami.app.groups.where({archivedGroup: false}))
+            var groups = new PamelaChu.Views.Groups({
+                collection: new PamelaChu.Collections.Groups(PamelaChu.app.groups.where({archivedGroup: false}))
             });
 
             return groups;
         },
         whoToFollow: function(){
-            var c = new Tatami.Collections.WhoToFollow();
+            var c = new PamelaChu.Collections.WhoToFollow();
             c.fetch();
-            return new Tatami.Views.WhoToFollow({
+            return new PamelaChu.Views.WhoToFollow({
                 collection: c
             });
         },
 
         usersRecommended: function(){
-            var c = new Tatami.Collections.WhoToFollow();
+            var c = new PamelaChu.Collections.WhoToFollow();
             c.fetch();
-            return  new Tatami.Views.UserList({
+            return  new PamelaChu.Views.UserList({
                 collection: c
             });
         }
     };
 
-})(Backbone, _, Tatami);
+})(Backbone, _, PamelaChu);

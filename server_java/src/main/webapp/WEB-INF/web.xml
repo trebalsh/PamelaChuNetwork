@@ -14,16 +14,16 @@
             -->
     </absolute-ordering>
 
-    <display-name>Tatami</display-name>
+    <display-name>PamelaChu</display-name>
 
     <!-- All the Servlets and Filters are configured by this ServletContextListener : -->
     <listener>
-        <listener-class>fr.ippon.tatami.web.init.WebConfigurer</listener-class>
+        <listener-class>fr.ippon.pamelaChu.web.init.WebConfigurer</listener-class>
     </listener>
 
     <filter>
         <filter-name>GzipFilter</filter-name>
-        <filter-class>fr.ippon.tatami.web.filter.TatamiGzipFilter</filter-class>
+        <filter-class>fr.ippon.pamelaChu.web.filter.PamelaChuGzipFilter</filter-class>
     </filter>
     
     <filter>
@@ -41,22 +41,22 @@
     
     <filter-mapping>
     	<filter-name>CharacterEncodingFilter</filter-name>
-    	<url-pattern>/tatami/*</url-pattern>
+    	<url-pattern>/pamelaChu/*</url-pattern>
     </filter-mapping>
 
     <filter-mapping>
         <filter-name>GzipFilter</filter-name>
-        <url-pattern>/tatami/*</url-pattern>
+        <url-pattern>/pamelaChu/*</url-pattern>
     </filter-mapping>
 
     <error-page>
         <error-code>500</error-code>
-        <location>/tatami/errors/500</location>
+        <location>/pamelaChu/errors/500</location>
     </error-page>
 
     <error-page>
         <error-code>404</error-code>
-        <location>/tatami/errors/404</location>
+        <location>/pamelaChu/errors/404</location>
     </error-page>
 
 </web-app>

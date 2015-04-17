@@ -1,6 +1,6 @@
 
 var MGroup = Backbone.Model.extend({
-    urlRoot: '/tatami/rest/groups',
+    urlRoot: '/pamelaChu/rest/groups',
     idAttribute: 'groupId',
     defaults: {
         name: '',

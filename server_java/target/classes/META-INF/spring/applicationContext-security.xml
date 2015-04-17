@@ -10,41 +10,41 @@
 				http://www.springframework.org/schema/context
 				http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-    <context:property-placeholder location="classpath:/META-INF/tatami/tatami.properties"/>
+    <context:property-placeholder location="classpath:/META-INF/pamelaChu/pamelaChu.properties"/>
 
     <global-method-security pre-post-annotations="enabled"/>
 
-    <http pattern="/tatami/static-wro4j/**" security="none"/>
-    <http pattern="/tatami/static/**" security="none"/>
-    <http pattern="/tatami/login*" security="none"/>
-    <http pattern="/tatami/syndic/**" security="none"/>
-    <http pattern="/tatami/register/**" security="none"/>
-    <http pattern="/tatami/lostpassword/**" security="none"/>
+    <http pattern="/pamelaChu/static-wro4j/**" security="none"/>
+    <http pattern="/pamelaChu/static/**" security="none"/>
+    <http pattern="/pamelaChu/login*" security="none"/>
+    <http pattern="/pamelaChu/syndic/**" security="none"/>
+    <http pattern="/pamelaChu/register/**" security="none"/>
+    <http pattern="/pamelaChu/lostpassword/**" security="none"/>
 
     <http auto-config="true" use-expressions="true" create-session="ifRequired">
-        <remember-me key="tatamiRememberKey" token-validity-seconds="2592000"/>
-        <intercept-url pattern="/tatami/presentation" access="permitAll()"/>
-        <intercept-url pattern="/tatami/tos" access="permitAll()"/>
-        <intercept-url pattern="/tatami/license" access="permitAll()"/>
-        <intercept-url pattern="/tatami/404-error" access="permitAll()"/>
-        <intercept-url pattern="/tatami/500-error" access="permitAll()"/>
-        <intercept-url pattern="/tatami/rest/users" method="POST" access="permitAll()"/>
+        <remember-me key="pamelaChuRememberKey" token-validity-seconds="2592000"/>
+        <intercept-url pattern="/pamelaChu/presentation" access="permitAll()"/>
+        <intercept-url pattern="/pamelaChu/tos" access="permitAll()"/>
+        <intercept-url pattern="/pamelaChu/license" access="permitAll()"/>
+        <intercept-url pattern="/pamelaChu/404-error" access="permitAll()"/>
+        <intercept-url pattern="/pamelaChu/500-error" access="permitAll()"/>
+        <intercept-url pattern="/pamelaChu/rest/users" method="POST" access="permitAll()"/>
         <intercept-url pattern="/metrics/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/**" access="isAuthenticated()"/>
 
         <form-login
-                login-processing-url="/tatami/authentication"
-                login-page="/tatami/login"
-                authentication-failure-url="/tatami/login?action=loginFailure"
-                default-target-url="/tatami/"
-                authentication-success-handler-ref="tatamiAuthenticationSuccessHandler"/>
+                login-processing-url="/pamelaChu/authentication"
+                login-page="/pamelaChu/login"
+                authentication-failure-url="/pamelaChu/login?action=loginFailure"
+                default-target-url="/pamelaChu/"
+                authentication-success-handler-ref="pamelaChuAuthenticationSuccessHandler"/>
 
-        <logout logout-url="/tatami/logout"
-                logout-success-url="/tatami/login"/>
+        <logout logout-url="/pamelaChu/logout"
+                logout-success-url="/pamelaChu/login"/>
 
-        <openid-login authentication-failure-url="/tatami/login?action=loginFailure"
+        <openid-login authentication-failure-url="/pamelaChu/login?action=loginFailure"
                       user-service-ref="openIdAutoRegisteringUserDetailsService"
-                      authentication-success-handler-ref="tatamiAuthenticationSuccessHandler">
+                      authentication-success-handler-ref="pamelaChuAuthenticationSuccessHandler">
             <!-- Only Google Apps is supported -->
             <attribute-exchange identifier-match="https://www.google.com/.*">
                 <openid-attribute name="email" type="http://axschema.org/contact/email" required="true" count="1"/>
@@ -72,7 +72,7 @@
         <beans:constructor-arg value="ldap://directory:389"/>
     </beans:bean>
 
-    <beans:bean id="ldapAuthenticationProvider" class="fr.ippon.tatami.security.TatamiLdapAuthenticationProvider">
+    <beans:bean id="ldapAuthenticationProvider" class="fr.ippon.pamelaChu.security.PamelaChuLdapAuthenticationProvider">
         <beans:constructor-arg>
             <beans:bean class="org.springframework.security.ldap.authentication.BindAuthenticator">
                 <beans:constructor-arg ref="ldapContextSource"/>
@@ -85,7 +85,7 @@
                 </beans:property>
             </beans:bean>
         </beans:constructor-arg>
-        <beans:constructor-arg value="${tatami.ldapauth.domain}"/>
+        <beans:constructor-arg value="${pamelaChu.ldapauth.domain}"/>
     </beans:bean>
 
 </beans:beans>

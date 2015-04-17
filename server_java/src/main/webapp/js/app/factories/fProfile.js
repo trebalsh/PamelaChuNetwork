@@ -1,12 +1,12 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
     var users = new (Backbone.Collection.extend({
-        model : Tatami.Models.User
+        model : PamelaChu.Models.User
     }))();
 
-    Tatami.Factories.Profile = {
+    PamelaChu.Factories.Profile = {
         profileSide: function(username){
-            return new Tatami.Views.ProfileSide();
+            return new PamelaChu.Views.ProfileSide();
 
         },
 
@@ -16,13 +16,13 @@
         },
 
         tagTrends: function(username){
-            return Tatami.Factories.Home.tagTrends(username);
+            return PamelaChu.Factories.Home.tagTrends(username);
         },
 
         stats: function(username){
             var user = this.getUsers(username);
 
-            return new Tatami.Views.ProfileStats({
+            return new PamelaChu.Views.ProfileStats({
                 model: user
             });
         },
@@ -30,20 +30,20 @@
         informations: function(username){
             var user = this.getUsers(username);
 
-            return new Tatami.Views.ProfileInformations({
+            return new PamelaChu.Views.ProfileInformations({
                 model: user
             });
         },
 
         profileBody: function(username){
-            return new Tatami.Views.ProfileBody({
+            return new PamelaChu.Views.ProfileBody({
                 user: username
             });
         },
         profileHeader: function(username){
             var user = this.getUsers(username);
 
-            return new Tatami.Views.ProfileHeader({
+            return new PamelaChu.Views.ProfileHeader({
                 model: user
             });
         },
@@ -51,13 +51,13 @@
         getUsers: function(username){
             var user = users.get(username);
             if(!user){
-                user = new Tatami.Models.User({
+                user = new PamelaChu.Models.User({
                     username: username
                 });
                 users.add(user);
                 user.fetch({
                     error: function(){
-                        Tatami.app.router.defaults();
+                        PamelaChu.app.router.defaults();
                     }
                 });
             }
@@ -66,31 +66,31 @@
         },
 
         statuses: function(username){
-            var c = new Tatami.Collections.StatusesUsers();
+            var c = new PamelaChu.Collections.StatusesUsers();
             c.user = username;
 
-            return new Tatami.Views.Statuses({
+            return new PamelaChu.Views.Statuses({
                 collection: c
             });
         },
 
         friends: function(username){
-            var c = new Tatami.Collections.Friends();
+            var c = new PamelaChu.Collections.Friends();
             c.user = username;
             c.fetch();
-            return  new Tatami.Views.UserList({
+            return  new PamelaChu.Views.UserList({
                 collection: c,
                 itemViewOptions:{desactivable:true}
             });
         },
 
         followers: function(username){
-            var c = new Tatami.Collections.Followers();
+            var c = new PamelaChu.Collections.Followers();
             c.user = username;
-            return  new Tatami.Views.UserList({
+            return  new PamelaChu.Views.UserList({
                 collection: c
             });
         }
     };
 
-})(Backbone, _, Tatami);
+})(Backbone, _, PamelaChu);

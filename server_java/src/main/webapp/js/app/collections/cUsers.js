@@ -1,48 +1,48 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Users = Backbone.Collection.extend({
-        model: Tatami.Models.User
+        model: PamelaChu.Models.User
     });
 
     var UsersInGroup = Backbone.Collection.extend({
-        model: Tatami.Models.UserGroup,
+        model: PamelaChu.Models.UserGroup,
 
         url: function(){
-            return '/tatami/rest/groups/' + this.group + '/members/';
+            return '/pamelaChu/rest/groups/' + this.group + '/members/';
         }
     });
 
     var Friends = Users.extend({
         url: function(){
-          return '/tatami/rest/users/' + this.user + '/friends';
+          return '/pamelaChu/rest/users/' + this.user + '/friends';
         }
     });
 
     var Followers = Users.extend({
         url: function(){
-            return '/tatami/rest/users/' + this.user + '/followers';
+            return '/pamelaChu/rest/users/' + this.user + '/followers';
         }
     });
 
     var WhoToFollow = Users.extend({
         url: function(){
-          return '/tatami/rest/users/suggestions';
+          return '/pamelaChu/rest/users/suggestions';
         }
     });
 
     var SearchUsers = Users.extend({
         url: function(){
-            return '/tatami/rest/search/users';
+            return '/pamelaChu/rest/search/users';
         }
     });
 
 
 
-    Tatami.Collections.Users = Users;
-    Tatami.Collections.Friends = Friends;
-    Tatami.Collections.Followers = Followers;
-    Tatami.Collections.WhoToFollow = WhoToFollow;
-    Tatami.Collections.UsersInGroup = UsersInGroup;
-    Tatami.Collections.SearchUsers = SearchUsers;
+    PamelaChu.Collections.Users = Users;
+    PamelaChu.Collections.Friends = Friends;
+    PamelaChu.Collections.Followers = Followers;
+    PamelaChu.Collections.WhoToFollow = WhoToFollow;
+    PamelaChu.Collections.UsersInGroup = UsersInGroup;
+    PamelaChu.Collections.SearchUsers = SearchUsers;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

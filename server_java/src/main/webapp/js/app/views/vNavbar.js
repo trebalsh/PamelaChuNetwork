@@ -1,7 +1,7 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var Navbar = Backbone.Marionette.Layout.extend({
         initialize: function(){
-            this.$el.find('[name="search"]').typeahead(new Tatami.Search());
+            this.$el.find('[name="search"]').typeahead(new PamelaChu.Search());
             $(".deleteicon").hide();
             var navbar = this;
             $("#searchinput").keyup(function(event) {
@@ -30,7 +30,7 @@
         },
 
         editTatam: function(){
-            Tatami.app.trigger('edit:show');
+            PamelaChu.app.trigger('edit:show');
         }, 
 
         search: function(event){
@@ -51,5 +51,5 @@
 
     });
 
-    Tatami.Views.Navbar = Navbar;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.Navbar = Navbar;
+})(Backbone, _, PamelaChu);

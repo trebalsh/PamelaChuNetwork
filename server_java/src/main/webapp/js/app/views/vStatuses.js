@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var StatusItem = Backbone.Marionette.Layout.extend({
 
         initialize: function(){
@@ -113,7 +113,7 @@
             }
 
             this.$el.toggleClass('discussion', this.model.get('detailsAvailable'));
-            this.attachments.show(new Tatami.Views.StatusAttachments({
+            this.attachments.show(new PamelaChu.Views.StatusAttachments({
                 collection: new Backbone.Collection(this.model.get('attachments'))
             }));
             $(this.el).find("abbr.timeago").timeago();
@@ -206,7 +206,7 @@
             if (this.model.get('type') != 'STATUS' && this.model.get('type') != 'SHARE' && this.model.get('type') != 'ANNOUNCEMENT') {
                 return;
             }
-            var statusDetail = Tatami.Factories.Status.getStatusDetail(this.model.id);
+            var statusDetail = PamelaChu.Factories.Status.getStatusDetail(this.model.id);
             statusDetail.set("groupId", this.model.get("groupId"));
             statusDetail.set("statusPrivate", this.model.get("statusPrivate"));
             statusDetail.set("type", this.model.get("type"));
@@ -228,7 +228,7 @@
                 return;
             }
             var isRoot = this.model.get('root');
-                var statusDetail = Tatami.Factories.Status.getStatusDetail(this.model.id);
+                var statusDetail = PamelaChu.Factories.Status.getStatusDetail(this.model.id);
                 statusDetail.set("groupId", this.model.get("groupId"));
                 statusDetail.set("statusPrivate", this.model.get("statusPrivate"));
                 statusDetail.set("type", this.model.get("type"));
@@ -239,8 +239,8 @@
                         success: function(){                
                             var shares = statusDetail.get('sharedByLogins');
                             self.shares = {};
-                            self.share.show(new Tatami.Views.StatusShares({
-                                collection: new Tatami.Collections.Users(shares)
+                            self.share.show(new PamelaChu.Views.StatusShares({
+                                collection: new PamelaChu.Collections.Users(shares)
                             }));
                             if(shares.length){
                                 self.share.$el.slideToggle({duration: 100});
@@ -248,11 +248,11 @@
                             self.buttons.$el.css('visibility' , 'visible')  ;
 
                             //TODO CodingParty : Afficher l'annulation du partage
-                            currentModel.set('sharedByMe', statusDetail.isSharedBy(Tatami.app.user.get('username')));
+                            currentModel.set('sharedByMe', statusDetail.isSharedBy(PamelaChu.app.user.get('username')));
 
                             if (self.model.getImages() != null && self.model.getImages().length > 0) {
 
-                                self.preview.show(new Tatami.Views.StatusImagePreview({
+                                self.preview.show(new PamelaChu.Views.StatusImagePreview({
                                     model: self.model
                                 }));
 
@@ -266,7 +266,7 @@
                                 $(self.el).toggleClass('tatam-hover');
                                 $(self.el).toggleClass('tatam-expand-container').animate(100);
                                 var befores = statusDetail.getStatusBefore();
-                                var before = new Tatami.Views.Statuses({
+                                var before = new PamelaChu.Views.Statuses({
                                     collection: befores,
                                     itemViewOptions: {
                                         discussion: false
@@ -283,7 +283,7 @@
                                 }   
 
                                 var afters = statusDetail.getStatusAfter();
-                                var after = new Tatami.Views.Statuses({
+                                var after = new PamelaChu.Views.Statuses({
                                     collection: afters,
                                     itemViewOptions: {
                                         discussion: false
@@ -325,13 +325,13 @@
             return false;        
         },
         refreshDetails: function(){
-            var statusDetail = Tatami.Factories.Status.getStatusDetail(this.model.id);
+            var statusDetail = PamelaChu.Factories.Status.getStatusDetail(this.model.id);
             var self = this;
             statusDetail.fetch({
                 success: function(){
                     var shares = statusDetail.get('sharedByLogins');
-                    self.share.show(new Tatami.Views.StatusShares({
-                        collection: new Tatami.Collections.Users(shares)
+                    self.share.show(new PamelaChu.Views.StatusShares({
+                        collection: new PamelaChu.Collections.Users(shares)
                     }));
                     if(shares.length){
                         self.share.$el.slideToggle({duration: 200});
@@ -341,7 +341,7 @@
             });
         },
         replyAction: function(){
-            Tatami.app.trigger('edit:show',{
+            PamelaChu.app.trigger('edit:show',{
                     status: this.model.id
             });
             return false;
@@ -426,22 +426,22 @@
             });
 
             if(this.options.autoRefresh){
-                this.listenTo(Tatami.app, 'refresh', function(options){
+                this.listenTo(PamelaChu.app, 'refresh', function(options){
                     options = options ? _.clone(options) : {};
                     _.defaults(options || {}, {
                         display: false
                     });
                     self.collection.refresh(function(){
                         if(options.display) {
-                            Tatami.app.trigger('display');
-                            Tatami.app.trigger('statusPending');
+                            PamelaChu.app.trigger('display');
+                            PamelaChu.app.trigger('statusPending');
                         }
                     });
                 });
-                this.listenTo(Tatami.app, 'next', function(){
+                this.listenTo(PamelaChu.app, 'next', function(){
                     self.collection.next();
                 });
-                this.listenTo(Tatami.app, 'display', this.onRender);
+                this.listenTo(PamelaChu.app, 'display', this.onRender);
             }
 
             this.listenTo(this.collection, 'add', function(model, collection, options){
@@ -509,7 +509,7 @@
             if(index < 0){
                 index = images.length-1;
             }
-            this.$el.find('img').attr('src', '/tatami/file/'+images[index].attachmentId+'/'+images[index].filename);
+            this.$el.find('img').attr('src', '/pamelaChu/file/'+images[index].attachmentId+'/'+images[index].filename);
             this.options.currentIndex = index;
         },
         right: function(event){
@@ -519,7 +519,7 @@
             if(index >= images.length){
                 index = 0;
             }
-            this.$el.find('img').attr('src', '/tatami/file/'+images[index].attachmentId+'/'+images[index].filename);
+            this.$el.find('img').attr('src', '/pamelaChu/file/'+images[index].attachmentId+'/'+images[index].filename);
             this.options.currentIndex = index;
         }
 
@@ -546,8 +546,8 @@
                 model: self.model,
                 currentIndex: current
             });
-            Tatami.app.slider.show(slider);
-            Tatami.app.slider.$el.modal('show');
+            PamelaChu.app.slider.show(slider);
+            PamelaChu.app.slider.$el.modal('show');
             return false;
         },
         showLink: function(event){
@@ -559,11 +559,11 @@
     });
 
 
-    Tatami.Views.Statuses = Statuses;
-    Tatami.Views.StatusItem = StatusItem;
-    Tatami.Views.StatusActions = StatusActions;
-    Tatami.Views.StatusAttachments = StatusAttachments;
-    Tatami.Views.StatusAttachmentItems = StatusAttachmentItems;
-    Tatami.Views.StatusImagePreview = StatusImagePreview;
-    Tatami.Views.StatusImageSlider = StatusImageSlider;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.Statuses = Statuses;
+    PamelaChu.Views.StatusItem = StatusItem;
+    PamelaChu.Views.StatusActions = StatusActions;
+    PamelaChu.Views.StatusAttachments = StatusAttachments;
+    PamelaChu.Views.StatusAttachmentItems = StatusAttachmentItems;
+    PamelaChu.Views.StatusImagePreview = StatusImagePreview;
+    PamelaChu.Views.StatusImageSlider = StatusImageSlider;
+})(Backbone, _, PamelaChu);

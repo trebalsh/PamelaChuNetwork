@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>fr.ippon.tatami</groupId>
-    <artifactId>tatami</artifactId>
+    <groupId>fr.ippon.pamelaChu</groupId>
+    <artifactId>pamelaChu</artifactId>
     <version>3.1.1</version>
     <packaging>war</packaging>
 
-    <description>Tatami is an enterprise micro-blogging platform</description>
+    <description>PamelaChu is an enterprise micro-blogging platform</description>
     <inceptionYear>2012</inceptionYear>
-    <url>https://github.com/ippontech/tatami</url>
+    <url>https://github.com/ippontech/pamelaChu</url>
     <organization>
         <name>Ippon Technologies</name>
         <url>http://www.ippon.fr</url>
@@ -22,11 +22,11 @@
     </licenses>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/ippontech/tatami/issues</url>
+        <url>https://github.com/ippontech/pamelaChu/issues</url>
     </issueManagement>
     <scm>
-        <url>http://github.com/ippontech/tatami</url>
-        <connection>scm:git:git@github.com:ippontech/tatami.git</connection>
+        <url>http://github.com/ippontech/pamelaChu</url>
+        <connection>scm:git:git@github.com:ippontech/pamelaChu.git</connection>
     </scm>
 
     <profiles>
@@ -36,25 +36,25 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <!-- Spring profiles available : tatamibot, metrics, apple-push -->
+                <!-- Spring profiles available : pamelaChubot, metrics, apple-push -->
                 <spring.profiles.active></spring.profiles.active>
             </properties>
         </profile>
         <profile>
             <id>elasticsearch-remote</id>
             <properties>
-                <!-- Spring profiles available : tatamibot, metrics, apple-push -->
+                <!-- Spring profiles available : pamelaChubot, metrics, apple-push -->
                 <spring.profiles.active></spring.profiles.active>
-                <tatami.elasticsearch.engine.mode>remote</tatami.elasticsearch.engine.mode>
-                <tatami.elasticsearch.path.data>target/elasticsearch</tatami.elasticsearch.path.data>
-                <tatami.elasticsearch.path.log>target/elasticsearch/log</tatami.elasticsearch.path.log>
-                <tatami.elasticsearch.http.enabled>true</tatami.elasticsearch.http.enabled>
+                <pamelaChu.elasticsearch.engine.mode>remote</pamelaChu.elasticsearch.engine.mode>
+                <pamelaChu.elasticsearch.path.data>target/elasticsearch</pamelaChu.elasticsearch.path.data>
+                <pamelaChu.elasticsearch.path.log>target/elasticsearch/log</pamelaChu.elasticsearch.path.log>
+                <pamelaChu.elasticsearch.http.enabled>true</pamelaChu.elasticsearch.http.enabled>
             </properties>
         </profile>
         <profile>
             <id>preprod</id>
             <properties>
-                <!-- Spring profiles available : tatamibot, metrics, apple-push -->
+                <!-- Spring profiles available : pamelaChubot, metrics, apple-push -->
                 <spring.profiles.active>apple-push</spring.profiles.active>
                 <jetty.scanIntervalSeconds>0</jetty.scanIntervalSeconds>
                 <logback.loglevel>DEBUG</logback.loglevel>
@@ -62,12 +62,12 @@
                 <logback.syslogHost>logs.papertrailapp.com</logback.syslogHost>
                 <logback.syslogHost.port>38143</logback.syslogHost.port>
                 <ehcache.maxBytesLocalHeap>128M</ehcache.maxBytesLocalHeap>
-                <tatami.url>http://sandbox.tatamisoft.com</tatami.url>
-                <tatami.smtp.host>localhost</tatami.smtp.host>
-                <tatami.smtp.port>25</tatami.smtp.port>
-                <tatami.smtp.from>tatami@ippon.fr</tatami.smtp.from>
-                <tatami.wro4j.enabled>true</tatami.wro4j.enabled>
-                <tatami.message.reloading.enabled>false</tatami.message.reloading.enabled>
+                <pamelaChu.url>http://sandbox.pamelaChusoft.com</pamelaChu.url>
+                <pamelaChu.smtp.host>localhost</pamelaChu.smtp.host>
+                <pamelaChu.smtp.port>25</pamelaChu.smtp.port>
+                <pamelaChu.smtp.from>pamelaChu@ippon.fr</pamelaChu.smtp.from>
+                <pamelaChu.wro4j.enabled>true</pamelaChu.wro4j.enabled>
+                <pamelaChu.message.reloading.enabled>false</pamelaChu.message.reloading.enabled>
             </properties>
             <build>
                 <plugins>
@@ -84,7 +84,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <targetGroups>tatami-vendor,tatami-app,tatami-account,tatami-app-account</targetGroups>
+                            <targetGroups>pamelaChu-vendor,pamelaChu-app,pamelaChu-account,pamelaChu-app-account</targetGroups>
                             <minimize>false</minimize>
                             <destinationFolder>${basedir}/src/main/webapp/WEB-INF/generated-wro4j</destinationFolder>
                             <contextFolder>${basedir}/src/main/webapp</contextFolder>
@@ -105,7 +105,7 @@
         <profile>
             <id>prod</id>
             <properties>
-                <!-- Spring profiles available : tatamibot, metrics, apple-push -->
+                <!-- Spring profiles available : pamelaChubot, metrics, apple-push -->
                 <spring.profiles.active></spring.profiles.active>
                 <jetty.port>80</jetty.port>
                 <jetty.scanIntervalSeconds>0</jetty.scanIntervalSeconds>
@@ -114,22 +114,22 @@
                 <logback.syslogHost>logs.papertrailapp.com</logback.syslogHost>
                 <logback.syslogHost.port>38143</logback.syslogHost.port>
                 <ehcache.maxBytesLocalHeap>512M</ehcache.maxBytesLocalHeap>
-                <tatami.url>https://app.tatamisoft.com</tatami.url>
-                <tatami.ldapauth.url>ldap://10.55.0.4:389</tatami.ldapauth.url>
-                <tatami.smtp.host>localhost</tatami.smtp.host>
-                <tatami.smtp.port>25</tatami.smtp.port>
-                <tatami.smtp.from>tatami@ippon.fr</tatami.smtp.from>
-                <tatami.google.analytics.key>UA-10959780-3</tatami.google.analytics.key>
-                <tatami.wro4j.enabled>true</tatami.wro4j.enabled>
-                <tatami.message.reloading.enabled>false</tatami.message.reloading.enabled>
-                <tatami.connection.security>https</tatami.connection.security>
-                <tatami.elasticsearch.engine.mode>embedded</tatami.elasticsearch.engine.mode>
-                <tatami.elasticsearch.path.data>/opt/tatami/data/elasticsearch</tatami.elasticsearch.path.data>
-                <tatami.elasticsearch.path.log>/opt/tatami/log/elasticsearch</tatami.elasticsearch.path.log>
-                <tatami.elasticsearch.http.enabled>false</tatami.elasticsearch.http.enabled>
-                <tatami.automatic.registration>false</tatami.automatic.registration>
-                <tatami.metrics.graphite.host></tatami.metrics.graphite.host>
-                <tatami.metrics.graphite.port>2003</tatami.metrics.graphite.port>
+                <pamelaChu.url>https://app.pamelaChusoft.com</pamelaChu.url>
+                <pamelaChu.ldapauth.url>ldap://10.55.0.4:389</pamelaChu.ldapauth.url>
+                <pamelaChu.smtp.host>localhost</pamelaChu.smtp.host>
+                <pamelaChu.smtp.port>25</pamelaChu.smtp.port>
+                <pamelaChu.smtp.from>pamelaChu@ippon.fr</pamelaChu.smtp.from>
+                <pamelaChu.google.analytics.key>UA-10959780-3</pamelaChu.google.analytics.key>
+                <pamelaChu.wro4j.enabled>true</pamelaChu.wro4j.enabled>
+                <pamelaChu.message.reloading.enabled>false</pamelaChu.message.reloading.enabled>
+                <pamelaChu.connection.security>https</pamelaChu.connection.security>
+                <pamelaChu.elasticsearch.engine.mode>embedded</pamelaChu.elasticsearch.engine.mode>
+                <pamelaChu.elasticsearch.path.data>/opt/pamelaChu/data/elasticsearch</pamelaChu.elasticsearch.path.data>
+                <pamelaChu.elasticsearch.path.log>/opt/pamelaChu/log/elasticsearch</pamelaChu.elasticsearch.path.log>
+                <pamelaChu.elasticsearch.http.enabled>false</pamelaChu.elasticsearch.http.enabled>
+                <pamelaChu.automatic.registration>false</pamelaChu.automatic.registration>
+                <pamelaChu.metrics.graphite.host></pamelaChu.metrics.graphite.host>
+                <pamelaChu.metrics.graphite.port>2003</pamelaChu.metrics.graphite.port>
             </properties>
             <build>
                 <plugins>
@@ -146,7 +146,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <targetGroups>tatami-vendor,tatami-app,tatami-account,tatami-app-account</targetGroups>
+                            <targetGroups>pamelaChu-vendor,pamelaChu-app,pamelaChu-account,pamelaChu-app-account</targetGroups>
                             <minimize>false</minimize>
                             <destinationFolder>${basedir}/src/main/webapp/WEB-INF/generated-wro4j</destinationFolder>
                             <contextFolder>${basedir}/src/main/webapp</contextFolder>
@@ -166,19 +166,19 @@
         <profile>
             <id>stress-tests</id>
             <properties>
-                <!-- Spring profiles available : tatamibot, metrics, apple-push -->
+                <!-- Spring profiles available : pamelaChubot, metrics, apple-push -->
                 <spring.profiles.active></spring.profiles.active>
                 <jetty.scanIntervalSeconds>0</jetty.scanIntervalSeconds>
                 <logback.loglevel>WARN</logback.loglevel>
                 <logback.appender>CONSOLE</logback.appender>
                 <ehcache.maxBytesLocalHeap>64M</ehcache.maxBytesLocalHeap>
-                <tatami.automatic.registration>true</tatami.automatic.registration>
+                <pamelaChu.automatic.registration>true</pamelaChu.automatic.registration>
             </properties>
         </profile>
         <profile>
             <id>uitest</id>
             <properties>
-                <!-- Spring profiles available : tatamibot, metrics, apple-push -->
+                <!-- Spring profiles available : pamelaChubot, metrics, apple-push -->
                 <spring.profiles.active></spring.profiles.active>
             </properties>
             <build>
@@ -378,28 +378,28 @@
         <logback.appender>CONSOLE</logback.appender>
         <logback.syslogHost>localhost</logback.syslogHost>
         <ehcache.maxBytesLocalHeap>64M</ehcache.maxBytesLocalHeap>
-        <tatami.version>${project.version}</tatami.version>
-        <tatami.url>http://localhost:8080</tatami.url>
-        <tatami.ldapauth.url>ldap://directory:389</tatami.ldapauth.url>
-        <tatami.ldapauth.searchbase>dc=ippon,dc=fr</tatami.ldapauth.searchbase>
-        <tatami.ldapauth.searchfilter>(uid={0})</tatami.ldapauth.searchfilter>
-        <tatami.smtp.host></tatami.smtp.host>
-        <tatami.smtp.port></tatami.smtp.port>
-        <tatami.smtp.user></tatami.smtp.user>
-        <tatami.smtp.password></tatami.smtp.password>
-        <tatami.smtp.from>tatami@localhost</tatami.smtp.from>
-        <tatami.smtp.tls></tatami.smtp.tls>
-        <tatami.google.analytics.key></tatami.google.analytics.key>
-        <tatami.wro4j.enabled>false</tatami.wro4j.enabled>
-        <tatami.message.reloading.enabled>true</tatami.message.reloading.enabled>
-        <tatami.connection.security>any</tatami.connection.security>
-        <tatami.elasticsearch.engine.mode>embedded</tatami.elasticsearch.engine.mode>
-        <tatami.elasticsearch.path.data>target/elasticsearch</tatami.elasticsearch.path.data>
-        <tatami.elasticsearch.path.log>target/elasticsearch/log</tatami.elasticsearch.path.log>
-        <tatami.elasticsearch.http.enabled>true</tatami.elasticsearch.http.enabled>
-        <tatami.automatic.registration>false</tatami.automatic.registration>
-        <tatami.metrics.graphite.host></tatami.metrics.graphite.host>
-        <tatami.metrics.graphite.port>2003</tatami.metrics.graphite.port>
+        <pamelaChu.version>${project.version}</pamelaChu.version>
+        <pamelaChu.url>http://localhost:8080</pamelaChu.url>
+        <pamelaChu.ldapauth.url>ldap://directory:389</pamelaChu.ldapauth.url>
+        <pamelaChu.ldapauth.searchbase>dc=ippon,dc=fr</pamelaChu.ldapauth.searchbase>
+        <pamelaChu.ldapauth.searchfilter>(uid={0})</pamelaChu.ldapauth.searchfilter>
+        <pamelaChu.smtp.host></pamelaChu.smtp.host>
+        <pamelaChu.smtp.port></pamelaChu.smtp.port>
+        <pamelaChu.smtp.user></pamelaChu.smtp.user>
+        <pamelaChu.smtp.password></pamelaChu.smtp.password>
+        <pamelaChu.smtp.from>pamelaChu@localhost</pamelaChu.smtp.from>
+        <pamelaChu.smtp.tls></pamelaChu.smtp.tls>
+        <pamelaChu.google.analytics.key></pamelaChu.google.analytics.key>
+        <pamelaChu.wro4j.enabled>false</pamelaChu.wro4j.enabled>
+        <pamelaChu.message.reloading.enabled>true</pamelaChu.message.reloading.enabled>
+        <pamelaChu.connection.security>any</pamelaChu.connection.security>
+        <pamelaChu.elasticsearch.engine.mode>embedded</pamelaChu.elasticsearch.engine.mode>
+        <pamelaChu.elasticsearch.path.data>target/elasticsearch</pamelaChu.elasticsearch.path.data>
+        <pamelaChu.elasticsearch.path.log>target/elasticsearch/log</pamelaChu.elasticsearch.path.log>
+        <pamelaChu.elasticsearch.http.enabled>true</pamelaChu.elasticsearch.http.enabled>
+        <pamelaChu.automatic.registration>false</pamelaChu.automatic.registration>
+        <pamelaChu.metrics.graphite.host></pamelaChu.metrics.graphite.host>
+        <pamelaChu.metrics.graphite.port>2003</pamelaChu.metrics.graphite.port>
 
         <!-- Configuration -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -877,7 +877,7 @@
         </dependency>
     </dependencies>
     <build>
-        <!-- Tatami must be configured at the root context (/) of the application server -->
+        <!-- PamelaChu must be configured at the root context (/) of the application server -->
         <finalName>root</finalName>
         <resources>
             <resource>

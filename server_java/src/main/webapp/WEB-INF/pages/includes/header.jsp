@@ -1,7 +1,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="fr.ippon.tatami.config.Constants" %>
+<%@ page import="fr.ippon.pamelaChu.config.Constants" %>
 <%
     String version = Constants.VERSION;
     request.setAttribute("version", version);
@@ -13,13 +13,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><fmt:message key="tatami.title"/></title>
+    <title><fmt:message key="pamelaChu.title"/></title>
     <meta name="viewport" content="width=device-width, initial-scale = 1,user-scalable=no,maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Ippon Technologies">
 
     <link href="/css/vendor/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/tatami.css" rel="stylesheet">
+    <link href="/css/pamelaChu.css" rel="stylesheet">
     <!--[if IE]>
         <link rel="stylesheet" type="text/css" href="/css/ie-only.css" />
     <![endif]-->
@@ -64,7 +64,7 @@
     <sec:authorize ifAnyGranted="ROLE_USER">
         <c:if test="${not empty user.rssUid}">
             <link rel="alternate" type="application/rss+xml" title="RSS"
-                  href="/tatami/syndic/${user.rssUid}" />
+                  href="/pamelaChu/syndic/${user.rssUid}" />
         </c:if>
     </sec:authorize>
 

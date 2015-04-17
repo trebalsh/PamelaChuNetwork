@@ -2,15 +2,15 @@
 
 # This file contains the configuration of the embedded elasticsearch cluster,
 
-cluster.name: tatamiCluster
+cluster.name: pamelaChuCluster
 node:
   local: true
-  name: "tatami-embedded-node"
+  name: "pamelaChu-embedded-node"
 
 path:
-  data: ${tatami.elasticsearch.path.data}/data
-  work: ${tatami.elasticsearch.path.data}/work
-  logs: ${tatami.elasticsearch.path.log}
+  data: ${pamelaChu.elasticsearch.path.data}/data
+  work: ${pamelaChu.elasticsearch.path.data}/work
+  logs: ${pamelaChu.elasticsearch.path.log}
 
-http.enabled: ${tatami.elasticsearch.http.enabled}
+http.enabled: ${pamelaChu.elasticsearch.http.enabled}
 

@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
     var VFile = Marionette.ItemView.extend({
         template: '#FileItemTemplate',
@@ -59,7 +59,7 @@
 
         initialize: function(){
             var self = this;
-            this.listenTo(Tatami.app, 'next', function(){
+            this.listenTo(PamelaChu.app, 'next', function(){
                 self.collection.next();
             });
         }
@@ -69,8 +69,8 @@
         template: '#files-menu'
     });
 
-    Tatami.Views.QuotaFiles = VQuotaFiles;
-    Tatami.Views.FilesList = VFilesList;
-    Tatami.Views.FilesMenu = VFilesMenu;
+    PamelaChu.Views.QuotaFiles = VQuotaFiles;
+    PamelaChu.Views.FilesList = VFilesList;
+    PamelaChu.Views.FilesMenu = VFilesMenu;
 
-})(Backbone, _, Tatami);
+})(Backbone, _, PamelaChu);

@@ -1,10 +1,10 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Status = Backbone.Model.extend({
         initialize: function(){
             var self = this;
 
-            this.listenTo(Tatami.app, 'model:status:' + this.id, function(model){
+            this.listenTo(PamelaChu.app, 'model:status:' + this.id, function(model){
                 if(self !== model)
                     model.keys().forEach(function(key){
                         var value = model.get(key);
@@ -12,7 +12,7 @@
                     });
             });
             // this.listenTo(this, 'change', function(){
-            //     Tatami.app.trigger('model:status:' + self.id, self);
+            //     PamelaChu.app.trigger('model:status:' + self.id, self);
             // });
         },
         idAttribute: 'statusId',
@@ -46,7 +46,7 @@
             activated: true
         },
 
-        urlRoot: '/tatami/rest/statuses/',
+        urlRoot: '/pamelaChu/rest/statuses/',
 
         toJSON: function(){
             var attr = Backbone.Model.prototype.toJSON.call(this);
@@ -73,7 +73,7 @@
         },
 
         getAvatarURL: function(){
-            return (this.get('avatar'))? '/tatami/avatar/' + this.get('avatar') + '/photo.jpg': '/img/default_image_profile.png';
+            return (this.get('avatar'))? '/pamelaChu/avatar/' + this.get('avatar') + '/photo.jpg': '/img/default_image_profile.png';
         },
 
         getGeoLocalizationUrl: function() {
@@ -95,6 +95,6 @@
         }
     });
 
-    Tatami.Models.Status = Status;
+    PamelaChu.Models.Status = Status;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

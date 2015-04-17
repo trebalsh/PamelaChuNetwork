@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
     var ProfileActions = Backbone.Marionette.ItemView.extend({
         template: '#ProfileActions',
@@ -32,8 +32,8 @@
         }
     });
 
-    Tatami.Views.ProfileActions = ProfileActions;
-    Tatami.Views.ProfileInformations = ProfileInformations;
-    Tatami.Views.ProfileStats = ProfileStats;
-    Tatami.Views.ProfileTagTrends = ProfileTagTrends;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.ProfileActions = ProfileActions;
+    PamelaChu.Views.ProfileInformations = ProfileInformations;
+    PamelaChu.Views.ProfileStats = ProfileStats;
+    PamelaChu.Views.ProfileTagTrends = ProfileTagTrends;
+})(Backbone, _, PamelaChu);

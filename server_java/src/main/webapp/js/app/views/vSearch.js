@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
     var SearchBody = Backbone.Marionette.Layout.extend({
         template: '#SearchBody',
@@ -16,7 +16,7 @@
         template: '#SearchHeader'
     });
 
-    Tatami.Views.SearchHeader = SearchHeader;
-    Tatami.Views.SearchBody = SearchBody;
+    PamelaChu.Views.SearchHeader = SearchHeader;
+    PamelaChu.Views.SearchBody = SearchBody;
 
-})(Backbone, _, Tatami);
+})(Backbone, _, PamelaChu);

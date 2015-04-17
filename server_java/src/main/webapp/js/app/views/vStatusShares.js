@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var StatusShareItems = Backbone.Marionette.ItemView.extend({
         tagName: 'span',
         template: '#StatusShareItems',
@@ -34,6 +34,6 @@
         }
     });
 
-    Tatami.Views.StatusShareItems = StatusShareItems;
-    Tatami.Views.StatusShares = StatusShares;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.StatusShareItems = StatusShareItems;
+    PamelaChu.Views.StatusShares = StatusShares;
+})(Backbone, _, PamelaChu);

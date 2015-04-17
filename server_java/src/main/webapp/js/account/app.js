@@ -5,14 +5,14 @@ _.templateSettings = {
     escape: /\<\@\-(.+?)\@\>/gim
 };
 
-var Tatami = {
+var PamelaChu = {
     Views: {},
     Collections: {},
     Models: {},
     Factories: {}
 };
 
-Tatami.app = new Backbone.Marionette.Application();
+PamelaChu.app = new Backbone.Marionette.Application();
 
 if(!window.app){
     app = window.app = _.extend({
@@ -84,41 +84,41 @@ accountLayout.navigation.show(new VNavigation());
 contentLayout = new ContentLayout();
 ContentContainer.show(contentLayout);
 
-Tatami.app.addInitializer(function(){
+PamelaChu.app.addInitializer(function(){
     var autoRefresh = function(){
-        Tatami.app.trigger('refresh');
+        PamelaChu.app.trigger('refresh');
         _.delay(autoRefresh, 20000);
     };
     autoRefresh();
 });
 
-Tatami.app.addInitializer(function(){
+PamelaChu.app.addInitializer(function(){
     var $w = $(window);
     var $d = $(document);
 
     var autoNext = _.debounce(function(){
         if($w.height() + $d.scrollTop() > $d.height() - 200)
-            Tatami.app.trigger('next');
+            PamelaChu.app.trigger('next');
     }, jQuery.fx.speeds._default);
 
     $(window).scroll(autoNext);
 });
 
-Tatami.app.addInitializer(function(){
-    Tatami.app.addRegions({
-        header: '#tatamiHeader',
-        side: '#tatamiSide',
-        body: '#tatamiBody',
+PamelaChu.app.addInitializer(function(){
+    PamelaChu.app.addRegions({
+        header: '#pamelaChuHeader',
+        side: '#pamelaChuSide',
+        body: '#pamelaChuBody',
         slider: '#slider'
     });
 });
 
-Tatami.app.on("initialize:after", function(options){
+PamelaChu.app.on("initialize:after", function(options){
     if (Backbone.history){
             app.router = new AdminRouter();
         Backbone.history.start({
             pushState: true,
-                root: "/tatami/account/"
+                root: "/pamelaChu/account/"
         });
         if (Backbone.history._hasPushState) {
             $(document).delegate("a", "click", function(evt) {
@@ -135,18 +135,18 @@ Tatami.app.on("initialize:after", function(options){
 
 $(function(){
     var onStart = _.after(2, function(){
-        Tatami.app.start();
+        PamelaChu.app.start();
     });
 
-    Tatami.app.user = new Tatami.Models.User({
+    PamelaChu.app.user = new PamelaChu.Models.User({
         username: username
     });
-    Tatami.app.groups = new Tatami.Collections.Groups();
+    PamelaChu.app.groups = new PamelaChu.Collections.Groups();
 
-    Tatami.app.user.fetch({
+    PamelaChu.app.user.fetch({
         success: onStart
     });
-    Tatami.app.groups.fetch({
+    PamelaChu.app.groups.fetch({
         success: onStart
     });
 });

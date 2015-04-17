@@ -27,7 +27,7 @@
             </c:when>
             <c:otherwise>
                 <div class="row-fluid">
-                    <fmt:message key="tatami.user.undefined"/>
+                    <fmt:message key="pamelaChu.user.undefined"/>
                 </div>
             </c:otherwise>
         </c:choose>
@@ -86,7 +86,7 @@
 
     <script src="/js/vendor/raphael-min.js"></script>
     <script src="/js/vendor/jquery.jgrowl.js"></script>
-    <script src="/js/app/plugins/jquery-raphael-tatami-pie.js"></script>
+    <script src="/js/app/plugins/jquery-raphael-pamelaChu-pie.js"></script>
     <script src="/js/app/plugins/bootstrap-filestyle.min.js"></script>
 
     <script src="/js/account/models/mAccountProfile.js"></script>
@@ -115,7 +115,7 @@
 
 
     <!--APP-->
-    <script src="/js/app/plugins/tatami.search.js"></script>
+    <script src="/js/app/plugins/pamelaChu.search.js"></script>
     <script src="/js/app/plugins/suggester.js"></script>
     <script src="/js/app/models/mUser.js"></script>
     <script src="/js/app/collections/cUsers.js"></script>
@@ -158,11 +158,11 @@
 
 </c:if>
 <c:if test="${wro4jEnabled eq true}">
-    <script src="/tatami/static/${version}/vendor/raphael-min.js"></script>
-    <script src="/tatami/static/${version}/app/plugins/jquery-raphael-tatami-pie.js"></script>
-    <script src="/tatami/static/${version}/app/plugins/bootstrap-filestyle.min.js"></script>
-    <script src="/tatami/static-wro4j/${version}/tatami-account.js"></script>
-    <script src="/tatami/static-wro4j/${version}/tatami-app-account.js"></script>
+    <script src="/pamelaChu/static/${version}/vendor/raphael-min.js"></script>
+    <script src="/pamelaChu/static/${version}/app/plugins/jquery-raphael-pamelaChu-pie.js"></script>
+    <script src="/pamelaChu/static/${version}/app/plugins/bootstrap-filestyle.min.js"></script>
+    <script src="/pamelaChu/static-wro4j/${version}/pamelaChu-account.js"></script>
+    <script src="/pamelaChu/static-wro4j/${version}/pamelaChu-app-account.js"></script>
 </c:if>
 
 </body>

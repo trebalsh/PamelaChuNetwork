@@ -1,7 +1,7 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var CFiles = Backbone.Collection.extend({
-        model: Tatami.Models.File,
+        model: PamelaChu.Models.File,
         initialize: function(){
             this.initNext();
         },
@@ -30,10 +30,10 @@
     });
 
     var CFilesPage = CFiles.extend({
-        url: '/tatami/rest/attachments'
+        url: '/pamelaChu/rest/attachments'
     });
 
-    Tatami.Collections.Files = CFiles;
-    Tatami.Collections.FilesPage = CFilesPage;
+    PamelaChu.Collections.Files = CFiles;
+    PamelaChu.Collections.FilesPage = CFilesPage;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

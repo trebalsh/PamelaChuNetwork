@@ -1,6 +1,6 @@
 
 var CDailyStat = Backbone.Collection.extend({
-    url:'/tatami/rest/stats/day',
+    url:'/pamelaChu/rest/stats/day',
     defaults :{
         "username" : '',
         "statusCount" : ''

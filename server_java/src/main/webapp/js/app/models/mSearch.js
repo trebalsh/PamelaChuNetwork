@@ -1,4 +1,4 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Search = Backbone.Model.extend({
         defaults: {
@@ -6,6 +6,6 @@
         }
     });
 
-    Tatami.Models.Search = Search;
+    PamelaChu.Models.Search = Search;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var CardProfile = Backbone.Marionette.ItemView.extend({
         template: '#CardProfile',
         modelEvents: {
@@ -7,5 +7,5 @@
         }
     });
 
-    Tatami.Views.CardProfile = CardProfile;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.CardProfile = CardProfile;
+})(Backbone, _, PamelaChu);

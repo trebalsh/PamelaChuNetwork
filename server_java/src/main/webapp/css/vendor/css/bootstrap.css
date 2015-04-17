@@ -1491,7 +1491,8 @@ fieldset[disabled] input,
 fieldset[disabled] select,
 fieldset[disabled] textarea {
   cursor: not-allowed;
-  background-color: #eeeeee;
+  background-color: rgba(238, 238, 238, 0.24);
+  color: #1597a2;
 }
 
 input[type="radio"][disabled],

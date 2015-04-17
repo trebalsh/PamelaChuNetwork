@@ -8,7 +8,7 @@
         </encoder>
     </appender>
 
-    <logger name="fr.ippon.tatami" level="DEBUG"/>
+    <logger name="fr.ippon.pamelaChu" level="DEBUG"/>
     <logger name="ch.qos.logback" level="WARN"/>
     <logger name="com.yammer.metrics" level="WARN"/>
     <logger name="com.notnoop" level="WARN"/>

@@ -1,26 +1,26 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Tags = Backbone.Collection.extend({
-        url: '/tatami/rest/tags',
-        model: Tatami.Models.Tag
+        url: '/pamelaChu/rest/tags',
+        model: PamelaChu.Models.Tag
     });
 
     var TagsFollow = Tags.extend({
         url: function(){
-            return '/tatami/rest/tags';
+            return '/pamelaChu/rest/tags';
         }
     });
 
     var TagsRecommended = Tags.extend({
         url: function(){
-            return '/tatami/rest/tags/popular';
+            return '/pamelaChu/rest/tags/popular';
         }
     });
 
 
-    Tatami.Collections.Tags = Tags;
-    Tatami.Collections.TagsFollow = TagsFollow;
-    Tatami.Collections.TagsRecommended = TagsRecommended;
+    PamelaChu.Collections.Tags = Tags;
+    PamelaChu.Collections.TagsFollow = TagsFollow;
+    PamelaChu.Collections.TagsRecommended = TagsRecommended;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);
 

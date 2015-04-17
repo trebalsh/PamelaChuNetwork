@@ -1,5 +1,5 @@
 {
-    "name":"tatami",
+    "name":"pamelaChu",
     "columnFamilies":[
         {
             "name":"User",
@@ -846,7 +846,7 @@
                         },
                         {
                             "name":"content",
-                            "value":"utf8(Tatami is an enterprise social network)"
+                            "value":"utf8(PamelaChu is an enterprise social network)"
                         },
                         {
                             "name":"statusDate",
@@ -871,7 +871,7 @@
                         },
                         {
                             "name":"content",
-                            "value":"utf8(Tatami is fully Open Source)"
+                            "value":"utf8(PamelaChu is fully Open Source)"
                         },
                         {
                             "name":"statusDate",

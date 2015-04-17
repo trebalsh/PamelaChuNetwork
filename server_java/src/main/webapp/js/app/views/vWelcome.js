@@ -1,6 +1,6 @@
 var showWelcome = true;
 
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
 
     var WelcomeRegion = Backbone.Marionette.Layout.extend({
         template: '#Welcome',
@@ -21,5 +21,5 @@ var showWelcome = true;
         }
     });
 
-    Tatami.Views.WelcomeRegion = WelcomeRegion;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.WelcomeRegion = WelcomeRegion;
+})(Backbone, _, PamelaChu);

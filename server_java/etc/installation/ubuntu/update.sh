@@ -1,22 +1,22 @@
 #!/bin/sh
 #
-# description: Updates Tatami from Git
-# This script must be run by the "tatami" user, who must be a sudoer.
-echo "Welcome to the Tatami updater"
+# description: Updates PamelaChu from Git
+# This script must be run by the "pamelaChu" user, who must be a sudoer.
+echo "Welcome to the PamelaChu updater"
 
 #################################
 # Variables
 #################################
 echo "Setting up variables"
-export USER=tatami
-export TATAMI_DIR=/opt/tatami
+export USER=pamelaChu
+export PAMELACHU_DIR=/opt/pamelaChu
 
 #################################
 # Update application
 #################################
-cd $TATAMI_DIR/application/tatami
+cd $PAMELACHU_DIR/application/pamelaChu
 git pull
-cd /opt/tatami/application/tatami && mvn -Pprod -DskipTests clean package
+cd /opt/pamelaChu/application/pamelaChu && mvn -Pprod -DskipTests clean package
 sudo /etc/init.d/jetty stop
-sudo cp /opt/tatami/application/tatami/target/root.war /opt/jetty/webapps/root.war
+sudo cp /opt/pamelaChu/application/pamelaChu/target/root.war /opt/jetty/webapps/root.war
 sudo /etc/init.d/jetty start

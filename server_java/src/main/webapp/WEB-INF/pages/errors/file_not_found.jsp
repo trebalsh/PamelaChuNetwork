@@ -14,7 +14,7 @@
 <div id="mainPanel" class="container">
     <div class="row">
         <div class="offset2 span8 text-center">
-            <h2><fmt:message key="tatami.file.not.found"/></h2>
+            <h2><fmt:message key="pamelaChu.file.not.found"/></h2>
             <img src="/img/404-error.jpg">
         </div>
     </div>

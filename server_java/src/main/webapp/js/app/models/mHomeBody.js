@@ -1,4 +1,4 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var HomeBody = Backbone.Model.extend({
         idAttribute: 'tabName',
@@ -9,7 +9,7 @@
 
     });
 
-    Tatami.Models.HomeBody = HomeBody;
+    PamelaChu.Models.HomeBody = HomeBody;
 
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

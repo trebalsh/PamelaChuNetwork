@@ -6,9 +6,9 @@
     jQuery(function($) {
         var tour = new Tour({
             labels: {
-                end: '<fmt:message key="tatami.help.end"/>',
-                next: '<fmt:message key="tatami.help.next"/>',
-                prev: '<fmt:message key="tatami.help.previous"/>'
+                end: '<fmt:message key="pamelaChu.help.end"/>',
+                next: '<fmt:message key="pamelaChu.help.next"/>',
+                prev: '<fmt:message key="pamelaChu.help.previous"/>'
             },
             backdrop: true,
             useLocalStorage: true
@@ -18,51 +18,51 @@
             element: "#help-tour",
             placement: "bottom",
             stepId: "presentationHelp",
-            title: "<fmt:message key="tatami.help.home.presentation.title"/>",
-            content: "<fmt:message key="tatami.help.home.presentation.content"/>"
+            title: "<fmt:message key="pamelaChu.help.home.presentation.title"/>",
+            content: "<fmt:message key="pamelaChu.help.home.presentation.content"/>"
         });
 
         tour.addStep({
-            element: "#tatamiBody",
+            element: "#pamelaChuBody",
             placement: "left",
             stepId: "timelineHelp",
-            title: "<fmt:message key="tatami.help.home.timeline.title"/>",
-            content: "<fmt:message key="tatami.help.home.timeline.content"/>"
+            title: "<fmt:message key="pamelaChu.help.home.timeline.title"/>",
+            content: "<fmt:message key="pamelaChu.help.home.timeline.content"/>"
         });
 
         tour.addStep({
             element: "#editTatam",
             placement: "left",
             stepId: "updateStatusContentHelp",
-            title: "<fmt:message key="tatami.help.home.updatestatus.title"/>",
-            content: "<fmt:message key="tatami.help.home.updatestatus.content"/>"
+            title: "<fmt:message key="pamelaChu.help.home.updatestatus.title"/>",
+            content: "<fmt:message key="pamelaChu.help.home.updatestatus.content"/>"
         });
 
         tour.addStep({
             element: "#groups-list-title",
             placement: "right",
             stepId: "groupsHelp",
-            title: "<fmt:message key="tatami.help.home.groups.title"/>",
-            content: "<fmt:message key="tatami.help.home.groups.content"/>",
-            container: "#tatamiBody"
+            title: "<fmt:message key="pamelaChu.help.home.groups.title"/>",
+            content: "<fmt:message key="pamelaChu.help.home.groups.content"/>",
+            container: "#pamelaChuBody"
         });
 
         tour.addStep({
             element: "#follow-suggest-title",
             placement: "right",
             stepId: "follow-suggestHelp",
-            title: "<fmt:message key="tatami.help.home.follow-suggest.title"/>",
-            content: "<fmt:message key="tatami.help.home.follow-suggest.content"/>",
-            container: "#tatamiBody"
+            title: "<fmt:message key="pamelaChu.help.home.follow-suggest.title"/>",
+            content: "<fmt:message key="pamelaChu.help.home.follow-suggest.content"/>",
+            container: "#pamelaChuBody"
         });
 
         tour.addStep({
             element: "#profile-trends-title",
             placement: "right",
             stepId: "profileTrendsHelp",
-            title: "<fmt:message key="tatami.help.home.profileTrends.title"/>",
-            content: "<fmt:message key="tatami.help.home.profileTrends.content"/>",
-            container: "#tatamiBody"
+            title: "<fmt:message key="pamelaChu.help.home.profileTrends.title"/>",
+            content: "<fmt:message key="pamelaChu.help.home.profileTrends.content"/>",
+            container: "#pamelaChuBody"
         });
 
 

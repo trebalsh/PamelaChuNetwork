@@ -5,9 +5,9 @@
  * Time: 16:27
  * To change this template use File | Settings | File Templates.
  */
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
-    Tatami.Factories.Admin = {
+    PamelaChu.Factories.Admin = {
         profile: function(){
             var mAccountProfile = new MAccountProfile();
             return new VAccountProfile({model: mAccountProfile});
@@ -60,16 +60,16 @@
         },
 
         quotaFiles: function(){
-            return new Tatami.Views.QuotaFiles({model : new Tatami.Models.Quota()});
+            return new PamelaChu.Views.QuotaFiles({model : new PamelaChu.Models.Quota()});
         },
 
         listFiles: function(){
-            var c = new Tatami.Collections.FilesPage();
+            var c = new PamelaChu.Collections.FilesPage();
             c.fetch();
-            return new Tatami.Views.FilesList({
+            return new PamelaChu.Views.FilesList({
                 collection: c
             });
         }
     };
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

@@ -5,50 +5,50 @@
 
 <script type="text/template" id="TagsHeader">
     <h3>
-      <span class="text-center"><strong><fmt:message key="tatami.tag"/> : #<@= name @></strong></span>
+      <span class="text-center"><strong><fmt:message key="pamelaChu.tag"/> : #<@= name @></strong></span>
       <a class="btn-blue toggleTag pull-right label <@= (followed)?'label-info':'' @> ">
       <@ if(followed) { @>
-        <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="tatami.user.followed"/></span></span>
+        <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="pamelaChu.user.followed"/></span></span>
       <@ } else { @>
-        <span class="glyphicon glyphicon-plus"> <span class="hidden-phone"><fmt:message key="tatami.user.follow"/></span></span>
+        <span class="glyphicon glyphicon-plus"> <span class="hidden-phone"><fmt:message key="pamelaChu.user.follow"/></span></span>
       <@ } @>
       </a>
     </h3>
 </script>
 <script type="text/template" id="GroupsHeader">
     <h3>
-        <span class="text-center"><strong><fmt:message key="tatami.group.name"/> : <@= name @></strong></span>
+        <span class="text-center"><strong><fmt:message key="pamelaChu.group.name"/> : <@= name @></strong></span>
         <@ if(publicGroup && !administrator) { @>
             <a class="btn-blue toggleTag pull-right label <@= (member)?'label-info':'' @>">
                 <@ if(member) { @>
-                  <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="tatami.user.followed"/></span></span>
+                  <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="pamelaChu.user.followed"/></span></span>
                 <@ } else { @>
-                  <span class="glyphicon glyphicon-plus"> <span class="hidden-phone"><fmt:message key="tatami.user.follow"/></span></span>
+                  <span class="glyphicon glyphicon-plus"> <span class="hidden-phone"><fmt:message key="pamelaChu.user.follow"/></span></span>
                 <@ } @>
             </a>
         <@ } else if(administrator) { @>
-            <a href="/tatami/account/#/groups/<@= groupId @>" class="btn-blue toggleTag pull-right label label-info hidden-phone">
-                <span class="glyphicon glyphicon-th-large"> <span><fmt:message key="tatami.group.edit.link"/></span></span>
+            <a href="/pamelaChu/account/#/groups/<@= groupId @>" class="btn-blue toggleTag pull-right label label-info hidden-phone">
+                <span class="glyphicon glyphicon-th-large"> <span><fmt:message key="pamelaChu.group.edit.link"/></span></span>
             </a>
         <@ } @>
     </h3>
 </script>
 <script type="text/template" id="SearchHeader">
-    <h3><strong> <fmt:message key="tatami.user.search.searchInStatus"/> :  "<@= input @>"</strong></h3>
+    <h3><strong> <fmt:message key="pamelaChu.user.search.searchInStatus"/> :  "<@= input @>"</strong></h3>
 </script>
 <script type="text/template" id="ProfileHeader">
     <@ if(!you) { @>
-    <h3><strong><fmt:message key="tatami.user.profile.show"/> : @<@= username @> </strong><@ if(!activated) { @><span><i><fmt:message key="tatami.user.desactivate.msg2"/></i></span><@ } @>
-        <@if(follower){ @> (<fmt:message key="tatami.user.follows.you"/>) <@ }@>
+    <h3><strong><fmt:message key="pamelaChu.user.profile.show"/> : @<@= username @> </strong><@ if(!activated) { @><span><i><fmt:message key="pamelaChu.user.desactivate.msg2"/></i></span><@ } @>
+        <@if(follower){ @> (<fmt:message key="pamelaChu.user.follows.you"/>) <@ }@>
             <a class="btn-blue toggleFriend pull-right label <@= (friend)?'label-info':'' @>">
                 <@ if(friend) { @>
-                  <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="tatami.user.followed"/></span></span>
+                  <span class="glyphicon glyphicon-minus"> <span class="hidden-phone"><fmt:message key="pamelaChu.user.followed"/></span></span>
                 <@ } else { @>
-                <span class="glyphicon glyphicon-plus"> <span class="hidden-phone"><fmt:message key="tatami.user.follow"/></span></span>
+                <span class="glyphicon glyphicon-plus"> <span class="hidden-phone"><fmt:message key="pamelaChu.user.follow"/></span></span>
                 <@ } @>
             </a>
         <@ } else {@>
-        <h3><strong><fmt:message key="tatami.user.profile.yourProfil"/></strong></h3>
+        <h3><strong><fmt:message key="pamelaChu.user.profile.yourProfil"/></strong></h3>
         <@ } @>
 
     </h3>
@@ -75,7 +75,7 @@
     <div class="well well-small">
         <h4 id="profile-trends-title">
             <span class="glyphicon glyphicon-fire"></span>
-            &nbsp;<fmt:message key="tatami.trends.title"/>
+            &nbsp;<fmt:message key="pamelaChu.trends.title"/>
         </h4>
         <div class="items">
         </div>
@@ -116,9 +116,9 @@
                 <strong><a href="#users/<@= username @>"><@= fullName @></a></strong>
                 <small><a href="#users/<@= username @>">@<@= username @></a></small>
                 <@ if (type == 'MENTION_SHARE') { @>
-                    <fmt:message key="tatami.user.shared.you"/>
+                    <fmt:message key="pamelaChu.user.shared.you"/>
                 <@ } else if (type == 'MENTION_FRIEND') { @>
-                    <fmt:message key="tatami.user.followed.you"/>
+                    <fmt:message key="pamelaChu.user.followed.you"/>
                 <@ } @>
             </h5>
             <div class="markdown <@ if (type == 'MENTION_SHARE') { @>mention-share<@ } @>">
@@ -132,18 +132,18 @@
                     <br/>
                 <@ } @>           
                 <@ if (statusPrivate == true) { @>
-                <span class="glyphicon glyphicon-lock"></span> <fmt:message key="tatami.status.private"/>&nbsp;
+                <span class="glyphicon glyphicon-lock"></span> <fmt:message key="pamelaChu.status.private"/>&nbsp;
                 <br/>
                 <@ } @>
                 <@ if (replyTo != '') { @>
-                    <span class="glyphicon glyphicon-share-alt"></span> <fmt:message key="tatami.user.status.replyto"/> <a href="#status/<@= replyTo @>">@<@= replyToUsername @></a></br>
+                    <span class="glyphicon glyphicon-share-alt"></span> <fmt:message key="pamelaChu.user.status.replyto"/> <a href="#status/<@= replyTo @>">@<@= replyToUsername @></a></br>
                 <@ } @>
                 <@ if ((type == 'STATUS' || type == 'SHARE') && sharedByUsername != null && sharedByUsername != false) { @>
-                    <span class="glyphicon glyphicon-retweet"></span> <fmt:message key="tatami.user.status.shared.by"/> <a href="#users/<@= sharedByUsername @>">@<@= sharedByUsername @></a></br>
+                    <span class="glyphicon glyphicon-retweet"></span> <fmt:message key="pamelaChu.user.status.shared.by"/> <a href="#users/<@= sharedByUsername @>">@<@= sharedByUsername @></a></br>
                 <@ } @>
 
                 <@ if ((type == 'ANNOUNCEMENT')) { @>
-                    <span class="glyphicon glyphicon-bullhorn"></span> <fmt:message key="tatami.user.status.announced.by"/> <a href="#users/<@= sharedByUsername @>">@<@= sharedByUsername @></a></br>
+                    <span class="glyphicon glyphicon-bullhorn"></span> <fmt:message key="pamelaChu.user.status.announced.by"/> <a href="#users/<@= sharedByUsername @>">@<@= sharedByUsername @></a></br>
                 <@ } @>
                 <div class="attachments"/>   
                 <div id="share">
@@ -153,7 +153,7 @@
             <@  if(!activated) { @>
                 <div class="little-marge-top">
                 <span class="glyphicon glyphicon-off">
-                   <fmt:message key="tatami.user.desactivate.msg"/>
+                   <fmt:message key="pamelaChu.user.desactivate.msg"/>
                 </span>
                 </div>
             <@ } @>
@@ -179,7 +179,7 @@
 <script type="text/template" id="ImageSlider">
     <div class="slider-container">
         <div class="slider-container-header"><button type="button" class="slider-button slider-button-close" data-dismiss="modal" aria-hidden="true">&times;</button></div>                
-        <div class="slider-container-img"><img src="/tatami/file/<@= attachmentsImage[current].attachmentId @>/<@= attachmentsImage[current].filename @>"></div>
+        <div class="slider-container-img"><img src="/pamelaChu/file/<@= attachmentsImage[current].attachmentId @>/<@= attachmentsImage[current].filename @>"></div>
         <a class="slider-button slider-button-left">&lt;</a>
         <a class="slider-button slider-button-right">&gt;</a>
     </div>
@@ -190,9 +190,9 @@
     <@   if(index < 4){ @>                    
             <div class="<@= attachmentsImage.length<2?'image-preview-element-1':'image-preview-element' @>">
         <@ if(!ios){ @>
-            <img src="/tatami/file/<@= attachmentsImage[index].attachmentId @>/<@= attachmentsImage[index].filename @>" class="slide-img slide-img-n<@= index @>">
+            <img src="/pamelaChu/file/<@= attachmentsImage[index].attachmentId @>/<@= attachmentsImage[index].filename @>" class="slide-img slide-img-n<@= index @>">
         <@ } else { @>
-            <a href="/tatami/file/<@= attachmentsImage[index].attachmentId @>/<@= attachmentsImage[index].filename @>" class="btn-link status-action" target="_blank"><img src="/tatami/file/<@= attachmentsImage[index].attachmentId @>/<@= attachmentsImage[index].filename @>"></a>
+            <a href="/pamelaChu/file/<@= attachmentsImage[index].attachmentId @>/<@= attachmentsImage[index].filename @>" class="btn-link status-action" target="_blank"><img src="/pamelaChu/file/<@= attachmentsImage[index].attachmentId @>/<@= attachmentsImage[index].filename @>"></a>
         <@ } @>            
             </div>
     <@  } } @>
@@ -214,47 +214,47 @@
     <small class="statusitem-footer"> 
 <@ } @>  
         <a href="#status/<@= statusId @>" class="btn-link status-action button-ios" >
-            <i class="glyphicon glyphicon-eye-open"></i> <fmt:message key="tatami.user.status.show"/>
+            <i class="glyphicon glyphicon-eye-open"></i> <fmt:message key="pamelaChu.user.status.show"/>
         </a>
         <@ if (ios) { @>
             <button class="btn-link status-action button-ios">
-                <a href="tatami://sendResponse?replyTo=<@= statusId @>&replyToUsername=<@= username @>&groupId=<@= groupId @>">
-                    <i class="glyphicon glyphicon-comment"></i> <fmt:message key="tatami.user.status.reply"/>
+                <a href="pamelaChu://sendResponse?replyTo=<@= statusId @>&replyToUsername=<@= username @>&groupId=<@= groupId @>">
+                    <i class="glyphicon glyphicon-comment"></i> <fmt:message key="pamelaChu.user.status.reply"/>
                 </a>
             </button>
         <@ } else { @>
             <button class="btn-link status-action status-action-reply button-ios">
-                <i class="glyphicon glyphicon-comment"></i> <fmt:message key="tatami.user.status.reply"/>
+                <i class="glyphicon glyphicon-comment"></i> <fmt:message key="pamelaChu.user.status.reply"/>
             </button>
         <@ } @>
 
         <@ if (!shareByMe) { @>
-            <@ if (Tatami.app.user.get('username') !== username && statusPrivate == false && groupId == '' && type != 'ANNOUNCEMENT') { @>
-            <button class="btn-link status-action status-action-share button-ios" success-text="<fmt:message key="tatami.user.status.share.success"/>">
-                <i class="glyphicon glyphicon-retweet"></i> <fmt:message key="tatami.user.status.share"/>
+            <@ if (PamelaChu.app.user.get('username') !== username && statusPrivate == false && groupId == '' && type != 'ANNOUNCEMENT') { @>
+            <button class="btn-link status-action status-action-share button-ios" success-text="<fmt:message key="pamelaChu.user.status.share.success"/>">
+                <i class="glyphicon glyphicon-retweet"></i> <fmt:message key="pamelaChu.user.status.share"/>
             </button>
             <@ } }@>
             <button class="btn-link status-action status-action-favorite button-ios">
-                <i class="glyphicon glyphicon-star"></i> <fmt:message key="tatami.user.status.favorite"/>
+                <i class="glyphicon glyphicon-star"></i> <fmt:message key="pamelaChu.user.status.favorite"/>
             </button>
             <sec:authorize ifAnyGranted="ROLE_ADMIN">
                 <@ if (statusPrivate == false && groupId == '') { @>
                 <button class="btn-link status-action status-action-announce button-ios"
-                        confirmation-text='<p class="text-blue"><fmt:message key="tatami.user.status.confirm.announce"/></p><p class="text-center">
-                                             <a class="btn btn-red status-action-announce-cancel" href="#"><fmt:message key="tatami.form.cancel"/></a>
-                                             <a class="btn btn-red status-action-announce-confirm" href="#"><fmt:message key="tatami.user.status.announce"/></a>
+                        confirmation-text='<p class="text-blue"><fmt:message key="pamelaChu.user.status.confirm.announce"/></p><p class="text-center">
+                                             <a class="btn btn-red status-action-announce-cancel" href="#"><fmt:message key="pamelaChu.form.cancel"/></a>
+                                             <a class="btn btn-red status-action-announce-confirm" href="#"><fmt:message key="pamelaChu.user.status.announce"/></a>
                                              </p>'>
-                    <i class="glyphicon glyphicon-bullhorn"></i> <fmt:message key="tatami.user.status.announce"/>
+                    <i class="glyphicon glyphicon-bullhorn"></i> <fmt:message key="pamelaChu.user.status.announce"/>
                 </button>
                 <@ } @>
             </sec:authorize>
-            <@ if (Tatami.app.user.get('username') == username) { @>
+            <@ if (PamelaChu.app.user.get('username') == username) { @>
             <button class="btn-link status-action status-action-delete button-ios"
-                    confirmation-text='<p class="text-blue"><fmt:message key="tatami.user.status.confirm.delete"/></p><p class="text-center">
-                                         <button class="btn btn-red status-action-delete-cancel" href="#"><fmt:message key="tatami.form.cancel"/></button>
-                                         <button class="btn btn-red status-action-delete-confirm" href="#"><fmt:message key="tatami.user.status.delete"/></button>
+                    confirmation-text='<p class="text-blue"><fmt:message key="pamelaChu.user.status.confirm.delete"/></p><p class="text-center">
+                                         <button class="btn btn-red status-action-delete-cancel" href="#"><fmt:message key="pamelaChu.form.cancel"/></button>
+                                         <button class="btn btn-red status-action-delete-confirm" href="#"><fmt:message key="pamelaChu.user.status.delete"/></button>
                                          </p>'>
-                <i class="glyphicon glyphicon-trash"></i> <fmt:message key="tatami.user.status.delete"/>
+                <i class="glyphicon glyphicon-trash"></i> <fmt:message key="pamelaChu.user.status.delete"/>
             </button>
         <@ } @>        
 <@ if (ios) { @>
@@ -264,7 +264,7 @@
 <@ } @>
 </script>
 <script type="text/template" id="StatusShares">
-        <fmt:message key="tatami.user.status.shared.by"/>
+        <fmt:message key="pamelaChu.user.status.shared.by"/>
         <span class="badge">
                <@= sharesCount @>
         </span> :
@@ -282,17 +282,17 @@
     <ul class="homebody-nav nav nav-justified">
         <li>
             <a href="#timeline">
-                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.timeline"/>
+                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.timeline"/>
             </a>
         </li>
         <li>
             <a href="#mentions">
-                <i class="glyphicon glyphicon-user"></i> <fmt:message key="tatami.mentions"/>
+                <i class="glyphicon glyphicon-user"></i> <fmt:message key="pamelaChu.mentions"/>
             </a>
         </li>
         <li>
             <a href="#favorites">
-                <i class="glyphicon glyphicon-star"></i> <fmt:message key="tatami.user.favoritestatus"/>
+                <i class="glyphicon glyphicon-star"></i> <fmt:message key="pamelaChu.user.favoritestatus"/>
             </a>
         </li>
     </ul>
@@ -300,9 +300,9 @@
     <@ if (!ios) { @>
         <div class="tatams-content-title">
             <h3>
-                <@ if (tabName == 'timeline' ) { @><fmt:message key="tatami.timeline"/><@ } @>
-                <@ if (tabName == 'mentions' ) { @><fmt:message key="tatami.mentions"/><@ } @>
-                <@ if (tabName == 'favorites' ) { @><fmt:message key="tatami.user.favoritestatus"/><@ } @>
+                <@ if (tabName == 'timeline' ) { @><fmt:message key="pamelaChu.timeline"/><@ } @>
+                <@ if (tabName == 'mentions' ) { @><fmt:message key="pamelaChu.mentions"/><@ } @>
+                <@ if (tabName == 'favorites' ) { @><fmt:message key="pamelaChu.user.favoritestatus"/><@ } @>
             </h3>
         </div>
     <@ } @>
@@ -318,7 +318,7 @@
         <ul class="homebody-nav nav nav-justified">
             <li>
                 <a href="#timeline">
-                    <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.timeline"/>
+                    <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.timeline"/>
                 </a>
             </li>
         </ul>
@@ -335,7 +335,7 @@
     <ul class="homebody-nav nav nav-justified">
         <li>
             <a href="#timeline">
-                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.timeline"/>
+                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.timeline"/>
             </a>
         </li>
     </ul>
@@ -357,10 +357,10 @@
 
     <@} else if (count == 1) { @>
         <span class="badge"><@= count @></span>
-        <fmt:message key="tatami.timeline.message"/>
+        <fmt:message key="pamelaChu.timeline.message"/>
     <@ } else { @>
      <span class="badge"><@= count @></span>
-        <fmt:message key="tatami.timeline.messages"/>
+        <fmt:message key="pamelaChu.timeline.messages"/>
     <@ } @>
 </script>
 <!-- <script type="text/template" id="Welcome">
@@ -369,7 +369,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"><fmt:message key="tatami.welcome.title"/></h4>
+                    <h4 class="modal-title"><fmt:message key="pamelaChu.welcome.title"/></h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -377,12 +377,12 @@
                             <img src="/img/welcome.jpg" class="pull-left">
                         </div>
                         <div class="col col-span6">
-                            <br/><br/><h2><fmt:message key="tatami.welcome.title"/></h2><p><fmt:message key="tatami.welcome.description"/></p>
+                            <br/><br/><h2><fmt:message key="pamelaChu.welcome.title"/></h2><p><fmt:message key="pamelaChu.welcome.description"/></p>
                         </div>
                     </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default hide-welcome" data-dismiss="modal"><fmt:message key="tatami.form.cancel"/></button>
-                    <button type="button" class="btn btn-blue launch-help"><fmt:message key="tatami.welcome.launch"/></button>
+                    <button type="button" class="btn btn-default hide-welcome" data-dismiss="modal"><fmt:message key="pamelaChu.form.cancel"/></button>
+                    <button type="button" class="btn btn-blue launch-help"><fmt:message key="pamelaChu.welcome.launch"/></button>
                 </div>
             </div>
         </div>
@@ -393,16 +393,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title"><fmt:message key="tatami.status.update"/></h4>
+            <h4 class="modal-title"><fmt:message key="pamelaChu.status.update"/></h4>
         </div>
         <div class="modal-body">
             <a class="edit-tatam-float-right">
-                <i class="glyphicon glyphicon-edit close hide" title="<fmt:message key="tatami.status.editor"/>"></i><i class="glyphicon glyphicon-eye-open close" title="<fmt:message key="tatami.status.preview"/>"></i>
+                <i class="glyphicon glyphicon-edit close hide" title="<fmt:message key="pamelaChu.status.editor"/>"></i><i class="glyphicon glyphicon-eye-open close" title="<fmt:message key="pamelaChu.status.preview"/>"></i>
             </a>
             <fieldset class="edit-tatam row-fluid">
-                <textarea name="content" placeholder="<fmt:message key="tatami.status.update"/>" maxlength="750" rows="5" required="required"></textarea>
+                <textarea name="content" placeholder="<fmt:message key="pamelaChu.status.update"/>" maxlength="750" rows="5" required="required"></textarea>
                 <em>
-                    <fmt:message key="tatami.status.characters.left"/>
+                    <fmt:message key="pamelaChu.status.characters.left"/>
                     <span class="countstatus badge">751</span>
                 </em>
             </fieldset>
@@ -411,13 +411,13 @@
             </fieldset>
             <fieldset class="reply row-fluid">
                 <legend>
-                    <fmt:message key="tatami.status.reply"/>
+                    <fmt:message key="pamelaChu.status.reply"/>
                 </legend>
                 <div class="tatam-reply"/>
             </fieldset>
             <fieldset class="row-fluid">
                 <legend>
-                    <fmt:message key="tatami.status.options"/>
+                    <fmt:message key="pamelaChu.status.options"/>
                 </legend>
                     <div class="controls groups">
                         <@ if (!ie || ie > 9){ @>
@@ -425,7 +425,7 @@
                             <div data-toggle="collapse" data-target="#geolocalisationCheckbox">
                                 <div class="controls geoLocalization" id="geolocCheckboxDiv">
                                     <label class="checkbox">
-                                    <input id="statusGeoLocalization" name="statusGeoLocalization" type="checkbox" value="true"> <span class="glyphicon glyphicon-map-marker"></span> <fmt:message key="tatami.status.geoLocalization"/>
+                                    <input id="statusGeoLocalization" name="statusGeoLocalization" type="checkbox" value="true"> <span class="glyphicon glyphicon-map-marker"></span> <fmt:message key="pamelaChu.status.geoLocalization"/>
                                     </label>
                                 </div>
                             <div id="geolocalisationCheckbox" class="collapse">
@@ -435,7 +435,7 @@
                                 </div>
                             </div>
                         <@ } @>
-                            <label class="control-label"><fmt:message key="tatami.group.name"/></label>
+                            <label class="control-label"><fmt:message key="pamelaChu.group.name"/></label>
                             <select name="groupId">
                                 <option value=""></option>
                                 <@ for (index in groups) { @>
@@ -448,13 +448,13 @@
                         <@ if (!ie || ie > 9){ @>
                         <div class="controls status-files">
                             <label>
-                                <fmt:message key="tatami.menu.files"/>
+                                <fmt:message key="pamelaChu.menu.files"/>
                             </label>
                             <div class="attachmentBar progress progress-striped active" style="display: none;">
                                 <div class="bar progress-bar progress-bar-info" style="width: 0%;"></div>
                             </div>
-                            <div class="dropzone well"><fmt:message key="tatami.status.update.drop.file"/></div>
-                            <input style="display: none;" class="updateStatusFileupload" type="file" name="uploadFile" data-url="/tatami/rest/fileupload" multiple/>
+                            <div class="dropzone well"><fmt:message key="pamelaChu.status.update.drop.file"/></div>
+                            <input style="display: none;" class="updateStatusFileupload" type="file" name="uploadFile" data-url="/pamelaChu/rest/fileupload" multiple/>
                             <div class="fileUploadResults wrap">
 
                             </div>
@@ -462,27 +462,27 @@
                         <@ } else { @>
                             <label class="control-label"></label>
                             <div class="controlsIE">
-							<span class="hidden-label choose-label"><fmt:message key="tatami.user.upload.choose" /></span>
-                            <p><fmt:message key="tatami.user.upload.buttonIE-ok" /></p>
-                                <input id="tatamFile" type="file" name="uploadFile" data-url="/tatami/rest/fileuploadIE" class="filestyle" data-classButton="btn btn-blue" data-input="false" data-buttonText="" data-icon="false"/>
+							<span class="hidden-label choose-label"><fmt:message key="pamelaChu.user.upload.choose" /></span>
+                            <p><fmt:message key="pamelaChu.user.upload.buttonIE-ok" /></p>
+                                <input id="tatamFile" type="file" name="uploadFile" data-url="/pamelaChu/rest/fileuploadIE" class="filestyle" data-classButton="btn btn-blue" data-input="false" data-buttonText="" data-icon="false"/>
                             <span class="glyphicon glyphicon-search ok-ko"></span>
                             <div class="fileUploadResults wrap">
-                                <span class="upload-ko"><fmt:message key="tatami.user.upload.buttonIE-ko" /></span>
+                                <span class="upload-ko"><fmt:message key="pamelaChu.user.upload.buttonIE-ko" /></span>
                             </div>
                         <@ } @>
                 <div class="controls status-private">
                     <label class="checkbox">
-                        <input id="statusPrivate" name="statusPrivate" type="checkbox" value="true"> <span class="glyphicon glyphicon-lock"></span> <fmt:message key="tatami.status.private"/>
+                        <input id="statusPrivate" name="statusPrivate" type="checkbox" value="true"> <span class="glyphicon glyphicon-lock"></span> <fmt:message key="pamelaChu.status.private"/>
                     </label>
                 </div>
             </fieldset>
         </div>
         <div class="modal-footer">
             <a class="btn btn-red" data-dismiss="modal" aria-hidden="true">
-                <fmt:message key="tatami.form.cancel"/>
+                <fmt:message key="pamelaChu.form.cancel"/>
             </a>
-            <span class="hidden-label submit-label"><fmt:message key="tatami.form.save"/></span>
-            <span class="hidden-label tatam-mandatory"><fmt:message key="tatami.tatam.mandatory"/></span>
+            <span class="hidden-label submit-label"><fmt:message key="pamelaChu.form.save"/></span>
+            <span class="hidden-label tatam-mandatory"><fmt:message key="pamelaChu.tatam.mandatory"/></span>
             <input type="submit" class="btn btn-blue submit" data-buttonText="">
         </div>
     </div>
@@ -491,7 +491,7 @@
     <div class="well well-small">
         <h4 id="groups-list-title">
             <span class="glyphicon glyphicon-list-alt"></span>
-            &nbsp;<fmt:message key="tatami.account.groups.mygroups"/>
+            &nbsp;<fmt:message key="pamelaChu.account.groups.mygroups"/>
         </h4>
         <div class="items">
         </div>
@@ -501,7 +501,7 @@
     <a href="#groups/<@= groupId @>"><@= name @></a>
 </script>
 <script type="text/template" id="StatusAttachmentItems">
-        <a href="/tatami/file/<@= attachmentId @>/<@= filename @>" class="btn-link status-action" target="_blank">
+        <a href="/pamelaChu/file/<@= attachmentId @>/<@= filename @>" class="btn-link status-action" target="_blank">
             <i class="glyphicon glyphicon-file"></i> <@= filename @>
         </a>
 </script>
@@ -524,12 +524,12 @@
             <div class="img img-rounded img-small" style="background-image: url(<@= item.avatarURL @>);" />
             <h4><a href="#"><@= item.fullName @></a></h4>
             <p><@= item.label @></p>
-            <@ if(!item.activated) { @><span class=""><i><fmt:message key="tatami.user.desactivate.msg2"/></i></span><@ } @>
+            <@ if(!item.activated) { @><span class=""><i><fmt:message key="pamelaChu.user.desactivate.msg2"/></i></span><@ } @>
         </li>
     <@} else if(item.label) { @>
         <li class="item groups background-image-fffix" data-value="<@= item.label @>" rel="<@= item.id @>">
             <h4 class="smallPaddingLeft"><a href="#"><@= item.label @></a></h4>
-            <p><@= item.nb @> <fmt:message key="tatami.group.counter"/></p>
+            <p><@= item.nb @> <fmt:message key="pamelaChu.group.counter"/></p>
         </li>
     <@}@>
 </script>
@@ -539,13 +539,13 @@
     <div class="well well-small">
         <!-- <h4>
             <span class="glyphicon glyphicon-signal"></span>
-            <fmt:message key="tatami.statistics"/>
+            <fmt:message key="pamelaChu.statistics"/>
         </h4> -->
 
         <div>
             <!-- <p>
                 <strong>
-                    <fmt:message key="tatami.badge.status"/> :
+                    <fmt:message key="pamelaChu.badge.status"/> :
                 </strong>
                 <a href="#users/<@= username @>">
                     <span class="badge"><@= statusCount @></span>
@@ -554,7 +554,7 @@
 
             <p>
                 <strong>
-                    <fmt:message key="tatami.badge.followed"/> :
+                    <fmt:message key="pamelaChu.badge.followed"/> :
                 </strong>
                 <a href="#users/<@= username @>/friends">
                     <span class="badge"><@= friendsCount @></span>
@@ -563,7 +563,7 @@
 
             <p>
                 <strong>
-                    <fmt:message key="tatami.badge.followers"/> :
+                    <fmt:message key="pamelaChu.badge.followers"/> :
                 </strong>
                 <a href="#users/<@= username @>/followers">
                     <span class="badge"><@= followersCount @></span>
@@ -579,40 +579,40 @@
     <div class="well well-small">
         <h4>
             <span class="glyphicon glyphicon-user"></span>
-            <fmt:message key="tatami.user.informations"/>
+            <fmt:message key="pamelaChu.user.informations"/>
         </h4>
 
         <p>
             <strong>
-                <fmt:message key="tatami.user.firstName"/> :
+                <fmt:message key="pamelaChu.user.firstName"/> :
             </strong>
             <@= firstName @>
         </p>
 
         <p>
             <strong>
-                <fmt:message key="tatami.user.lastName"/> :
+                <fmt:message key="pamelaChu.user.lastName"/> :
             </strong>
             <@= lastName @>
         </p>
 
         <p>
             <strong>
-                <fmt:message key="tatami.user.email"/> :
+                <fmt:message key="pamelaChu.user.email"/> :
             </strong>
             <@= login @>
         </p>
 
         <p>
             <strong>
-                <fmt:message key="tatami.user.jobTitle"/> :
+                <fmt:message key="pamelaChu.user.jobTitle"/> :
             </strong>
             <@= jobTitle @>
         </p>
 
         <p>
             <strong>
-                <fmt:message key="tatami.user.phoneNumber"/> :
+                <fmt:message key="pamelaChu.user.phoneNumber"/> :
             </strong>
             <@= phoneNumber @>
         </p>
@@ -628,7 +628,7 @@
     <div class="well well-small">
         <h4>
             <span class="glyphicon glyphicon-fire"></span>
-            &nbsp;<fmt:message key="tatami.trends.title"/>
+            &nbsp;<fmt:message key="pamelaChu.trends.title"/>
         </h4>
         <div class="items">
         </div>
@@ -639,7 +639,7 @@
     <ul class="homebody-nav nav nav-justified">
         <li>
             <a href="#timeline">
-                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.timeline"/>
+                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.timeline"/>
             </a>
         </li>
     </ul>
@@ -647,17 +647,17 @@
     <ul class="homebody-nav nav nav-tabs-inverse nav-justified">
         <li class="timeline">
             <a href="#users/<@= user @>">
-                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.badge.status"/>
+                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.badge.status"/>
             </a>
         </li>
         <li class="friends">
             <a href="#users/<@= user @>/friends">
-                <i class="glyphicon glyphicon-upload"></i> <fmt:message key="tatami.badge.followed"/>
+                <i class="glyphicon glyphicon-upload"></i> <fmt:message key="pamelaChu.badge.followed"/>
             </a>
         </li>
         <li class="followers">
             <a href="#users/<@= user @>/followers">
-                <i class="glyphicon glyphicon-download"></i> <fmt:message key="tatami.badge.followers"/>
+                <i class="glyphicon glyphicon-download"></i> <fmt:message key="pamelaChu.badge.followers"/>
             </a>
         </li>
     </ul>
@@ -674,7 +674,7 @@
     <ul class="homebody-nav nav nav-justified">
         <li>
             <a href="#timeline">
-                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.timeline"/>
+                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.timeline"/>
             </a>
         </li>
     </ul>
@@ -682,12 +682,12 @@
     <ul class="homebody-nav nav nav-tabs-inverse nav-justified">
         <li class="timeline">
             <a href="#groups/<@= group @>">
-                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="tatami.badge.status"/>
+                <i class="glyphicon glyphicon-th-list"></i> <fmt:message key="pamelaChu.badge.status"/>
             </a>
         </li>
         <li class="members">
             <a href="#groups/<@= group @>/members">
-                <i class="glyphicon glyphicon-user"></i> <fmt:message key="tatami.group.members.list"/>
+                <i class="glyphicon glyphicon-user"></i> <fmt:message key="pamelaChu.group.members.list"/>
             </a>
         </li>
     </ul>
@@ -707,7 +707,7 @@
        <@  if(!activated) { @>
         <span>
             <span class="glyphicon glyphicon-off">
-               <fmt:message key="tatami.user.desactivate.msg"/>
+               <fmt:message key="pamelaChu.user.desactivate.msg"/>
             </span>
         </span>
         <@ } @>
@@ -716,13 +716,13 @@
                 <span class="glyphicon glyphicon-<@= (friend)? 'minus':'plus'@>"></span>
             </span>
         <@ } @>
-        <a href="/tatami/home/#/users/<@= username @>">
+        <a href="/pamelaChu/home/#/users/<@= username @>">
             <strong>
                 <@= fullName @>
             </strong>
         </a>
         <br>
-        <a href="/tatami/home/#/users/<@= username @>">
+        <a href="/pamelaChu/home/#/users/<@= username @>">
             <small>
                 @<@= username @>
             </small>
@@ -731,7 +731,7 @@
         <sec:authorize ifAnyGranted="ROLE_ADMIN">
             <span class="desactivateUser pointer pull-right label label-<@ if(activated) { @>danger<@ } else {@>success<@} @>">
               <span class="glyphicon glyphicon-<@= (activated)? 'minus':'plus'@>">
-                  <@= (activated)? '<fmt:message key="tatami.user.desactivate"/>':'<fmt:message key="tatami.user.activate"/>'@>
+                  <@= (activated)? '<fmt:message key="pamelaChu.user.desactivate"/>':'<fmt:message key="pamelaChu.user.activate"/>'@>
               </span>
             </span>
         </sec:authorize>
@@ -767,7 +767,7 @@
     <div class="well well-small">
         <h4 id="follow-suggest-title">
             <span class="glyphicon glyphicon-random"></span>
-            &nbsp;<fmt:message key="tatami.follow.suggestions"/>
+            &nbsp;<fmt:message key="pamelaChu.follow.suggestions"/>
         </h4>
         <div class="items">
         </div>
@@ -777,7 +777,7 @@
 <script type="text/html" id="TagsListTemplate">
     <table class="table noCollapse">
          <tr>
-            <th style="border-top :0"><fmt:message key="tatami.tag"/></th>
+            <th style="border-top :0"><fmt:message key="pamelaChu.tag"/></th>
             <th style="border-top :0" />
          </tr>
         <tbody class="items">
@@ -789,9 +789,9 @@
 <script type="text/html" id="GroupsSuscribeTemplate">
     <table class="table noCollapse">
         <tr>
-            <th style="border-top :0"><fmt:message key="tatami.group.name"/></th>
-            <th style="border-top :0"><fmt:message key="tatami.group.add.access"/></th>
-            <th style="border-top :0"><fmt:message key="tatami.group.counter"/></th>
+            <th style="border-top :0"><fmt:message key="pamelaChu.group.name"/></th>
+            <th style="border-top :0"><fmt:message key="pamelaChu.group.add.access"/></th>
+            <th style="border-top :0"><fmt:message key="pamelaChu.group.counter"/></th>
             <th style="border-top :0"></th>
         </tr>
         <tbody class="items">
@@ -802,8 +802,8 @@
 <script type="text/html" id="UserGroupList">
     <table class="table noCollapse">
         <tr>
-            <th style="border-top :0"><fmt:message key="tatami.username"/></th>
-            <th style="border-top :0"><fmt:message key="tatami.group.role"/></th>
+            <th style="border-top :0"><fmt:message key="pamelaChu.username"/></th>
+            <th style="border-top :0"><fmt:message key="pamelaChu.group.role"/></th>
             <th style="border-top :0"></th>
         </tr>
         <tbody class="items">

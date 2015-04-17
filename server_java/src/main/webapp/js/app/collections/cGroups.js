@@ -1,37 +1,37 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Groups = Backbone.Collection.extend({
-        url: '/tatami/rest/groups',
-        model: Tatami.Models.Group
+        url: '/pamelaChu/rest/groups',
+        model: PamelaChu.Models.Group
     });
 
     var GroupsSuscribe = Groups.extend({
         url: function(){
-            return '/tatami/rest/groups';
+            return '/pamelaChu/rest/groups';
         }
     })
 
     var GroupsRecommended = Groups.extend({
         url: function(){
-            return '/tatami/rest/groupmemberships/suggestions';
+            return '/pamelaChu/rest/groupmemberships/suggestions';
         }
     })
 
     var SearchGroups = Groups.extend({
         url: function(){
-            return '/tatami/rest/search/groups';
+            return '/pamelaChu/rest/search/groups';
         }
     });
 
     var SearchTags = Groups.extend({
         url: function(){
-            return '/tatami/rest/search/tags';
+            return '/pamelaChu/rest/search/tags';
         }
     });
 
-    Tatami.Collections.Groups = Groups;
-    Tatami.Collections.GroupsList = GroupsSuscribe;
-    Tatami.Collections.GroupsRecommended = GroupsRecommended;
-    Tatami.Collections.SearchGroups = SearchGroups;
-    Tatami.Collections.SearchTags = SearchTags;
-})(Backbone, Tatami);
+    PamelaChu.Collections.Groups = Groups;
+    PamelaChu.Collections.GroupsList = GroupsSuscribe;
+    PamelaChu.Collections.GroupsRecommended = GroupsRecommended;
+    PamelaChu.Collections.SearchGroups = SearchGroups;
+    PamelaChu.Collections.SearchTags = SearchTags;
+})(Backbone, PamelaChu);

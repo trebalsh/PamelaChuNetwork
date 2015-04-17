@@ -15,19 +15,19 @@
 <jsp:include page="includes/topmenu.jsp"/>
 
 <div class="row">
-    <div id="tatamiHeader" class="col-span-12">
+    <div id="pamelaChuHeader" class="col-span-12">
     </div>
 </div>
 
 <div class="row">
-    <aside id="tatamiSide" class="col-span-3">
+    <aside id="pamelaChuSide" class="col-span-3">
     </aside>
-    <section id="tatamiBody" class="col-span-7">
+    <section id="pamelaChuBody" class="col-span-7">
     </section>
 </div>
 
 <c:if test="${!ios}">
-    <form id="tatamiEdit" class="modal fade">
+    <form id="pamelaChuEdit" class="modal fade">
     </form>
 </c:if>
 <div id="slider" class="modal fade"></div>
@@ -40,7 +40,7 @@
     <script src="/js/vendor/favico-0.3.0.min.js"></script>
     <script src="/js/vendor/OpenLayers.js"></script>
     <script src="/js/app/app.js"></script>
-    <script src="/js/app/plugins/tatami.search.js"></script>
+    <script src="/js/app/plugins/pamelaChu.search.js"></script>
     <script src="/js/app/plugins/suggester.js"></script>
     <script src="/js/app/models/mUser.js"></script>
     <script src="/js/app/models/mFile.js"></script>
@@ -85,8 +85,8 @@
     <script src="/js/app/router.js"></script>
 </c:if>
 <c:if test="${wro4jEnabled eq true}">
-    <script src="/tatami/static-wro4j/${version}/tatami-app.js"></script>
-    <script src="/tatami/static-wro4j/${version}/tatami-app-account.js"></script>
+    <script src="/pamelaChu/static-wro4j/${version}/pamelaChu-app.js"></script>
+    <script src="/pamelaChu/static-wro4j/${version}/pamelaChu-app-account.js"></script>
 </c:if>
 
 <jsp:include page="includes/templates.jsp"/>

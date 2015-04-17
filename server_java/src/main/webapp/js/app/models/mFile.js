@@ -1,4 +1,4 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var MFile = Backbone.Model.extend({
         idAttribute: 'attachmentId',
@@ -7,7 +7,7 @@
     });
 
     var MQuota = Backbone.Model.extend({
-        url : '/tatami/rest/attachments/quota',
+        url : '/pamelaChu/rest/attachments/quota',
 
         parse : function(data){
             var response = {};
@@ -23,7 +23,7 @@
         }
     });
 
-    Tatami.Models.File = MFile;
-    Tatami.Models.Quota = MQuota;
+    PamelaChu.Models.File = MFile;
+    PamelaChu.Models.Quota = MQuota;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

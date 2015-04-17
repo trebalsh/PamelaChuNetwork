@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var HomeSide = Backbone.Marionette.Layout.extend({
         template: "#HomeSide",
         regions: {
@@ -40,7 +40,7 @@
         }
     });
 
-    Tatami.Views.HomeHeader = HomeHeader;
-    Tatami.Views.HomeSide = HomeSide;
-    Tatami.Views.HomeBody = HomeBody;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.HomeHeader = HomeHeader;
+    PamelaChu.Views.HomeSide = HomeSide;
+    PamelaChu.Views.HomeBody = HomeBody;
+})(Backbone, _, PamelaChu);

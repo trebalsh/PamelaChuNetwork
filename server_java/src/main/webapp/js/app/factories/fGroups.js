@@ -1,62 +1,62 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var groups = new (Backbone.Collection.extend({
-        model : Tatami.Models.Group
+        model : PamelaChu.Models.Group
     }))();
 
-    Tatami.Factories.Groups = {
+    PamelaChu.Factories.Groups = {
         groupsHeader: function(groupId){
             var group = groups.get(groupId);
             if(!group){
-                group = new Tatami.Models.Group({
+                group = new PamelaChu.Models.Group({
                     groupId: groupId
                 });
                 groups.add(group);
                 group.fetch({
                     error: function(){
-                        Tatami.app.router.defaults();
+                        PamelaChu.app.router.defaults();
                     }
                 });
             }
 
-            return new Tatami.Views.GroupsHeader({
+            return new PamelaChu.Views.GroupsHeader({
               model: group
             });
         },
         groupsBody: function(groupId){
-            return new Tatami.Views.GroupsBody({
+            return new PamelaChu.Views.GroupsBody({
                 group: groupId
             });
         }, 
         groupsUser: function(groupId){
-            var c = new Tatami.Collections.UsersInGroup();
+            var c = new PamelaChu.Collections.UsersInGroup();
             c.group = groupId;
-            return new Tatami.Views.UserList({
+            return new PamelaChu.Views.UserList({
                 collection: c
             });
         }  ,
 
         groupUsers: function(groupId){
-            var c = new Tatami.Collections.UsersInGroup();
+            var c = new PamelaChu.Collections.UsersInGroup();
             c.group = groupId;
             c.fetch();
-            return new Tatami.Views.UserGroupList({
+            return new PamelaChu.Views.UserGroupList({
                 collection: c
             });
         },
 
         groupsSubscribe: function(){
-            var c = new Tatami.Collections.GroupsList();
+            var c = new PamelaChu.Collections.GroupsList();
             c.fetch();
-            return new Tatami.Views.GroupsList({
+            return new PamelaChu.Views.GroupsList({
                 collection: c
             });
         },
 
         groupsRecommended: function(){
-            var c = new Tatami.Collections.GroupsRecommended();
+            var c = new PamelaChu.Collections.GroupsRecommended();
             c.fetch();
-            return new Tatami.Views.GroupsList({
+            return new PamelaChu.Views.GroupsList({
                 collection: c
             });
         },
@@ -71,4 +71,4 @@
 
     };
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

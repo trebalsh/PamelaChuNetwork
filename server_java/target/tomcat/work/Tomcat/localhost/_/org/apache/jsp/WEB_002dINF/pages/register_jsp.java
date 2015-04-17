@@ -103,7 +103,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"col-offset-4 col-span-2\">\n");
       out.write("            <br>\n");
       out.write("            <br>\n");
-      out.write("            <a href=\"/tatami/\">");
+      out.write("            <a href=\"/pamelaChu/\">");
       if (_jspx_meth_fmt_005fmessage_005f3(_jspx_page_context))
         return;
       out.write("</a>\n");
@@ -138,7 +138,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_fmt_005fmessage_005f0.setPageContext(_jspx_page_context);
     _jspx_th_fmt_005fmessage_005f0.setParent(null);
     // /WEB-INF/pages/register.jsp(17,16) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_fmt_005fmessage_005f0.setKey("tatami.register.validation.title");
+    _jspx_th_fmt_005fmessage_005f0.setKey("pamelaChu.register.validation.title");
     int _jspx_eval_fmt_005fmessage_005f0 = _jspx_th_fmt_005fmessage_005f0.doStartTag();
     if (_jspx_th_fmt_005fmessage_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f0);
@@ -189,7 +189,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_fmt_005fmessage_005f1.setPageContext(_jspx_page_context);
     _jspx_th_fmt_005fmessage_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f0);
     // /WEB-INF/pages/register.jsp(20,19) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_fmt_005fmessage_005f1.setKey("tatami.register.validation.error");
+    _jspx_th_fmt_005fmessage_005f1.setKey("pamelaChu.register.validation.error");
     int _jspx_eval_fmt_005fmessage_005f1 = _jspx_th_fmt_005fmessage_005f1.doStartTag();
     if (_jspx_th_fmt_005fmessage_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f1);
@@ -240,7 +240,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_fmt_005fmessage_005f2.setPageContext(_jspx_page_context);
     _jspx_th_fmt_005fmessage_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_005fif_005f1);
     // /WEB-INF/pages/register.jsp(23,19) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_fmt_005fmessage_005f2.setKey("tatami.register.validation.ok");
+    _jspx_th_fmt_005fmessage_005f2.setKey("pamelaChu.register.validation.ok");
     int _jspx_eval_fmt_005fmessage_005f2 = _jspx_th_fmt_005fmessage_005f2.doStartTag();
     if (_jspx_th_fmt_005fmessage_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f2);
@@ -259,7 +259,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_fmt_005fmessage_005f3.setPageContext(_jspx_page_context);
     _jspx_th_fmt_005fmessage_005f3.setParent(null);
     // /WEB-INF/pages/register.jsp(31,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_fmt_005fmessage_005f3.setKey("tatami.register.home");
+    _jspx_th_fmt_005fmessage_005f3.setKey("pamelaChu.register.home");
     int _jspx_eval_fmt_005fmessage_005f3 = _jspx_th_fmt_005fmessage_005f3.doStartTag();
     if (_jspx_th_fmt_005fmessage_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f3);

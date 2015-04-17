@@ -1,15 +1,15 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var statusDetails = new (Backbone.Collection.extend({
-        model : Tatami.Models.StatusDetails
+        model : PamelaChu.Models.StatusDetails
     }))();
 
-    Tatami.Factories.Status = {
+    PamelaChu.Factories.Status = {
 
         getStatusDetail: function(id){
             var statusDetail = statusDetails.get(id);
             if(!statusDetail){
-                var statusDetail = new Tatami.Models.StatusDetails({
+                var statusDetail = new PamelaChu.Models.StatusDetails({
                     statusId: id
                 });
                 statusDetails.add(statusDetail);
@@ -18,67 +18,67 @@
         },
 
         getTimelineRegion: function(){
-            return new Tatami.Views.StatusTimelineRegion();
+            return new PamelaChu.Views.StatusTimelineRegion();
         },
 
         getWelcomeRegion: function(){
-            return new Tatami.Views.WelcomeRegion();
+            return new PamelaChu.Views.WelcomeRegion();
         },
 
         getUpdateButton: function(){
-            return new Tatami.Views.StatusUpdateButton();
+            return new PamelaChu.Views.StatusUpdateButton();
         },
 
         statusesTimeline: function(){
-            return new Tatami.Views.Statuses({
-                collection: new Tatami.Collections.StatusesTimeline()                
+            return new PamelaChu.Views.Statuses({
+                collection: new PamelaChu.Collections.StatusesTimeline()                
             });
         },
 
         statusesFavorites: function(){
-            return new Tatami.Views.Statuses({
-                collection: new Tatami.Collections.StatusesFavorites()
+            return new PamelaChu.Views.Statuses({
+                collection: new PamelaChu.Collections.StatusesFavorites()
             });
         },
 
         statusesMentions: function(){
-            return new Tatami.Views.Statuses({
-                collection: new Tatami.Collections.StatusesMentions()
+            return new PamelaChu.Views.Statuses({
+                collection: new PamelaChu.Collections.StatusesMentions()
             });
         },
 
         statusesCompany: function(){
-            return new Tatami.Views.Statuses({
-                collection: new Tatami.Collections.StatusesCompany()
+            return new PamelaChu.Views.Statuses({
+                collection: new PamelaChu.Collections.StatusesCompany()
             });
         },
 
         statusesTags: function(tagName){
-            var c = new Tatami.Collections.StatusesTags();
+            var c = new PamelaChu.Collections.StatusesTags();
             c.tag = tagName;
 
-            return new Tatami.Views.Statuses({
+            return new PamelaChu.Views.Statuses({
                 collection: c
             });
         },
 
         statusesGroups: function(groupId){
-            var c = new Tatami.Collections.StatusesGroups();
+            var c = new PamelaChu.Collections.StatusesGroups();
             c.group = groupId;
 
-            return new Tatami.Views.Statuses({
+            return new PamelaChu.Views.Statuses({
                 collection: c
             });
         }, 
 
         statusesSearch: function(input){
-            var c = new Tatami.Collections.StatusesSearch();
+            var c = new PamelaChu.Collections.StatusesSearch();
             c.input = input;
             
-            return new Tatami.Views.Statuses({
+            return new PamelaChu.Views.Statuses({
                 collection: c
             });
         }
     };
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

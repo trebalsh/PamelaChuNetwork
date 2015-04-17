@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var UserItems = Backbone.Marionette.ItemView.extend({
         className: 'useritem',
         template: '#UserItems',
@@ -103,7 +103,7 @@
         className: 'useritem'
     });
 
-    Tatami.Views.UserList = UserList;
-    Tatami.Views.WhoToFollow = WhoToFollow;
-    Tatami.Views.UserGroupList = UserGroupList;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.UserList = UserList;
+    PamelaChu.Views.WhoToFollow = WhoToFollow;
+    PamelaChu.Views.UserGroupList = UserGroupList;
+})(Backbone, _, PamelaChu);

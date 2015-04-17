@@ -1,11 +1,11 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var StatusUpdateButton = Backbone.Marionette.ItemView.extend({
         initialize: function(){
             _.defaults(this.options, {
                 count: 0
             });
             this.$el.css('display', 'none');
-            this.listenTo(Tatami.app, 'statusPending', function(hiddenStatuses){
+            this.listenTo(PamelaChu.app, 'statusPending', function(hiddenStatuses){
                 this.options.count = (hiddenStatuses)? hiddenStatuses.length: 0;
                 this.render();
             });
@@ -18,11 +18,11 @@
         },
         onClick: function(){
             $(this.el).removeClass('refresh-button-style');
-            Tatami.app.trigger('display');
+            PamelaChu.app.trigger('display');
             if (!ie || ie>9){
-                Tatami.app.favi.badge(0) ;
+                PamelaChu.app.favi.badge(0) ;
             }
-            document.title = "Tatami";
+            document.title = "PamelaChu";
             this.$el.slideUp();
         },
         onRender: function(){
@@ -30,16 +30,16 @@
             if(this.options.count !== 0) {
                 $(this.el).addClass('refresh-button-style');
                 if (!ie || ie>9){
-                    Tatami.app.favi.badge(this.options.count) ;
+                    PamelaChu.app.favi.badge(this.options.count) ;
                 }
-                document.title = "Tatami (" + this.options.count + ")";
+                document.title = "PamelaChu (" + this.options.count + ")";
                 this.$el.slideDown();
             } else {
                 $(this.el).removeClass('refresh-button-style');
-                document.title = "Tatami";
+                document.title = "PamelaChu";
                 this.$el.slideUp();
                 if (!ie || ie > 9){
-                    Tatami.app.trigger("changeFavicon", {
+                    PamelaChu.app.trigger("changeFavicon", {
                         countFavicon : self.options.count
                     });
                 }
@@ -57,6 +57,6 @@
         }
     });
 
-    Tatami.Views.StatusTimelineRegion = StatusTimelineRegion;
-    Tatami.Views.StatusUpdateButton = StatusUpdateButton;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.StatusTimelineRegion = StatusTimelineRegion;
+    PamelaChu.Views.StatusUpdateButton = StatusUpdateButton;
+})(Backbone, _, PamelaChu);

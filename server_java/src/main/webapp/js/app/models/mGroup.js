@@ -1,7 +1,7 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Group = Backbone.Model.extend({
-        urlRoot: '/tatami/rest/groups',
+        urlRoot: '/pamelaChu/rest/groups',
         idAttribute: 'groupId',
         defaults: {
             publicGroup: true,
@@ -22,6 +22,6 @@
         }
     });
 
-    Tatami.Models.Group = Group;
+    PamelaChu.Models.Group = Group;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

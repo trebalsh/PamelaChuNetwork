@@ -15,62 +15,62 @@
 
 <div class="row">
     <div class="container-fluid">
-        <img class="logo-site" src="/img/company-logo.png" alt="<fmt:message key="tatami.logo"/>">
-        <h3 class="text-center title-blue"><fmt:message key="tatami.presentation"/></h3>
+        <img class="logo-site" src="/img/company-logo.png" alt="<fmt:message key="pamelaChu.logo"/>">
+        <h3 class="text-center title-blue"><fmt:message key="pamelaChu.presentation"/></h3>
     </div>
 </div>
 
 <c:if test="${action eq 'register'}">
 <div class="alert alert-info">
-    <fmt:message key="tatami.register.msg"/>
+    <fmt:message key="pamelaChu.register.msg"/>
 </div>
 </c:if>
 <c:if test="${action eq 'registerFailure'}">
 <div class="alert alert-danger">
-    <fmt:message key="tatami.register.msg.error"/>
+    <fmt:message key="pamelaChu.register.msg.error"/>
 </div>
 </c:if>
 <c:if test="${action eq 'loginFailure'}">
 <div class="alert alert-danger">
-    <fmt:message key="tatami.authentification.error"/>
+    <fmt:message key="pamelaChu.authentification.error"/>
 </div>
 </c:if>
 <c:if test="${action eq 'lostPassword'}">
 <div class="alert alert-info">
-    <fmt:message key="tatami.lost.password.msg"/>
+    <fmt:message key="pamelaChu.lost.password.msg"/>
 </div>
 </c:if>
 <c:if test="${action eq 'lostPasswordFailure'}">
 <div class="alert alert-danger">
-    <fmt:message key="tatami.lost.password.msg.error"/>
+    <fmt:message key="pamelaChu.lost.password.msg.error"/>
 </div>
 </c:if>
 <c:if test="${action eq 'ldapPasswordFailure'}">
 <div class="alert alert-danger">
-    <fmt:message key="tatami.ldap.password.msg.error"/>
+    <fmt:message key="pamelaChu.ldap.password.msg.error"/>
 </div>
 </c:if>
 
 <div class="row">
     <div class="col-span-6">
-        <h4 class="title-blue sub-title-home"><fmt:message key="tatami.register.title"/></h4>
+        <h4 class="title-blue sub-title-home"><fmt:message key="pamelaChu.register.title"/></h4>
 
         <p class="text-blue">
-            <fmt:message key="tatami.register.text.1"/>
-            <fmt:message key="tatami.register.text.2"/>
+            <fmt:message key="pamelaChu.register.text.1"/>
+            <fmt:message key="pamelaChu.register.text.2"/>
         </p>
-        <form action="/tatami/register" method="post" class="well" accept-charset="utf-8" id="registrationForm">
+        <form action="/pamelaChu/register" method="post" class="well" accept-charset="utf-8" id="registrationForm">
             <fieldset class="row-fluid">
                 <div class="controle-group">
                     <label>
-                        <fmt:message key="tatami.login"/> :
+                        <fmt:message key="pamelaChu.login"/> :
                     </label>
                     <input name="email" type="email" required="required" class="col-span-12"
                            placeholder="Your e-mail..."/>
                 </div>
                 <div class="controle-group">
                     <button type="submit" class="col-span-12 btn btn-blue btn-L" id="registrationButton">
-                        <fmt:message key="tatami.register"/>
+                        <fmt:message key="pamelaChu.register"/>
                     </button>
                 </div>
             </fieldset>
@@ -78,20 +78,20 @@
     </div>
 
     <div class="col-span-6">
-        <h4 class="title-blue sub-title-home"><fmt:message key="tatami.authentification"/></h4>
+        <h4 class="title-blue sub-title-home"><fmt:message key="pamelaChu.authentification"/></h4>
 
-        <form action="/tatami/authentication" method="post" accept-charset="utf-8" id="loginForm" class="well">
+        <form action="/pamelaChu/authentication" method="post" accept-charset="utf-8" id="loginForm" class="well">
             <fieldset class="row-fluid">
                 <div class="controle-group">
                     <label>
-                        <fmt:message key="tatami.login"/> :
+                        <fmt:message key="pamelaChu.login"/> :
                     </label>
                     <input id="j_username" name="j_username" type="email" required="required" autofocus
                            class="col-span-12" placeholder="Your e-mail..."/>
                 </div>
                 <div class="controle-group">
                     <label>
-                        <fmt:message key="tatami.password"/> :
+                        <fmt:message key="pamelaChu.password"/> :
                     </label>
                     <input id="j_password" name="j_password" type="password" required="required"
                            class="col-span-12" placeholder="Your password..."/>
@@ -99,11 +99,11 @@
                 <div class="controle-group">
                     <input id="_spring_security_remember_me" name="_spring_security_remember_me"
                            type="checkbox"/>
-                    <fmt:message key="tatami.remember.password.time"/>
+                    <fmt:message key="pamelaChu.remember.password.time"/>
                 </div>
                 <div class="controle-group">
                     <button type="submit" class="col-span-12 btn btn-blue btn-L" id="loginButton">
-                        <fmt:message key="tatami.authentificate"/>
+                        <fmt:message key="pamelaChu.authentificate"/>
                     </button>
                 </div>
 
@@ -113,23 +113,23 @@
         <div class="well row-fluid col-span-12">
             <div data-toggle="collapse" data-target="#lostPasswordDiv">
                 <button class="col-span-12 btn btn-red btn-L">
-                    <fmt:message key="tatami.lost.password.title"/>
+                    <fmt:message key="pamelaChu.lost.password.title"/>
                 </button>
             </div>
             <div class="col-span-12">
                 <div id="lostPasswordDiv" class="collapse little-height">
-                    <form action="/tatami/lostpassword" method="post" accept-charset="utf-8">
+                    <form action="/pamelaChu/lostpassword" method="post" accept-charset="utf-8">
                         <fieldset>
                             <div class="controle-group">
                                 <label class="little-marge-top">
-                                    <fmt:message key="tatami.login"/> :
+                                    <fmt:message key="pamelaChu.login"/> :
                                 </label>
                                 <input name="email" type="email" required="required" class="col-span-12"
                                        placeholder="Your e-mail..."/>
                             </div>
                             <div class="controle-group">
                                 <button type="submit" class="col-span-12 btn-L btn btn-blue">
-                                    <fmt:message key="tatami.lost.password.button"/>
+                                    <fmt:message key="pamelaChu.lost.password.button"/>
                                 </button>
                             </div>
                         </fieldset>
@@ -141,10 +141,10 @@
 
 
     <%-- <div class="col-span-4">
-        <h1><fmt:message key="tatami.authentication.google.title"/></h1>
+        <h1><fmt:message key="pamelaChu.authentication.google.title"/></h1>
 
         <p>
-            <fmt:message key="tatami.authentication.google.desc.1"/>
+            <fmt:message key="pamelaChu.authentication.google.desc.1"/>
         </p>
 
         <p>
@@ -152,14 +152,14 @@
         </p>
 
         <p>
-            <fmt:message key="tatami.authentication.google.desc.2"/>
+            <fmt:message key="pamelaChu.authentication.google.desc.2"/>
         </p>
 
         <p>
-            <fmt:message key="tatami.authentication.google.desc.3"/>
+            <fmt:message key="pamelaChu.authentication.google.desc.3"/>
         </p>
 
-        <form class="well" action="/tatami/j_spring_openid_security_check" method="post" accept-charset="utf-8">
+        <form class="well" action="/pamelaChu/j_spring_openid_security_check" method="post" accept-charset="utf-8">
             <fieldset class="row-fluid">
                 <div class="controle-group">
                     <input class="col-span-12" name="openid_identifier" size="50"
@@ -168,11 +168,11 @@
                 </div>
                 <div class="controle-group">
                     <button id="proceed_google" type="submit" class="col-span-12 btn btn-blue">
-                        <fmt:message key="tatami.authentication.google.submit"/>
+                        <fmt:message key="pamelaChu.authentication.google.submit"/>
                     </button>
                 </div>
                 <div class="controle-group">
-                    <div class="text-center">(<a href="/tatami/tos"><fmt:message key="tatami.authentication.cgv"/></a>)
+                    <div class="text-center">(<a href="/pamelaChu/tos"><fmt:message key="pamelaChu.authentication.cgv"/></a>)
                     </div>
                 </div>
             </fieldset>
@@ -183,14 +183,14 @@
 <div id="modalTimeoutWindow" class="modal hide fade">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3><fmt:message key="tatami.login.modal.timeout.title"/></h3>
+        <h3><fmt:message key="pamelaChu.login.modal.timeout.title"/></h3>
     </div>
     <div class="modal-body">
-        <p><fmt:message key="tatami.login.modal.timeout.message"/></p>
+        <p><fmt:message key="pamelaChu.login.modal.timeout.message"/></p>
     </div>
     <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal" aria-hidden="true"><fmt:message
-                key="tatami.login.modal.timeout.close"/></a>
+                key="pamelaChu.login.modal.timeout.close"/></a>
     </div>
 </div>
 <jsp:include page="includes/footer.jsp"/>

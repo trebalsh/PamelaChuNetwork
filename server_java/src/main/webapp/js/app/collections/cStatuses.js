@@ -1,4 +1,4 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var Statuses = Backbone.Collection.extend({
         initialize: function(){
@@ -6,7 +6,7 @@
             this.initNext();
             this.initRefresh();
         },
-        model: Tatami.Models.Status,
+        model: PamelaChu.Models.Status,
         initStorage: function(){
 
         },
@@ -38,7 +38,7 @@
                     merge:true,
                     at:0,
                     success: function(){
-                        Tatami.app.trigger('statusPending', self.filter(function(model){
+                        PamelaChu.app.trigger('statusPending', self.filter(function(model){
                             return model.hidden;
                         }));
                         self.initRefresh();
@@ -57,59 +57,59 @@
     });
 
     var StatusesTimeline = Statuses.extend({
-        url: '/tatami/rest/statuses/home_timeline'
+        url: '/pamelaChu/rest/statuses/home_timeline'
     });
 
     var StatusesFavorites = Statuses.extend({
-        url: '/tatami/rest/favorites'
+        url: '/pamelaChu/rest/favorites'
     });
 
     var StatusesMentions = Statuses.extend({
-        model: Tatami.Models.Status,
-        url: '/tatami/rest/mentions'
+        model: PamelaChu.Models.Status,
+        url: '/pamelaChu/rest/mentions'
     });
 
     var StatusesCompany = Statuses.extend({
-        model: Tatami.Models.Status,
-        url: '/tatami/rest/company'
+        model: PamelaChu.Models.Status,
+        url: '/pamelaChu/rest/company'
     });
 
     var StatusesTags = Statuses.extend({
-        model: Tatami.Models.Status,
+        model: PamelaChu.Models.Status,
         url: function(){
-            return '/tatami/rest/tags/' + this.tag + '/tag_timeline';
+            return '/pamelaChu/rest/tags/' + this.tag + '/tag_timeline';
         }
     });
 
     var StatusesUsers = Statuses.extend({
-        model: Tatami.Models.Status,
+        model: PamelaChu.Models.Status,
         url: function(){
-            return '/tatami/rest/statuses/' + this.user + '/timeline';
+            return '/pamelaChu/rest/statuses/' + this.user + '/timeline';
         }
     });
 
     var StatusesGroups = Statuses.extend({
-        model: Tatami.Models.Status,
+        model: PamelaChu.Models.Status,
         url: function(){
-            return '/tatami/rest/groups/' + this.group + '/timeline';
+            return '/pamelaChu/rest/groups/' + this.group + '/timeline';
         }
     });
 
     var StatusesSearch = Statuses.extend({
-        model: Tatami.Models.Status,
+        model: PamelaChu.Models.Status,
         url: function(){
-            return '/tatami/rest/search/status?q='+this.input;
+            return '/pamelaChu/rest/search/status?q='+this.input;
         }
     });
 
-    Tatami.Collections.Statuses = Statuses;
-    Tatami.Collections.StatusesTimeline = StatusesTimeline;
-    Tatami.Collections.StatusesFavorites = StatusesFavorites;
-    Tatami.Collections.StatusesMentions = StatusesMentions;
-    Tatami.Collections.StatusesCompany = StatusesCompany;
-    Tatami.Collections.StatusesTags = StatusesTags;
-    Tatami.Collections.StatusesUsers = StatusesUsers;
-    Tatami.Collections.StatusesGroups = StatusesGroups;
-    Tatami.Collections.StatusesSearch = StatusesSearch;
+    PamelaChu.Collections.Statuses = Statuses;
+    PamelaChu.Collections.StatusesTimeline = StatusesTimeline;
+    PamelaChu.Collections.StatusesFavorites = StatusesFavorites;
+    PamelaChu.Collections.StatusesMentions = StatusesMentions;
+    PamelaChu.Collections.StatusesCompany = StatusesCompany;
+    PamelaChu.Collections.StatusesTags = StatusesTags;
+    PamelaChu.Collections.StatusesUsers = StatusesUsers;
+    PamelaChu.Collections.StatusesGroups = StatusesGroups;
+    PamelaChu.Collections.StatusesSearch = StatusesSearch;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

@@ -1,4 +1,4 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var StatusDetails = Backbone.Model.extend({
         idAttribute: 'statusId',
@@ -8,7 +8,7 @@
             sharedByLogins: []
         },
 
-        urlRoot: '/tatami/rest/statuses/details/',
+        urlRoot: '/pamelaChu/rest/statuses/details/',
 
         getStatusBefore: function(){
             var refDate = this.get('refDate');
@@ -19,7 +19,7 @@
             if(statusBefore.length > 0){
                 statusBefore[0].first = true;
             }
-            return new Tatami.Collections.Statuses(statusBefore);
+            return new PamelaChu.Collections.Statuses(statusBefore);
         },
 
         getStatusAfter: function(){
@@ -34,7 +34,7 @@
                 statusAfter[length].last = true;
             }
 
-            return new Tatami.Collections.Statuses(statusAfter);
+            return new PamelaChu.Collections.Statuses(statusAfter);
         },
 
         isSharedBy: function(username){
@@ -57,7 +57,7 @@
 
     });
 
-    Tatami.Models.StatusDetails = StatusDetails;
-    Tatami.Models.StatusDiscussion = StatusDiscussion;
+    PamelaChu.Models.StatusDetails = StatusDetails;
+    PamelaChu.Models.StatusDiscussion = StatusDiscussion;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

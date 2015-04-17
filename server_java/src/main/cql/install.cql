@@ -1,9 +1,9 @@
-create keyspace tatami
+create keyspace pamelaChu
   with placement_strategy = 'SimpleStrategy'
   and strategy_options = {replication_factor : 1}
   and durable_writes = true;
 
-use tatami;
+use pamelaChu;
 
 create column family Counter
   with column_type = 'Standard'
@@ -455,7 +455,7 @@ create column family Groupline
   and caching = 'KEYS_ONLY'
   and compression_options = {'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
 
-create column family TatamiBotDuplicate
+create column family PamelaChuBotDuplicate
   with column_type = 'Standard'
   and comparator = 'BytesType'
   and default_validation_class = 'BytesType'
@@ -545,7 +545,7 @@ create column family Domainline
   and caching = 'KEYS_ONLY'
   and compression_options = {'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
 
-create column family DomainTatamibot
+create column family DomainPamelaChubot
   with column_type = 'Standard'
   and comparator = 'UUIDType'
   and default_validation_class = 'BytesType'
@@ -560,7 +560,7 @@ create column family DomainTatamibot
   and caching = 'KEYS_ONLY'
   and compression_options = {'sstable_compression' : 'org.apache.cassandra.io.compress.SnappyCompressor'};
 
-create column family TatamibotConfiguration
+create column family PamelaChubotConfiguration
   with column_type = 'Standard'
   and comparator = 'BytesType'
   and default_validation_class = 'BytesType'

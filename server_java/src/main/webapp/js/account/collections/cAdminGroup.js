@@ -4,6 +4,6 @@
 var CListUserGroup = Backbone.Collection.extend({
     model : MUserGroup,
     url : function() {
-        return '/tatami/rest/groups/' + this.options.groupId + '/members/';
+        return '/pamelaChu/rest/groups/' + this.options.groupId + '/members/';
     }
 });

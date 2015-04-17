@@ -3,9 +3,9 @@ package pages
 import geb.Page
  
 class LoginPage extends Page {
-    static url = "tatami/login"
+    static url = "pamelaChu/login"
  
-    static at = { $("h1",text:contains("Welcome to Tatami")) }
+    static at = { $("h1",text:contains("Welcome to PamelaChu")) }
  
     static content = {
 		

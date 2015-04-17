@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var ProfileSide = Backbone.Marionette.Layout.extend({
         template: "#ProfileSide",
         regions: {
@@ -55,7 +55,7 @@
         }
     });
 
-    Tatami.Views.ProfileHeader = ProfileHeader;
-    Tatami.Views.ProfileSide = ProfileSide;
-    Tatami.Views.ProfileBody = ProfileBody;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.ProfileHeader = ProfileHeader;
+    PamelaChu.Views.ProfileSide = ProfileSide;
+    PamelaChu.Views.ProfileBody = ProfileBody;
+})(Backbone, _, PamelaChu);

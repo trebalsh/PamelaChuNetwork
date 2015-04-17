@@ -14,13 +14,13 @@
 <div id="mainPanel" class="container">
     <div class="row">
         <div class="col-offset-2 col-span-8">
-            <h1><fmt:message key="tatami.register.validation.title"/></h1>
+            <h1><fmt:message key="pamelaChu.register.validation.title"/></h1>
 
             <c:if test="${login eq null}">
-                <p><fmt:message key="tatami.register.validation.error"/></p>
+                <p><fmt:message key="pamelaChu.register.validation.error"/></p>
             </c:if>
             <c:if test="${login ne null}">
-                <p><fmt:message key="tatami.register.validation.ok"/></p>
+                <p><fmt:message key="pamelaChu.register.validation.ok"/></p>
             </c:if>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="col-offset-4 col-span-2">
             <br>
             <br>
-            <a href="/tatami/"><fmt:message key="tatami.register.home"/></a>
+            <a href="/pamelaChu/"><fmt:message key="pamelaChu.register.home"/></a>
         </div>
     </div>
 </div>

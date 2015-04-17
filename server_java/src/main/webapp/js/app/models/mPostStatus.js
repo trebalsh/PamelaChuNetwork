@@ -1,4 +1,4 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var PostStatus = Backbone.Model.extend({
         defaults: {
@@ -10,7 +10,7 @@
             statusPrivate: false
         },
 
-        urlRoot: '/tatami/rest/statuses/',
+        urlRoot: '/pamelaChu/rest/statuses/',
 
         addAttachment: function(id){
             var attachments = this.get('attachmentIds');
@@ -23,6 +23,6 @@
         }
     });
 
-    Tatami.Models.PostStatus = PostStatus;
+    PamelaChu.Models.PostStatus = PostStatus;
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

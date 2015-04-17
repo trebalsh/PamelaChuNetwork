@@ -22,7 +22,7 @@
             <@ if (item.avatar == null || item.avatar == '') { @>
             src="/img/default_image_profile.png"
             <@ } else { @>
-            src="/tatami/avatar/<@= item.avatar @>/photo.jpg"
+            src="/pamelaChu/avatar/<@= item.avatar @>/photo.jpg"
             <@ } @>
              alt=""/>
         <h4><a href="#"><@= item.fullName @></a></h4>
@@ -32,7 +32,7 @@
     <li class="item groups" data-value="<@= item.label @>" rel="<@= item.id @>">
         <img src="/img/default_image_profile.png" width="30px" height="30px">
         <h4><a href="#"><@= item.label @></a></h4>
-        <p><@= item.nb @> <fmt:message key="tatami.group.counter"/></p>
+        <p><@= item.nb @> <fmt:message key="pamelaChu.group.counter"/></p>
     </li>
 <@}@>
 </script>

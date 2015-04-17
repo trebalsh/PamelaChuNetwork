@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var TagTrendItems = Backbone.Marionette.ItemView.extend({
         template: '#TagTrendItems',
         events: {
@@ -28,6 +28,6 @@
         template: '#TagTrendsProfile'
     });
 
-    Tatami.Views.TagTrends = TagTrends;
-    Tatami.Views.TagTrendsProfile = TagTrendsProfile;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.TagTrends = TagTrends;
+    PamelaChu.Views.TagTrendsProfile = TagTrendsProfile;
+})(Backbone, _, PamelaChu);

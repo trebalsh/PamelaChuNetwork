@@ -1,4 +1,4 @@
-(function(window, Tatami){
+(function(window, PamelaChu){
 
     var patterns = {
         login: /(^|[^\w])@[\w]*$/gim,
@@ -28,7 +28,7 @@
             switch (query2.charAt(0)) {
                 case '@' :
                     q = query2.substring(1, query2.length);
-                    return $.get('/tatami/rest/search/users', {q:q}, function (data) {
+                    return $.get('/pamelaChu/rest/search/users', {q:q}, function (data) {
                         var results = [];
                         for (var i = 0; i < data.length; i++) {
                             results[i] = '@' + data[i].username;
@@ -37,7 +37,7 @@
                     });
                 case '#' :
                     q = query2.substring(1, query2.length);
-                    return $.get('/tatami/rest/search/tags', {q:q}, function (data) {
+                    return $.get('/pamelaChu/rest/search/tags', {q:q}, function (data) {
                         var results = [];
                         for (var i = 0; i < data.length; i++) {
                             results[i] = '#' + data[i].name;
@@ -76,5 +76,5 @@
       return (caretPos);
     };
 
-    Tatami.Suggester = Suggester;
-})(window, Tatami);
+    PamelaChu.Suggester = Suggester;
+})(window, PamelaChu);

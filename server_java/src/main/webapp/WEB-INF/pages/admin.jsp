@@ -68,7 +68,7 @@
             <div class="row-fluid">
                 <div class="tab-content col-span-12">
                     <h2>
-                        Environnement variables (from tatami.properties)
+                        Environnement variables (from pamelaChu.properties)
                     </h2>
                     <table class="table table-striped">
                         <thead>
@@ -102,7 +102,7 @@
                 Re-index Search Engine
             </h2>
 
-            <form class="form-horizontal" action="/tatami/admin/reindex" method="post">
+            <form class="form-horizontal" action="/pamelaChu/admin/reindex" method="post">
                 <fieldset>
                     <div class="form-actions">
                         <button type="submit" class="input-xlarge btn btn-danger"

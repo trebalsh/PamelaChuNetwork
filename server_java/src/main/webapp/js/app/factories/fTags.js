@@ -1,32 +1,32 @@
-(function(Backbone, Tatami){
+(function(Backbone, PamelaChu){
 
     var tags = new (Backbone.Collection.extend({
-        model : Tatami.Models.Tag
+        model : PamelaChu.Models.Tag
     }))();
 
     var tagsBody, tagsHeader;
 
-    Tatami.Factories.Tags = {
+    PamelaChu.Factories.Tags = {
         tagsBody: function(tagName){          
-            tagsBody = new Tatami.Views.TagsBody();
+            tagsBody = new PamelaChu.Views.TagsBody();
 
             return tagsBody;
         },
         tagsHeader: function(tagName){
             var tag = tags.get(tagName);
             if(!tag){
-                tag = new Tatami.Models.Tag({
+                tag = new PamelaChu.Models.Tag({
                     name: tagName
                 });
                 tags.add(tag);
                 tag.fetch({
                     error: function(){
-                        Tatami.app.router.defaults();
+                        PamelaChu.app.router.defaults();
                     }
                 });
             }
 
-            return new Tatami.Views.TagsHeader({
+            return new PamelaChu.Views.TagsHeader({
               model: tag
             });
         }
@@ -35,4 +35,4 @@
 
     };
 
-})(Backbone, Tatami);
+})(Backbone, PamelaChu);

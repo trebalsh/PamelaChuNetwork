@@ -1,6 +1,6 @@
 
 var MPreferences = Backbone.Model.extend({
-    url: '/tatami/rest/account/preferences',
+    url: '/pamelaChu/rest/account/preferences',
 
     defaults: {
         mentionEmail: '',

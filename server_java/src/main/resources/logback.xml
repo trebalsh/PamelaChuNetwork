@@ -19,7 +19,7 @@
         <appender-ref ref="SYNC_PAPERTRAIL"/>
     </appender>
 
-    <logger name="fr.ippon.tatami" level="${logback.loglevel}"/>
+    <logger name="fr.ippon.pamelaChu" level="${logback.loglevel}"/>
     <logger name="ch.qos.logback" level="WARN"/>
     <logger name="com.yammer.metrics" level="WARN"/>
     <logger name="com.notnoop" level="WARN"/>

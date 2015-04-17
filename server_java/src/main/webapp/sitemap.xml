@@ -6,19 +6,19 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
-		<loc>https://tatami.ippon.fr/tatami/login</loc>
+		<loc>https://pamelaChu.ippon.fr/pamelaChu/login</loc>
 		<priority>1.0</priority>
    </url>
    <url>
-		<loc>https://tatami.ippon.fr/tatami/presentation</loc>
+		<loc>https://pamelaChu.ippon.fr/pamelaChu/presentation</loc>
 		<priority>0.8</priority>
    </url>
    <url>
-		<loc>https://tatami.ippon.fr/tatami/tos</loc>
+		<loc>https://pamelaChu.ippon.fr/pamelaChu/tos</loc>
 		<priority>0.5</priority>
    </url>
    <url>
-		<loc>https://tatami.ippon.fr/tatami/license</loc>
+		<loc>https://pamelaChu.ippon.fr/pamelaChu/license</loc>
 		<priority>0.5</priority>
    </url>
 </urlset>

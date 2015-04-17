@@ -1,4 +1,4 @@
-(function(Backbone, _, Tatami){
+(function(Backbone, _, PamelaChu){
     var GroupsSide = Backbone.Marionette.Layout.extend({
         template: "#GroupsSide",
         regions: {
@@ -47,7 +47,7 @@
             'click .toggleTag': 'subscription'
         },
         subscription: function(event){
-            this.model.url = this.model.urlRoot+'/'+this.model.id+'/members/'+Tatami.app.user.id;
+            this.model.url = this.model.urlRoot+'/'+this.model.id+'/members/'+PamelaChu.app.user.id;
             var model = this.model;
             if(this.model.get('member')){                
                 this.model.destroy();
@@ -72,7 +72,7 @@
             'click .toggleGroup': 'subscription'
         },
         subscription: function(event){
-            this.model.url = this.model.urlRoot+'/'+this.model.id+'/members/'+Tatami.app.user.id;
+            this.model.url = this.model.urlRoot+'/'+this.model.id+'/members/'+PamelaChu.app.user.id;
             var model = this.model;
             if(this.model.get('member')){
                 this.model.destroy();
@@ -90,8 +90,8 @@
         template :'#GroupsSuscribeTemplate'
     });
 
-    Tatami.Views.GroupsList = GroupsList;
-    Tatami.Views.GroupsHeader = GroupsHeader;
-    Tatami.Views.GroupsSide = GroupsSide;
-    Tatami.Views.GroupsBody = GroupsBody;
-})(Backbone, _, Tatami);
+    PamelaChu.Views.GroupsList = GroupsList;
+    PamelaChu.Views.GroupsHeader = GroupsHeader;
+    PamelaChu.Views.GroupsSide = GroupsSide;
+    PamelaChu.Views.GroupsBody = GroupsBody;
+})(Backbone, _, PamelaChu);
